@@ -5,6 +5,6 @@ Tekenen is een manier om simpel en to-the-point te communiceren en wordt in de p
 Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, zowel studenten als docenten, visueel denken en communiceren.
 
 ## Resources
-
+[Project board](https://github.com/fdnd-projects/visual-thinking/projects/1)  
 [Styleguide](https://github.com/fdnd-projects/visual-thinking/blob/0bcfc55d8c25483d18e5c6629ad7fa7e99ca7b51/vtHBO-styleguide-v1.pdf)  
 API
