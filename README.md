@@ -7,4 +7,4 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 ## Resources
 
 [Styleguide](https://github.com/fdnd-projects/visual-thinking/blob/0bcfc55d8c25483d18e5c6629ad7fa7e99ca7b51/vtHBO-styleguide-v1.pdf)  
-[API]()
+API
