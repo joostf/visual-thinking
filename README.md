@@ -1,4 +1,5 @@
-# Visual Thinking voor het HBO
+![image](https://user-images.githubusercontent.com/1061632/191292733-fe7516d2-aaf9-4fc6-bbed-14fbd9d26dd5.png)
+
 
 Tekenen is een manier om simpel en to-the-point te communiceren en wordt in de praktijk steeds vaker gebruikt als tool voor interne en externe communicatie. ‘Visual thinking in het hbo’ wordt een platform met onderwijsmateriaal voor docenten en studenten om visual thinking in hun lessen en tijdens de studie toe te kunnen passen.
 
