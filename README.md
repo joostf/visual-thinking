@@ -8,7 +8,7 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 ## Resources
 [Project board](https://github.com/orgs/fdnd-agency/projects/7) 
 
-[REST API for Visual Thinking Platform](https://api.visualthinking.fdnd.nl)
+[REST API Visual Thinking Platform](https://api.visualthinking.fdnd.nl)
 
 [Living Styleguide]()
 
