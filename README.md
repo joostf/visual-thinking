@@ -8,6 +8,8 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 ## Resources
 [Project board](https://github.com/orgs/fdnd-agency/projects/7) 
 
+[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx3k=/)
+
 [REST API Visual Thinking Platform](https://api.visualthinking.fdnd.nl)
 
 [Living Styleguide]()
