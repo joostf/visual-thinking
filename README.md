@@ -17,3 +17,18 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 [Huisstijl](https://github.com/fdnd-projects/visual-thinking/blob/0bcfc55d8c25483d18e5c6629ad7fa7e99ca7b51/vtHBO-styleguide-v1.pdf)  
 
 [Figma Prototype](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)  
+
+## Design
+De basis voor het design is gelegd in het prototype van ... 
+
+Prototype ..: [Live site]() | [GitHub repo]()  
+
+## Functionaliteiten
+De basis voor functionaliteiten en inhoud is gelegd in het prototype van ...
+
+Prototype Wesley, Rick & Daan: [Live site](...) | [GitHub repo](...)  
+
+## Preferred tech stack
+
+Framework: [SvelteKit](https://kit.svelte.dev/)   
+Headless CMS: [Hygraph](https://hygraph.com/)
