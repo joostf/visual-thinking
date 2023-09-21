@@ -19,9 +19,8 @@ Ontwerp en ontwikkel een platform met werkvormen voor visual thinking in het hog
 [Figma Prototype](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)  
 
 ## Prototype
-De basis voor het design is gelegd in het prototype van ... 
-
-Prototype Ivar, Eliza, Marco & Trisjan: [Live site](https://vthbo.adaptable.app/) | [GitHub repo](https://github.com/IvarSchuyt/Visual-Thinking)  
+De basis voor het design is gelegd in het prototype van Ivar, Eliza, Marco & Trisjan  
+[Live site](https://vthbo.adaptable.app/) | [GitHub repo](https://github.com/IvarSchuyt/Visual-Thinking)  
 
 
 ## Preferred tech stack
