@@ -18,15 +18,11 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 
 [Figma Prototype](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)  
 
-## Design
+## Prototype
 De basis voor het design is gelegd in het prototype van ... 
 
-Prototype ..: [Live site]() | [GitHub repo]()  
+Prototype Ivar, Eliza, Marco & Trisjan: [Live site](https://vthbo.adaptable.app/) | [GitHub repo](https://github.com/IvarSchuyt/Visual-Thinking)  
 
-## Functionaliteiten
-De basis voor functionaliteiten en inhoud is gelegd in het prototype van ...
-
-Prototype Wesley, Rick & Daan: [Live site](...) | [GitHub repo](...)  
 
 ## Preferred tech stack
 
