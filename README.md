@@ -5,7 +5,7 @@ Tekenen is een manier om simpel en to-the-point te communiceren en wordt in de p
 Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, zowel studenten als docenten, visueel denken en communiceren.
 
 ## Design Challenge
-...
+Ontwerp en ontwikkel een platform met werkvormen voor visual thinking in het hoger onderwijs. 
 
 ## Resources
 [Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3) 
