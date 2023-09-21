@@ -8,7 +8,7 @@ Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, z
 ...
 
 ## Resources
-[Backlog](https://github.com/orgs/fdnd-agency/projects/7) 
+[Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3) 
 
 <!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx3k=/?share_link_id=863710582264)-->
 
