@@ -53,6 +53,57 @@ Hygraph: Dit is een headless CMS. Hierin heeft Charley al haar data staan.
 </ul>
 
 
+## Installatie
+Volg deze stappen om het project lokaal te installeren:
+
+1. Clone het project van de GitHub repository:
+
+```
+git clone https://github.com/kosterm14/lets-jam-webapplicatie
+```
+
+2. Installeer de benodigde afhankelijkheden:
+
+```
+cd lets-jam-webapplicatie
+npm install
+```
+
+3. Start de ontwikkelingsserver:
+
+```
+npm run dev
+Open je browser en ga naar http://localhost:5000 om de applicatie te bekijken.
+```
+
+Voor gedetailleerde documentatie over SvelteKit, raadpleeg de Svelte documentatie.
+
+## Gebruiksinstructies en Configuratie
+
+Om het project te gebruiken, moet je een .env-bestand toevoegen aan de hoofdmap van het project. Dit bestand bevat gevoelige informatie en wordt daarom niet gedeeld via versiebeheer. Hier zijn de vereiste variabelen en hun waarden:
+
+1. .env-bestand toevoegen:
+
+Maak een bestand met de naam .env in de hoofdmap van het project en voeg de volgende variabelen toe:
+
+```
+HYGRAPH_URL=""
+HYGRAPH_KEY=""
+```
+
+2. Voorbeeld van een .env-bestand:
+
+HYGRAPH_URL="https://voorbeeld.hygraph.com"
+HYGRAPH_KEY="jouw_hygraph_api_sleutel"
+
+3. Start de ontwikkelingsserver:
+
+Nadat je het .env-bestand hebt toegevoegd, start je de ontwikkelingsserver opnieuw:
+
+```
+npm run dev
+```
+
 ## 🌐 Bronnen
 
 <ul>
