@@ -1,31 +1,120 @@
-![image](https://user-images.githubusercontent.com/1061632/191292733-fe7516d2-aaf9-4fc6-bbed-14fbd9d26dd5.png)
 
-Tekenen is een manier om simpel en to-the-point te communiceren en wordt in de praktijk steeds vaker gebruikt als tool voor interne en externe communicatie. ‘Visual thinking in het hbo’ wordt een platform met onderwijsmateriaal voor docenten en studenten om visual thinking in hun lessen en tijdens de studie toe te kunnen passen.
+# Visual Thinking
+<img src='https://github.com/kosterm14/lets-jam-webapplicatie/assets/112856683/c60b24fc-f915-4fb6-92c2-3dc39f1a66f7' width=50%>
 
-Aan de hand van verschillende werkvormen, mini-cursussen en kennisclips leren, zowel studenten als docenten, visueel denken en communiceren.
+## 📚 Inhoudsopgave
 
-## Design Challenge
-Ontwerp en ontwikkel een platform met werkvormen voor visual thinking in het hoger onderwijs. 
+* [Beschrijving](#beschrijving)
+* [Kenmerken](#kenmerken)
+* [Bronnen](#bronnen)
+* [Licentie](#licentie)
 
-## Resources
-[Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3) 
+## 🗒️ Beschrijving
+<strong>Visual thinking 🖌️:</strong>
 
-<!--[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPhWkx3k=/?share_link_id=863710582264)-->
+<p> Wij gaan de website van Visual Thinking verbeteren en aanvullen. <br> 
+</p>
 
-[Headless CMS / API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0xfvf2fdq01uj9eme97m7/master)
+## 💻👨🏻‍💻👨🏼‍💻 Gebruik
 
-[Huisstijl](https://github.com/fdnd-projects/visual-thinking/blob/0bcfc55d8c25483d18e5c6629ad7fa7e99ca7b51/vtHBO-styleguide-v1.pdf)  
+Visual thinking leert studenten en docenten hun gedachten en doelen te verbeelden.
+Het helpt ze bij het creëren van overzicht en het overbrengen van hun boodschap.
 
-[Figma Prototype](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)  
+## 👩🏼‍💻👩🏾‍💻👨🏻‍💻👨🏼‍💻 Kenmerken
 
-[Kennisclips over Visula Thinking](https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa)
+Lijst met gebruikte tools, technieken en communicatie middelen.
+Dit project is gemaakt met Sveltekit en Hygraph.
 
-## Prototype
-De basis voor het design is gelegd in het prototype van Ivar, Eliza, Marco & Trisjan  
-[Live site](https://vthbo.adaptable.app/) | [GitHub repo](https://github.com/IvarSchuyt/Visual-Thinking) | [Figma Responsive Designs Eliza](https://www.figma.com/file/zM7mZ71HH7qQP1xO2KctIJ/Visual-Thinking---Designs?type=design&node-id=0-1&mode=design&t=Jd4LwSPKL8xpYLjv-0)
+Sveltekit: Dit is een framework. SvelteKit biedt extra mogelijkheden bovenop Svelte, zoals routing, statische site generation (SSG) en server-side rendering (SSR).
+
+Hygraph: Dit is een headless CMS. Hierin heeft Charley al haar data staan.
 
 
-## Preferred tech stack
+<ul>
+<li><strong>TOOLS 🧰:</strong></li>
+<li>VSCode</li>
+<li>Pen & Papier</li>
+<li>Laptop</li>
+</ul>
 
-Framework: [SvelteKit](https://kit.svelte.dev/)   
-Headless CMS: [Hygraph](https://hygraph.com/)
+<ul>
+<li><strong>GEBRUIKTE TECHNIEKEN 🛠️:</strong></li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+<li>Sveltekit</li>
+<li>Hygraph</li>
+</ul>
+
+<ul>
+<li><strong>COMMUNICATIE MIDDELEN 🗣️:</strong></li>
+<li>Microsoft Teams</li>
+ <li>Whatsapp</li>
+</ul>
+
+
+## Installatie
+Volg deze stappen om het project lokaal te installeren:
+
+1. Clone het project van de GitHub repository:
+
+```
+git clone https://github.com/kosterm14/lets-jam-webapplicatie
+```
+
+2. Installeer de benodigde afhankelijkheden:
+
+```
+cd lets-jam-webapplicatie
+npm install
+```
+
+3. Start de ontwikkelingsserver:
+
+```
+npm run dev
+Open je browser en ga naar http://localhost:5000 om de applicatie te bekijken.
+```
+
+Voor gedetailleerde documentatie over SvelteKit, raadpleeg de Svelte documentatie.
+
+## Gebruiksinstructies en Configuratie
+
+Om het project te gebruiken, moet je een .env-bestand toevoegen aan de hoofdmap van het project. Dit bestand bevat gevoelige informatie en wordt daarom niet gedeeld via versiebeheer. Hier zijn de vereiste variabelen en hun waarden:
+
+1. .env-bestand toevoegen:
+
+Maak een bestand met de naam .env in de hoofdmap van het project en voeg de volgende variabelen toe:
+
+```
+HYGRAPH_URL=""
+HYGRAPH_KEY=""
+```
+
+2. Voorbeeld van een .env-bestand:
+
+HYGRAPH_URL="https://voorbeeld.hygraph.com"
+HYGRAPH_KEY="jouw_hygraph_api_sleutel"
+
+3. Start de ontwikkelingsserver:
+
+Nadat je het .env-bestand hebt toegevoegd, start je de ontwikkelingsserver opnieuw:
+
+```
+npm run dev
+```
+
+## 🌐 Bronnen
+
+<ul>
+<li>https://github.com//</li>
+<li>https://www.google.nl/</li>
+</ul>
+
+
+
+## 🔒 Licentie
+
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+
+This work is licensed under [GNU GPLv3](./LICENSE).
