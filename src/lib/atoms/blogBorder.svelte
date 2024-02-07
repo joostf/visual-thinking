@@ -18,7 +18,6 @@
       <img src={artikelenHomepages.img.url} alt="artikelen" />
       <h2>{artikelenHomepages.title}</h2>
       <p>{artikelenHomepages.description}</p>
-      <h1>test</h1>
       <BlogButton page="/artikelen/{artikelenHomepages.pageName}"/>
     </article>
     {/each}
