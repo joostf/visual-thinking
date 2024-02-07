@@ -1,8 +1,8 @@
-<header>
+
     <section>
         <h4 class="line">Minicursussen</h4>
     </section>
-</header>
+
 
 <main>
     <section class="grid-container">
