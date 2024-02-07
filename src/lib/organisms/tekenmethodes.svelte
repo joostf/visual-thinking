@@ -38,7 +38,6 @@
   }
 </script>
 
-
 <section>
   <h4 class="line">Tekenmethodes</h4>
 </section>
@@ -142,13 +141,12 @@
                   type="image/webp"
                   srcset={method.template.url}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-       
                 />
                 <img
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-               
+
                 />
               </picture>
             {:else}
@@ -156,7 +154,7 @@
                 class={method.categories[0].title.replaceAll(" ", "-")}
                 src="/placeholder.webp"
                 alt="Placeholder"
-      
+
               />
             {/if}
             <section class="methods-titles">
@@ -180,12 +178,6 @@
     margin-top: 0%;
     display: flex;
     height: 30px;
-  }
-
-  .page {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
   }
 
   a {
@@ -261,7 +253,7 @@
   .lowercase {
     text-transform: none;
     line-height: 1.5rem;
-    max-width: 75%;
+    width: 80%;
   }
 
   .arrows {
@@ -477,12 +469,11 @@
     border-color: var(--vtSec-DarkBlue) !important;
   }
 
-    /*---RESPONSIVE DESKTOP---*/
+  /*---RESPONSIVE DESKTOP---*/
   @media (min-width: 68em) {
-    
-  .line {
-    padding-left: 9% !important;
-  }
+    .line {
+      padding-left: 9% !important;
+    }
 
     /*---TEKENMETHODES---*/
 
@@ -500,7 +491,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
     }
 
     .intro-text h1 {
@@ -544,13 +534,13 @@
       list-style: none;
       flex: 0 0 calc(33.33% - 60px);
       margin-bottom: 1em;
-      }
-    
+    }
+
     .categorie-names {
       display: flex;
       flex-wrap: wrap;
     }
-        
+
     .categorien {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -562,10 +552,10 @@
     }
 
     .img-categorie {
-    float: left;
-    left: 10%;
-    margin-top: -1em;
-  }
+      float: left;
+      left: 10%;
+      margin-top: -1em;
+    }
 
     .lower {
       margin: 3em 0;
@@ -604,7 +594,6 @@
 
   /*---RESPONSIVE TABLET GROOT---*/
   @media (min-width: 45em) {
-  
     /*---CATEGORIEEN---*/
     .categorien {
       display: grid;
@@ -657,96 +646,91 @@
     }
   }
 
-   /*---RESPONSIVE TABLET MINI---*/
+  /*---RESPONSIVE TABLET MINI---*/
   @media (min-width: 31em) {
+    .view-method {
+      display: flex;
+      font-weight: bold;
+      flex-direction: column;
+      margin-top: 0.83em;
+    }
 
-  .view-method {
-    display: flex;
-    font-weight: bold;
-    flex-direction: column;
-    margin-top: 0.83em;
-  }
+    .arrow-down {
+      width: 15px;
+      float: right;
+      margin-right: 1em;
+      margin-top: -2.2em;
+    }
 
-  .arrow-down {
-    width: 15px;
-    float: right;
-    margin-right: 1em;
-    margin-top: -2.2em;
-  }
+    h1 {
+      font-size: 2.369rem;
+      font-family: var(--vtPrimaryFont);
+      color: var(--vtDarkBlue);
+    }
 
-  h1 {
-    font-size: 2.369rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-  }
+    .content {
+      padding: 0 50px;
+    }
 
-  .content {
-    padding: 0 50px;
-  }
+    .toggler {
+      display: none;
+    }
 
-  .toggler {
-    display: none;
-  }
+    nav ul li {
+      display: inline-block;
+      padding-right: 30px;
+      padding-top: 5px;
+      color: var(--vtDarkBlue);
+      font: var(--vtMenuFont);
+    }
 
-  nav ul li {
-    display: inline-block;
-    padding-right: 30px;
-    padding-top: 5px;
-    color: var(--vtDarkBlue);
-    font: var(--vtMenuFont);
-  }
+    .account {
+      padding-left: 30px;
+      padding-bottom: 15px;
+    }
 
-  .account {
-    padding-left: 30px;
-    padding-bottom: 15px;
-  }
+    .tekenmethodes-main {
+      margin-left: 0em;
+    }
 
-  .tekenmethodes-main {
-    margin-left: 0em;
-  }
-
-  .line {
-    padding-left: 20%;
-  }
+    .line {
+      padding-left: 20%;
+    }
 
     /*---DROPDOWN---*/
-    
-  .categories {
-    display: none;
+
+    .categories {
+      display: none;
+    }
+
+    li a {
+      text-decoration: none;
+      color: var(--vtDarkBlue);
+      font-family: var(--vtPrimaryFont);
+      font-size: 18px;
+      padding-left: 20px;
+      padding-right: 1em;
+      margin-left: -1.5em;
+    }
   }
 
-  li a {
-    text-decoration: none;
-    color: var(--vtDarkBlue);
-    font-family: var(--vtPrimaryFont);
-    font-size: 18px;
-    padding-left: 20px;
-    padding-right: 1em;
-    margin-left: -1.5em;
+  /*---RESPONSIVE MOBILE---*/
+  @media (max-width: 31em) {
+    h1 {
+      font-size: 1.157rem;
+      font-family: var(--vtPrimaryFont);
+      color: var(--vtDarkBlue);
+    }
+
+    .arrow-down {
+      width: 15px;
+      float: right;
+      margin-right: 1em;
+      margin-top: -2.2em;
+    }
+
+    .line {
+      padding-left: 11%;
+    }
   }
-  }
-
-   /*---RESPONSIVE MOBILE---*/
-   @media (max-width: 31em) {
-
-  h1 {
-    font-size: 1.157rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-  }
-
-  .arrow-down {
-    width: 15px;
-    float: right;
-    margin-right: 1em;
-    margin-top: -2.2em;
-  }
-
-.line {
-    padding-left: 11%;
-  }
-
-}
-
-
 </style>
