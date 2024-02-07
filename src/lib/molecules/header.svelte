@@ -15,27 +15,17 @@
 </script>
 
 <section>
-  <body>
-    <nav class={loading ? "animate" : ""}>
-      <ul>
-        <a href="/tekenmethodes"><li>Tekenmethodes</li></a>
-        <a href="/over"><li>Over</li></a>
-        <a href="/minicursussen"> <li>Minicursussen</li></a>
-        <a href="/"
-          ><li>
-            <img
-              src="/vtHBO-v1.0-Logo_1.svg"
-              class="visual-thinking-logo"
-              alt="visual-thinking-logo"
-            />
-          </li></a
-        >
-        <a href="/kennisclips"><li>Kennisclips</li></a>
-        <a href="/artikelen"><li>Artikelen</li></a>
-        <a href="/tekenruimte"><li>Tekenruimte</li></a>
-      </ul>
-    </nav>
-  </body>
+  <nav class={loading ? "animate" : ""}>
+    <ul>
+      <li><a href="/tekenmethodes">Tekenmethodes</a></li>
+      <li><a href="/over">Over</a></li>
+      <li><a href="/minicursussen">Minicursussen</a></li>
+      <li><a href="/"><img src="/vtHBO-v1.0-Logo_1.svg" class="visual-thinking-logo" alt="visual-thinking-logo" /></a></li>
+      <li><a href="/kennisclips">Kennisclips</a></li>
+      <li><a href="/artikelen">Artikelen</a></li>
+      <li><a href="/tekenruimte">Tekenruimte</a></li>
+    </ul>
+  </nav>
 </section>
 
 <div class="mobile-container">
@@ -57,6 +47,7 @@
 </div>
 
 <style>
+
   .animate {
     animation: appear 3s forwards;
   }
@@ -68,12 +59,6 @@
     100% {
       opacity: 1;
     }
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    box-shadow: 0px 7px 6px -2px rgba(0, 0, 0, 0.1);
   }
 
   a {
@@ -92,6 +77,8 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    box-shadow: 0px 7px 6px -2px rgba(0, 0, 0, 0.1);
+
   }
 
   ul {
@@ -122,11 +109,6 @@
 
   /* tablet */
   @media (min-width: 31em) and (max-width: 55em) {
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
 
     body {
       font-size: 1em;
@@ -178,7 +160,7 @@
     .topnav a:nth-child(3),
     .topnav a:nth-child(4),
     .topnav a:nth-child(5),
-    .topnav a:nth-child(6) {
+    .topnav a:nth-child(6){
       text-transform: uppercase;
       color: var(--vtWhite);
       font-family: var(--vtPrimaryFont);
@@ -230,15 +212,13 @@
       animation: slide6 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    nav ul a:nth-child(1),
-    nav ul a:nth-child(2),
-    nav ul a:nth-child(3),
-    nav ul a:nth-child(5),
-    nav ul a:nth-child(6),
-    nav ul a:nth-child(7) {
+    nav ul a:nth-child(1) {
       display: none;
     }
-
+    nav ul li:nth-of-type(4) a{
+      display: block;
+    }
+    
     nav {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -247,6 +227,7 @@
     .active::before {
       content: ">";
       transition: 600ms;
+      padding-right: 5px;
     }
 
     .active.rotate::before {
@@ -430,13 +411,11 @@
       animation: slide6 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    nav ul a:nth-child(1),
-    nav ul a:nth-child(2),
-    nav ul a:nth-child(3),
-    nav ul a:nth-child(5),
-    nav ul a:nth-child(6),
-    nav ul a:nth-child(7) {
+    nav ul a:nth-child(1) {
       display: none;
+    }
+    nav ul li:nth-of-type(4) a{
+      display: block;
     }
 
     nav {
@@ -447,6 +426,7 @@
     .active::before {
       content: ">";
       transition: 600ms;
+      padding-right: 5px;
     }
 
     .active.rotate::before {
