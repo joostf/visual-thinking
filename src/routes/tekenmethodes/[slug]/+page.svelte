@@ -7,66 +7,62 @@
 
 <Header />
 
-<body class="page">
+<section>
+    <a href="/tekenmethodes">
+        <p class="line">
+            <img class="arrows-line" src="/arrows.svg" alt="" />
+            Overzicht<strong id="methodes-line">tekenmethodes</strong>
+        </p>
+    </a>
+</section>
 
-    <section>
-        <a href="/tekenmethodes">
-            <p class="line">
-                <img class="arrows-line" src="/arrows.svg" alt="" />
-                Overzicht<strong id="methodes-line">tekenmethodes</strong>
-            </p>
-        </a>
+<main class="detail-main">
+    <section class="navmain">
+        <section>
+            <h1 class="h1-detail">
+                {#each data.methods as method}
+                    {method?.title}
+                {/each}
+            </h1>
+        </section>
+
+        {#each data.methods as method}
+            <nav>
+                <ul>
+                    <li>
+                        <h2 class="bold">Beschrijving</h2>
+                    </li>
+                    <a href="/tekenmethodes/{method.slug}/stappenplan">
+                        <li>
+                            <h2 class="h2-detail">Stappenplan</h2>
+                        </li>
+                    </a>
+                    <a href="/tekenmethodes/{method.slug}/voorbeelden">
+                        <li>
+                            <h2 class="h2-detail">Voorbeelden</h2>
+                        </li>
+                      </a>
+                </ul>
+            </nav>
+        {/each}
     </section>
 
-    <main class="detail-main">
-        <section class="navmain">
-            <section>
-                <h1 class="h1-detail">
-                    {#each data.methods as method}
-                        {method?.title}
-                    {/each}
-                </h1>
-            </section>
+    <div class="section-wrapper">
+    <section class="flex-b">
+        {#each data.methods as method}
+            <img class="template-url" src={method?.template?.url} alt="" />
+        {/each}
 
+        <h3 class="text">
             {#each data.methods as method}
-                <nav>
-                    <ul>
-                        <li>
-                            <h2 class="bold">Beschrijving</h2>
-                        </li>
-                        <a href="/tekenmethodes/{method.slug}/stappenplan">
-                            <li>
-                                <h2 class="h2-detail">Stappenplan</h2>
-                            </li>
-                        </a>
-                        <a href="/tekenmethodes/{method.slug}/voorbeelden">
-                            <li>
-                                <h2 class="h2-detail">Voorbeelden</h2>
-                            </li>
-                          </a>
-                    </ul>
-                </nav>
+                {@html method?.description.html}
             {/each}
-        </section>
-
-        <div class="section-wrapper">
-        <section class="flex-b">
-            {#each data.methods as method}
-                <img class="template-url" src={method?.template?.url} alt="" />
-            {/each}
-
-            <h3 class="text">
-                {#each data.methods as method}
-                    {@html method?.description.html}
-                {/each}
-            </h3>
-        </section>
-      </div>
-    </main>
-</body>
+        </h3>
+    </section>
+  </div>
+</main>
 
 <Footer />
-
 
 <style>
   :root {

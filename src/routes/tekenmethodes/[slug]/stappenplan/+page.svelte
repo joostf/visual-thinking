@@ -33,103 +33,102 @@
 
 <Header />
 
-<body class="page">
-  <section>
-    <a href="/tekenmethodes">
-      <p class="line">
-        <img class="arrows-line" src="/arrows.svg" alt="" />
-        Overzicht <strong id="methodes-line">tekenmethodes</strong>
-      </p>
-    </a>
-  </section>
+<section>
+  <a href="/tekenmethodes">
+    <p class="line">
+      <img class="arrows-line" src="/arrows.svg" alt="" />
+      Overzicht <strong id="methodes-line">tekenmethodes</strong>
+    </p>
+  </a>
+</section>
 
-  <main class="detail-main">
-    <section class="navmain">
-      <section>
-        <h1 class="h1-detail">
-          {#each data.methods as method}
-            {method.title}
-          {/each}
-        </h1>
-      </section>
-
-      {#each data.methods as method}
-        <nav>
-          <ul>
-            <a href="/tekenmethodes/{method.slug}">
-              <li>
-                <h2 class="h2-detail">Beschrijving</h2>
-              </li>
-            </a>
-            <li>
-              <h2 class="bold">Stappenplan</h2>
-            </li>
-            <a href="/tekenmethodes/{method.slug}/voorbeelden">
-              <li>
-                <h2 class="h2-detail">Voorbeelden</h2>
-              </li>
-            </a>
-          </ul>
-        </nav>
-      {/each}
+<main class="detail-main">
+  <section class="navmain">
+    <section>
+      <h1 class="h1-detail">
+        {#each data.methods as method}
+          {method.title}
+        {/each}
+      </h1>
     </section>
 
     {#each data.methods as method}
-      <img class="template-url" src={method?.template?.url} alt="" />
+      <nav>
+        <ul>
+          <a href="/tekenmethodes/{method.slug}">
+            <li>
+              <h2 class="h2-detail">Beschrijving</h2>
+            </li>
+          </a>
+          <li>
+            <h2 class="bold">Stappenplan</h2>
+          </li>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">
+            <li>
+              <h2 class="h2-detail">Voorbeelden</h2>
+            </li>
+          </a>
+        </ul>
+      </nav>
     {/each}
+  </section>
 
-    <section class="flex-s">
-      <section class="full-b">
-        <section class="tags-b">
-          <img class="icon" src="/icon1.svg" alt="" />
-          {#each data.methods as method}
-            {#each method.categories as category}
-              <h2 class="tag">
-                {@html category.title}
-              </h2>
-            {/each}
+  {#each data.methods as method}
+    <img class="template-url" src={method?.template?.url} alt="" />
+  {/each}
+
+  <section class="flex-s">
+    <section class="full-b">
+      <section class="tags-b">
+        <img class="icon" src="/icon1.svg" alt="" />
+        {#each data.methods as method}
+          {#each method.categories as category}
+            <h2 class="tag">
+              {@html category.title}
+            </h2>
           {/each}
-        </section>
+        {/each}
+      </section>
 
-        <section class="tags-b">
-          <img class="icon" src="/icon2.svg" alt="" />
-          <h2 class="tag">
-            {#each data.methods as method}
-              {method.material}
-            {/each}
-          </h2>
-        </section>
-
-        <section class="tags-b">
-          <img class="icon" src="/icon3.svg" alt="" />
-          <h2 class="tag">
-            {#each data.methods as method}
-              {method.duration}
-            {/each}
-          </h2>
-        </section>
-
-        <section class="tags-b">
-          <img class="icon" src="/icon4.svg" alt="" />
-          <h2 class="tag">Charley Muhren</h2>
-        </section>
-
-        <section class="steps">
+      <section class="tags-b">
+        <img class="icon" src="/icon2.svg" alt="" />
+        <h2 class="tag">
           {#each data.methods as method}
-            {#each method.steps as step}
-              <p class="step-title">{step.title}</p>
-              {#if typeof step.description === "object"}
-                <p class="step-description">{@html step.description.html}</p>
-              {:else}
-                <p>{step.description}</p>
-              {/if}
-            {/each}
+            {method.material}
           {/each}
-        </section>
+        </h2>
+      </section>
+
+      <section class="tags-b">
+        <img class="icon" src="/icon3.svg" alt="" />
+        <h2 class="tag">
+          {#each data.methods as method}
+            {method.duration}
+          {/each}
+        </h2>
+      </section>
+
+      <section class="tags-b">
+        <img class="icon" src="/icon4.svg" alt="" />
+        <h2 class="tag">Charley Muhren</h2>
+      </section>
+
+      <section class="steps">
+        {#each data.methods as method}
+          {#each method.steps as step}
+            <p class="step-title">{step.title}</p>
+            {#if typeof step.description === "object"}
+              <p class="step-description">{@html step.description.html}</p>
+            {:else}
+              <p>{step.description}</p>
+            {/if}
+          {/each}
+        {/each}
       </section>
     </section>
-  </main>
-</body>
+  </section>
+</main>
+
 
 <Footer />
 

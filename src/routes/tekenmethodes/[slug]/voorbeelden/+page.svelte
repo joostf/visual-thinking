@@ -65,70 +65,68 @@
 
 <Header />
 
-<body class="page">
-  <section>
-    <a href="/tekenmethodes">
-      <p class="line">
-        <img class="arrows-line" src="/arrows.svg" alt="" />
-        Overzicht <strong id="methodes-line">tekenmethodes</strong>
-      </p>
-    </a>
+<section>
+  <a href="/tekenmethodes">
+    <p class="line">
+      <img class="arrows-line" src="/arrows.svg" alt="" />
+      Overzicht <strong id="methodes-line">tekenmethodes</strong>
+    </p>
+  </a>
+</section>
+
+<main class="detail-main">
+  <section class="navmain">
+    <section>
+      <h1 class="h1-detail">
+        {#each data.methods as method}
+          {method.title}
+        {/each}
+      </h1>
+    </section>
+
+    {#each data.methods as method}
+      <nav>
+        <ul>
+          <a href="/tekenmethodes/{method.slug}">
+            <li>
+              <h2 class="h2-detail">Beschrijving</h2>
+            </li>
+          </a>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">
+            <li>
+              <h2 class="h2-detail">Stappenplan</h2>
+            </li>
+          </a>
+          <li>
+            <h2 class="bold">Voorbeelden</h2>
+          </li>
+        </ul>
+      </nav>
+    {/each}
   </section>
 
-  <main class="detail-main">
-    <section class="navmain">
-      <section>
-        <h1 class="h1-detail">
-          {#each data.methods as method}
-            {method.title}
-          {/each}
-        </h1>
-      </section>
-
-      {#each data.methods as method}
-        <nav>
-          <ul>
-            <a href="/tekenmethodes/{method.slug}">
-              <li>
-                <h2 class="h2-detail">Beschrijving</h2>
-              </li>
-            </a>
-            <a href="/tekenmethodes/{method.slug}/stappenplan">
-              <li>
-                <h2 class="h2-detail">Stappenplan</h2>
-              </li>
-            </a>
-            <li>
-              <h2 class="bold">Voorbeelden</h2>
-            </li>
-          </ul>
-        </nav>
-      {/each}
+  <section class="carousel">
+    <button class="carousel-button-left">
+      <img src="/arrow.svg" alt="" />
+    </button>
+    <section class="carousel-container">
+      <ul class="carousel-list">
+        {#each data.methods as method}
+        {#each method.examples as example}
+          <li class="carousel-slide current-slide">
+            <!-- <img class="carousel-img-blur" src={example.url} alt="" /> -->
+            <img class="carousel-img" src={example.url} alt="" />
+          </li>
+        {/each}
+        {/each}
+      </ul>
     </section>
 
-    <section class="carousel">
-      <button class="carousel-button-left">
-        <img src="/arrow.svg" alt="" />
-      </button>
-      <section class="carousel-container">
-        <ul class="carousel-list">
-          {#each data.methods as method}
-          {#each method.examples as example}
-            <li class="carousel-slide current-slide">
-              <!-- <img class="carousel-img-blur" src={example.url} alt="" /> -->
-              <img class="carousel-img" src={example.url} alt="" />
-            </li>
-          {/each}
-          {/each}
-        </ul>
-      </section>
-
-    <button class="carousel-button-right">
-        <img src="/arrows_black.svg" alt="" />
-      </button>
-    </section>
-  </main>
-</body>
+  <button class="carousel-button-right">
+      <img src="/arrows_black.svg" alt="" />
+    </button>
+  </section>
+</main>
 
 <Footer />
 
