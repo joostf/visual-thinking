@@ -70,90 +70,68 @@
   <img src="/arrow-down.svg" alt="" class="arrow-down" />
   <input type="checkbox" id="touch" />
   <ul class="slide">
-    <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"
-        >Onderzoeken en begrijpen</a
-      >
+      <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
     </li>
-    <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"
-        >Organiseren en plannen</a
-      >
+      <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
     </li>
-    <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"
-        >Leren over anderen</a
-      >
+      <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
     </li>
-    <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"
-        >Leren over jezelf</a
-      >
+      <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
     </li>
-    <img src="/communiceren.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"
-        >Communiceren en presenteren</a
-      >
+      <img src="/communiceren.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
     </li>
-    <img src="/creatief.svg" alt="" class="img-categorie" />
     <li class="categorie-name">
-      <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"
-        >Creatief denken</a
-      >
+      <img src="/creatief.svg" alt="" class="img-categorie" />
+      <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
     </li>
   </ul>
 </section>
 
+
 <section class="categories">
   <section class="categories-container">
     <ul class="categorie-names">
-      <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"
-          >Onderzoeken en begrijpen</a
-        >
+        <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
       </li>
-      <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"
-          >Organiseren en plannen</a
-        >
+        <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
       </li>
-      <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"
-          >Leren over anderen</a
-        >
+        <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
       </li>
-      <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"
-          >Leren over jezelf</a
-        >
+        <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
       </li>
-      <img src="/communiceren.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"
-          >Communiceren en presenteren</a
-        >
+        <img src="/communiceren.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
       </li>
-      <img src="/creatief.svg" alt="" class="img-categorie" />
       <li class="categorie-name">
-        <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"
-          >Creatief denken</a
-        >
+        <img src="/creatief.svg" alt="" class="img-categorie" />
+        <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
       </li>
     </ul>
   </section>
 </section>
 
-<main class="tekenmethodes-main">
-  <article class="methods">
+
+<section class="tekenmethodes-main">
+  <section class="methods">
     {#if data && data.methods && data.methods.length > 0}
       {#each data.methods as method, index}
         <section class="method-container" data-index={index}>
@@ -164,13 +142,13 @@
                   type="image/webp"
                   srcset={method.template.url}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-                  loading="lazy"
+       
                 />
                 <img
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-                  loading="lazy"
+               
                 />
               </picture>
             {:else}
@@ -178,7 +156,7 @@
                 class={method.categories[0].title.replaceAll(" ", "-")}
                 src="/placeholder.webp"
                 alt="Placeholder"
-                loading="lazy"
+      
               />
             {/if}
             <section class="methods-titles">
@@ -188,55 +166,10 @@
         </section>
       {/each}
     {/if}
-  </article>
-</main>
+      </section>
+</section>
 
 <style>
-
-  :root {
-    --vtDarkBlue: #090940;
-    --vtLightBlue: #67c5d1;
-    --vtYellow: #feb51e;
-    --vtRed: #f96c4f;
-    --vtWhite: #ffffff;
-    
-    --vtDarkBlue-80: #3a3a66;
-    --vtDarkBlue-50: #6b6b8c;
-    --vtDarkBlue-30: #9d9db3;
-    --vtDarkBlue-10: #ceced9;
-
-    --vtLightBlue-80: #85d1da;
-    --vtLightBlue-50: #a4dce3;
-    --vtLightBlue-30: #c2e8ed;
-    --vtLightBlue-10: #e1f3f6;
-
-    --vtYellow-80: #fec44b;
-    --vtYellow-50: #fed378;
-    --vtYellow-30: #ffe1a5;
-    --vtYellow-10: #fff0d2;
-
-    --vtRed-80: #fa8972;
-    --vtRed-50: #fba795;
-    --vtRed-30: #fdc4b9;
-    --vtRed-10: #fee2dc;
-
-    --vtGrey-80: #c0beb9;
-    --vtGrey-50: #e0dedc;
-    --vtGrey-10: #f9f8f8;
-
-    --vtSec-Red: #af1301;
-    --vtSec-Red-30: #fbc5b4;
-    --vtSec-Green: #169861;
-    --vtSec-Green-30: #63c09f;
-    --vtSec-LightBlue: #4fbbc2;
-    --vtSec-DarkBlue: #31439c;
-    --vtSec-Brown: #8b3a00;
-    --vtSec-Orange: #fe6f07;
-
-    --vtPrimaryFont: "rigid-square", sans-serif;
-    --vtSecondaryFont: "yrsa", serif;
-  }
-
   .line {
     text-transform: uppercase;
     background-color: var(--vtYellow);
