@@ -96,6 +96,7 @@
   </ul>
 </section>
 
+
 <section class="categories">
   <section class="categories-container">
     <ul class="categorie-names">
@@ -140,13 +141,12 @@
                   type="image/webp"
                   srcset={method.template.url}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-    
                 />
                 <img
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-           
+
                 />
               </picture>
             {:else}
@@ -154,7 +154,7 @@
                 class={method.categories[0].title.replaceAll(" ", "-")}
                 src="/placeholder.webp"
                 alt="Placeholder"
-   
+
               />
             {/if}
             <section class="methods-titles">
