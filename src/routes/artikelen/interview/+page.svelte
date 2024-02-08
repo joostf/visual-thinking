@@ -1,5 +1,7 @@
 <script>
   import Header from "$lib/molecules/header.svelte";
+  import Footer from "$lib/molecules/footer.svelte";
+
 </script>
 
 <Header />
@@ -191,6 +193,8 @@
     </p>
   </section>
 </main>
+
+<Footer />
 
 <style>
   main {
