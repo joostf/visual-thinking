@@ -3,26 +3,27 @@
 </script>
 
 <section>
-<a href={page}>
-  <button>Lees meer</button>
-</a>
+  <a href={page}>Lees meer</a>
 </section>
 
 <style>
-  button {
+  section {
+    text-align: center; 
+  }
+
+  a {
+    font-size: 14px;
     background-color: var(--vtDarkBlue);
     color: var(--vtWhite);
     font-family: var(--vtPrimaryFont);
-    border-radius: 0.5em;
-    list-style: none;
-    border: none;
-    margin: 1em;
-    padding: 1em;
-    margin-top: 0em;
-    margin-left: 8em;
+    display: inline-block; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
   }
 
-  button:hover {
+  a:hover {
     background-color: var(--vtRed);
   }
 </style>

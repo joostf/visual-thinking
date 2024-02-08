@@ -1,7 +1,6 @@
 <script>
   import BlogButton from "./blogButton.svelte";
-  import BlogButton2 from "./blogButton2.svelte";
-  import BlogButton3 from "./blogButton3.svelte";
+
   export let data;
 </script>
 
