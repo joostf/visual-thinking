@@ -1,10 +1,10 @@
 <header>
-    <section>
+    <section >
         <h4 class="line">Over</h4>
     </section>
 </header>
 
-<main>
+<article>
     <h1>Over het platform</h1>
 
     <section>
@@ -35,20 +35,38 @@
             In de mini-cursussen worden de basisprincipes van ‘visual thinking’
             uitgelegd en wordt verwezen naar andere visual thinkers en bronnen.
         </p>
-        <em>Concept en onderzoek:</em> Charley Muhren<br />
-        <em>Design research, interaction- en webdesign:</em> Elias Poolman
-        <br />
-        <em>Visuele identiteit en webdesign:</em> Ramon Boers <br />
-        <em>Webdevelopment:</em> t.b.a.
+        <p>
+            <em>Concept en onderzoek:</em> Charley Muhren<br />
+            <em>Design research, interaction- en webdesign:</em> Elias Poolman<br />
+            <em>Visuele identiteit en webdesign:</em> Ramon Boers<br />
+            <em>Webdevelopment:</em> t.b.a.
+        </p>
     </section>
-</main>
+</article>
+
+
 
 <style>
-    main {
+    article {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .line {
+        text-transform: uppercase;
+        background-color: var(--vtSec-DarkBlue);
+        color: var(--vtWhite);
+        font-family: var(--vtPrimaryFont);
+        font-size: 0.9rem;
+        padding-left: 18.5%;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        margin-top: 0%;
+        width: 100vw;
+        display: flex;
+        align-items: center;
     }
 
     h1 {
@@ -74,21 +92,6 @@
         color: var(--vtDarkBlue);
     }
 
-    .line {
-        text-transform: uppercase;
-        background-color: var(--vtSec-DarkBlue);
-        color: var(--vtWhite);
-        font-family: var(--vtPrimaryFont);
-        font-size: 0.9rem;
-        padding-left: 18.5%;
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
-        margin-top: 0%;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-    }
-
     /* tablet */
     @media (min-width: 31em) and (max-width: 55em) {
         section {
@@ -107,8 +110,6 @@
         section {
             width: 77%;
         }
-        .line {
-            padding-left: 14.5%;
-        }
+
     }
 </style>
