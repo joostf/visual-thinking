@@ -81,3 +81,11 @@
     font-family: var(--vtPrimaryFont);
     margin-top: -1rem;
   }
+
+  h1, h2, h3 {
+    font-family:var(--vtPrimaryFont);
+  }
+
+  p{
+    font-family:var(--vtSecondaryFont) ;
+  }
