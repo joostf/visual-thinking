@@ -71,63 +71,85 @@
   <ul class="slide">
     <li class="categorie-name">
       <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
+      <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"
+        >Onderzoeken en begrijpen</a
+      >
     </li>
     <li class="categorie-name">
       <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
+      <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"
+        >Organiseren en plannen</a
+      >
     </li>
     <li class="categorie-name">
       <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
+      <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"
+        >Leren over anderen</a
+      >
     </li>
     <li class="categorie-name">
       <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
+      <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"
+        >Leren over jezelf</a
+      >
     </li>
     <li class="categorie-name">
       <img src="/communiceren.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
+      <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"
+        >Communiceren en presenteren</a
+      >
     </li>
     <li class="categorie-name">
       <img src="/creatief.svg" alt="" class="img-categorie" />
-      <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
+      <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"
+        >Creatief denken</a
+      >
     </li>
   </ul>
 </section>
-
 
 <section class="categories">
   <section class="categories-container">
     <ul class="categorie-names">
       <li class="categorie-name">
         <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
+        <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"
+          >Onderzoeken en begrijpen</a
+        >
       </li>
       <li class="categorie-name">
         <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
+        <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"
+          >Organiseren en plannen</a
+        >
       </li>
       <li class="categorie-name">
         <img src="/leren-over-anderen.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
+        <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"
+          >Leren over anderen</a
+        >
       </li>
       <li class="categorie-name">
         <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
+        <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"
+          >Leren over jezelf</a
+        >
       </li>
       <li class="categorie-name">
         <img src="/communiceren.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
+        <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"
+          >Communiceren en presenteren</a
+        >
       </li>
       <li class="categorie-name">
         <img src="/creatief.svg" alt="" class="img-categorie" />
-        <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
+        <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"
+          >Creatief denken</a
+        >
       </li>
     </ul>
   </section>
 </section>
-
 
 <section class="tekenmethodes-main">
   <section class="methods">
@@ -146,7 +168,6 @@
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
                   class={method.categories[0].title.replaceAll(" ", "-")}
-
                 />
               </picture>
             {:else}
@@ -154,7 +175,6 @@
                 class={method.categories[0].title.replaceAll(" ", "-")}
                 src="/placeholder.webp"
                 alt="Placeholder"
-
               />
             {/if}
             <section class="methods-titles">
@@ -164,10 +184,29 @@
         </section>
       {/each}
     {/if}
-      </section>
+  </section>
 </section>
 
 <style>
+  .intro1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+        font-size: 3.157rem;
+        font-family: var(--vtPrimaryFont);
+        text-align: center;
+        color: var(--vtDarkBlue);
+    }
+
+    .intro-text1 {
+        width: 80%;
+        
+    }
+
   .line {
     text-transform: uppercase;
     background-color: var(--vtYellow);
@@ -254,6 +293,7 @@
     text-transform: none;
     line-height: 1.5rem;
     width: 80%;
+    margin-bottom: 40px;
   }
 
   .arrows {
@@ -318,16 +358,28 @@
 
   .intro {
     display: grid;
-    grid: ". intro ." 1fr / 1fr 5fr 1fr;
-    gap: 8px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 75px;
+    grid: ". intro ." 1fr / 0.75fr 3fr 0.75fr;
+    gap: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
 
   .intro-text {
     grid-area: intro;
-    min-width: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro-text h1 {
+    font-size: 3.157rem;
+    position: relative;
+    justify-content: center;
+  }
+
+  .intro-text {
+    grid-area: intro;
+    /* min-width: 0em; */
   }
 
   .intro-text h1 {
@@ -367,12 +419,13 @@
     height: 0px;
     overflow: hidden;
     transition: height 0.4s ease;
+    margin-top: -2em;
   }
 
   .slide li {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
   }
 
   .img-categorie {
@@ -388,15 +441,14 @@
   }
 
   .categories-mobile span {
-    padding: 30px;
+    padding: 20px;
     background: var(--vtGrey);
     color: var(--vtDarkBlue);
-    font-size: 1.2em;
+    font-size: 20px;
     cursor: pointer;
     display: block;
     font-family: var(--vtPrimaryFont);
     font-weight: 800;
-    font-size: 16px;
   }
 
   #touch {
@@ -475,34 +527,6 @@
       padding-left: 9% !important;
     }
 
-    /*---TEKENMETHODES---*/
-
-    .intro {
-      display: grid;
-      grid: ". intro ." 1fr / 0.75fr 3fr 0.75fr;
-      gap: 8px;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      margin-bottom: 75px;
-    }
-
-    .intro-text {
-      grid-area: intro;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .intro-text h1 {
-      font-size: 3.157rem;
-      position: relative;
-      justify-content: center;
-    }
-
-    .intro-text p {
-      font-size: 20px;
-    }
-
     /*---CATEGORIEEN---*/
 
     .categories-mobile {
@@ -511,8 +535,9 @@
 
     .categories {
       display: grid !important;
-      grid: ". category ." 1fr / 1fr 4fr 1fr;
-      margin-bottom: 50px;
+      grid: ". category ." 2fr / 1fr 6fr 1fr;
+
+      /* margin-bottom: 50px; */
     }
 
     .categories-container {
@@ -524,14 +549,17 @@
       color: var(--vtDarkBlue);
       font-family: var(--vtPrimaryFont);
       font-size: 20px !important;
-      padding-left: 40px !important;
+      /* padding-left: 40px !important; */
+      gap: 20px;
     }
 
     .categorie-names li {
       display: flex;
       align-items: center;
+      /* justify-content:center; */
       padding-bottom: 0px;
       list-style: none;
+      width: 100%;
       flex: 0 0 calc(33.33% - 60px);
       margin-bottom: 1em;
     }
@@ -539,6 +567,8 @@
     .categorie-names {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      padding: inherit;
     }
 
     .categorien {
@@ -619,7 +649,6 @@
       font-size: 18px;
       padding-left: 20px;
       padding-right: 1em;
-      margin-left: -1.5em;
     }
 
     /*---METHODS---*/
@@ -710,7 +739,6 @@
       font-size: 18px;
       padding-left: 20px;
       padding-right: 1em;
-      margin-left: -1.5em;
     }
   }
 

@@ -39,17 +39,14 @@
           </a>
         </li>
       </ul>
+
+      <h4 class="copy">© Charley Muhren, 2022</h4>
     </div>
   </nav>
 </section>
 
 <style>
-  :root {
-    --vtPrimaryFont: "rigid-square", sans-serif;
-    --vtSecondaryFont: "yrsa", serif;
-    --vtDarkBlue: #090940;
-  }
-
+  
   .footer {
     background-color: rgb(240, 240, 240);
     font-family: var(--vtPrimaryFont);
@@ -58,7 +55,6 @@
     line-height: 1.6;
     text-align: center;
   }
-
  
   .social-media {
     list-style: none;
@@ -83,11 +79,9 @@
     align-items: center;
   }
 
-
-
   ul {
     margin-left: -20px;
-  }
+    }
 
   li {
     list-style-type: none;
@@ -97,6 +91,11 @@
     margin-left: 5px;
     font-size: 14px;
     color: #555;
+  }
+
+  .copy{
+    margin: 26.6px;
+    font-size: 14px;
   }
 
   .icon {

@@ -52,11 +52,9 @@
   </section>
 </section>
 
-
 <style>
-
-    /* line in header */
-    .line {
+  /* line in header */
+  .line {
     text-transform: uppercase;
     background-color: var(--vtSec-LightBlue);
     color: var(--vtWhite);
@@ -72,10 +70,10 @@
     align-items: center;
   }
 
-  .lineintro{
+  /* .lineintro{
     border-top:1px solid var(--vtDarkBlue) ;
     width: 35rem;
-  }
+  } */
 
   /* Header styling */
   h1 {
@@ -122,16 +120,16 @@
   }
 
   /* clips */
-  .clips-container {
+  /* .clips-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 3.3em;
     background-color: var(--vtGrey-10);
-  }
+  } */
 
   /* buttons */
-  button {
+  /* button {
     background-color: transparent;
     border: transparent;
     padding: 2em;
@@ -145,7 +143,7 @@
   .left-arrow {
     cursor: pointer;
     transform: rotate(180deg);
-  }
+  } */
 
   /* responsive clips */
   iframe {
@@ -155,8 +153,6 @@
     transition: opacity 0.3s ease-in;
   }
 
-  
-
   /* tablet */
   @media (min-width: 31em) and (max-width: 55em) {
     .line {
@@ -164,7 +160,7 @@
     }
 
     h1 {
-      font-size: 2.1em !important; 
+      font-size: 2.1em !important;
     }
 
     p {
@@ -180,13 +176,12 @@
     }
 
     h1 {
-      font-size: 1.157em !important
+      font-size: 1.157em !important;
     }
 
     p {
       padding-left: 2rem;
       padding-right: 2rem;
-
     }
 
     button {
