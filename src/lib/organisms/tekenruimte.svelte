@@ -88,9 +88,9 @@
   });
 </script>
 
-<section>
+<header>
   <h4 class="line">Tekenruimte</h4>
-</section>
+</header>
 
 <main>
   <div class="labeltekst">
@@ -120,13 +120,11 @@
     color: var(--vtWhite);
     font-family: var(--vtPrimaryFont);
     font-size: 0.9rem;
-    padding-left: 18.5%;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-left: 9%;
     margin-top: 0%;
-    width: 100vw;
     display: flex;
     align-items: center;
+    height: 30px;
   }
 
   h2 {
