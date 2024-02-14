@@ -4,46 +4,52 @@
 </script>
 
 <!-- INTRO DATA - CONTENT -->
-{#each data.introTeksts as intro}
-  <h1 class="introtitel">{intro.title}</h1>
-  <p class="introtext">{intro.description.text}</p>
-{/each}
+<section class="intro">
+  {#each data.introTeksts as intro}
+    <h1 class="introtitel2">{intro.title}</h1>
+    <p class="introtext2">{intro.description.text}</p>
+  {/each}
+</section>
 
 <!-- BORDERS - BUTTON - ARTIKELEN DATA - CONTENT -->
-<section>
+<section class="grid">
   {#each data.artikelenHomepages as artikelenHomepages}
     <article>
       <img src={artikelenHomepages.img.url} alt="artikelen" />
       <h2>{artikelenHomepages.title}</h2>
-      <p>{artikelenHomepages.description}</p>
+      <p class="text">{artikelenHomepages.description}</p>
 
-      <BlogButton page="/artikelen/{artikelenHomepages.pageName}"/>
+      <BlogButton page="/artikelen/{artikelenHomepages.pageName}" />
     </article>
-    {/each}
+  {/each}
 </section>
 
 <style>
   /* MOBILE - STYLING */
   /* INTRO - STYLING */
-  .introtitel {
-    margin-left: 0em;
-    font-size: 3.157rem;
+
+  /* Center the intro section with a max width of 700px */
+  .intro {
+    max-width: 700px;
+    width: 77%;
+    margin: 0 auto;
   }
 
-  .introtext {
-    font-size: 19px;
-    margin-bottom: -1em;
+  /* Style for intro text */
+  .introtitel2 {
+    font-size: 1.7rem;
+    text-align: center;
   }
 
   /* BORDER - CONTENT - STYLING */
-  section {
+  .grid {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     justify-items: center;
-    padding: 10%;
+    padding: 40px;
     justify-content: center;
-    padding-bottom: 1em;
+    margin-bottom: 40px;
     gap: 2em;
   }
 
@@ -61,7 +67,7 @@
     border-top-left-radius: 1em;
   }
 
-  h1, h2 {
+  h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     line-height: 1.2em;
@@ -74,7 +80,7 @@
     align-items: end;
   }
 
-  p {
+  .text {
     font-family: var(--vtSecondaryFont);
     font-size: 17px;
     line-height: 1.5em;
@@ -83,78 +89,38 @@
     height: 26%;
   }
 
-  /* MEDIA QUERY */
   /* TABLET - STYLING */
-  @media screen and (min-width: 760px) {
-    .introtitel {
-      margin-left: 3em;
+  @media screen and (min-width: 768px) {   
+     .intro {
+      max-width: 700px;
+      width: 80%;
+    }
+
+    .introtitel2{
       font-size: 3.157rem;
     }
 
-    .introtext {
-      width: 45%;
-      margin-left: 5em;
-      margin-bottom: -4em;
-      
-    }
-
-    section {
+    .grid {
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 1em;
+      margin-bottom: 40px;
       max-width: fit-content;
       margin: auto;
     }
   }
 
-  /* TABLET - STYLING */
-  @media screen and (min-width: 600px) {
-    .introtitel {
-      margin-left: 0.5em;
-      font-size: 3.157rem;
-    }
-
-    .introtext {
-      width: 55%;
-      margin-left: 3em;
-      margin-bottom: -2em;
-    }
-  }
-
   /* DESKTOP - STYLING */
-  @media screen and (min-width: 1280px) {
-    .introtitel {
-      margin-left: 2em;
-      font-size: 3.157rem;
-      max-width: 35rem;
+  @media screen and (min-width: 1120px) {
+    .intro {
+      max-width: 700px;
+      width: 80%;
     }
 
-    .introtext {
-      width: 38%;
-      margin-left: 9em;
-    }
-
-    section {
+    .grid {
       grid-template-columns: 1fr 1fr 1fr;
       padding-left: 7em;
       padding-right: 7em;
-      margin-top: -4em;
-    }
-  }
-
-  /* GROTERSCHREM - DESKTOP - STYLING */
-  @media screen and (min-width: 2280px) {
-    .introtitel {
-      margin-left: 18.1em;
-    }
-
-    .introtext {
-      width: 23%;
-      margin-left: 29em;
-    }
-
-    section {
-      gap: 8em;
-      margin-top: -8em;
+      margin-bottom: 40px;
+  
     }
   }
 </style>
