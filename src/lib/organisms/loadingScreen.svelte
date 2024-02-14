@@ -226,8 +226,8 @@
         overflow: hidden;
         height: 100vh;
         pointer-events: none;
-        animation: float 3s forwards;
-        animation-delay: 2500ms;
+        animation: float 2s forwards;
+        animation-delay: 2200ms;
         z-index: 1000;
     }
 
