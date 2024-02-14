@@ -92,15 +92,18 @@
   <h4 class="line">Tekenruimte</h4>
 </header>
 
-<main>
-  <div class="labeltekst">
-    <h2>Teken hier!</h2>
+<section>
+  <div class="titel">
+    <h1>Teken hier!</h1>
   </div>
-  <p class="disclaimer"><span class="attention">Let op:</span> Deze functie is momenteel in een experimentele fase</p>
-  
-    <section class="container">
+  <p class="disclaimer">
+    <span class="attention">Let op:</span> Deze functie is momenteel in een experimentele
+    fase
+  </p>
+
+  <section class="container">
     <div id="toolbar">
-      <h3>Tekentools</h3>
+      <h2>Tekentools</h2>
       <label for="stroke">Kleur</label>
       <input id="stroke" name="stroke" type="color" />
       <label for="lineWidth">Pen dikte:</label>
@@ -111,9 +114,10 @@
       <canvas id="drawing-board" />
     </div>
   </section>
-</main>
+</section>
 
 <style>
+
   .line {
     text-transform: uppercase;
     background-color: var(--vtGrey-80);
@@ -127,22 +131,25 @@
     height: 30px;
   }
 
+  h1 {
+    color: var(--vtDarkBlue);
+  }
+
   h2 {
-    font-size: 2.369rem;
+    font-size: 30px;
   }
 
-  .disclaimer{
-    text-align: center; 
+  .disclaimer {
+    text-align: center;
   }
 
-  .attention{
+  .attention {
     color: red;
   }
 
-  .labeltekst {
+  .titel {
     font-family: var(--vtPrimaryFont);
     margin: auto 0;
-    margin-top: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,8 +157,12 @@
   .container {
     font-family: var(--vtPrimaryFont);
     justify-items: center;
-    padding-bottom: 2em;
+    padding-bottom: 40px;
     width: 100vw;
+  }
+
+  label{
+    font-size: small;
   }
 
   .drawing-board {
@@ -286,7 +297,7 @@
       padding-left: 20%;
     }
 
-    .labeltekst {
+    .titel {
       font-family: var(--vtPrimaryFont);
       margin: auto 0;
       display: flex;
@@ -335,17 +346,21 @@
       padding-left: 11%;
     }
 
-    .inputComponent {
-      display: none;
+    h1 {
+      font-size: 1.7rem;
     }
 
-    .labeltekst {
+    h2 {
+      font-size: 25px;
+    }
+
+    .titel {
       font-family: var(--vtPrimaryFont);
       margin: auto 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 2em;
+      /* margin-top: 2em; */
       margin-left: 0em;
     }
 
