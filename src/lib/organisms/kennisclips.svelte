@@ -70,66 +70,35 @@
     align-items: center;
   }
 
-  /* .lineintro{
-    border-top:1px solid var(--vtDarkBlue) ;
-    width: 35rem;
-  } */
-
   /* Header styling */
   h1 {
     font-size: 3.157rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
-    line-height: 3rem;
     text-align: center;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-family: var(--vtPrimaryFont);
-    line-height: 1.5rem;
-    color: var(--vtDarkBlue);
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    font-family: var(--vtSecondaryFont);
-    line-height: 1.5rem;
-  }
-
-  .bold {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.5rem;
   }
 
   /* Kennisclip teksten */
   p {
-    text-align: left;
     line-height: 1.5rem;
     font-family: var(--vtSecondaryFont);
-    font-size: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40em;
+    margin: 0 auto;
+    max-width: 700px;
     text-transform: none;
     padding-bottom: 3em;
   }
 
   /* clips */
-  /* .clips-container {
+  .clips-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 3.3em;
     background-color: var(--vtGrey-10);
-  } */
+  }
 
   /* buttons */
-  /* button {
+  button {
     background-color: transparent;
     border: transparent;
     padding: 2em;
@@ -143,7 +112,7 @@
   .left-arrow {
     cursor: pointer;
     transform: rotate(180deg);
-  } */
+  }
 
   /* responsive clips */
   iframe {
@@ -164,8 +133,7 @@
     }
 
     p {
-      padding-left: 2.5em;
-      padding-right: 2.5em;
+      width: 80%;
     }
   }
 
@@ -180,8 +148,7 @@
     }
 
     p {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      width: 77%;
     }
 
     button {
