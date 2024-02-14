@@ -6,8 +6,7 @@
 </script>
 
 <Header />
-
-<section>
+   <section>
     <a href="/tekenmethodes">
         <p class="line">
             <img class="arrows-line" src="/arrows.svg" alt="" />
@@ -16,8 +15,8 @@
     </a>
 </section>
 
-<main class="detail-main">
-    <section class="navmain">
+<section class="detail-section">
+    <section class="navsection">
         <section>
             <h1 class="h1-detail">
                 {#each data.methods as method}
@@ -26,57 +25,45 @@
             </h1>
         </section>
 
-        {#each data.methods as method}
-            <nav>
-                <ul>
+        <nav>
+            <ul>
+                {#each data.methods as method}
                     <li>
                         <h2 class="bold">Beschrijving</h2>
                     </li>
-                    <a href="/tekenmethodes/{method.slug}/stappenplan">
-                        <li>
+                    <li>
+                        <a href="/tekenmethodes/{method.slug}/stappenplan">
                             <h2 class="h2-detail">Stappenplan</h2>
-                        </li>
-                    </a>
-                    <a href="/tekenmethodes/{method.slug}/voorbeelden">
-                        <li>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tekenmethodes/{method.slug}/voorbeelden">
                             <h2 class="h2-detail">Voorbeelden</h2>
-                        </li>
-                      </a>
-                </ul>
-            </nav>
-        {/each}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
+        </nav>
     </section>
 
     <div class="section-wrapper">
-    <section class="flex-b">
-        {#each data.methods as method}
-            <img class="template-url" src={method?.template?.url} alt="" />
-        {/each}
-
-        <h3 class="text">
+        <section class="flex-b">
             {#each data.methods as method}
-                {@html method?.description.html}
+                <img class="template-url" src={method?.template?.url} alt="" />
             {/each}
-        </h3>
-    </section>
-  </div>
-</main>
+
+            <h3 class="text">
+                {#each data.methods as method}
+                    {@html method?.description.html}
+                {/each}
+            </h3>
+        </section>
+    </div>
+  </section>
 
 <Footer />
 
 <style>
-  :root {
-    --vtGrey-80: #c0beb9;
-    --vtGrey-50: #e0dedc;
-    --vtGrey-10: #f9f8f8;
-  }
-
-  .page {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   #methodes-line {
     margin-left: 0.7em;
   }
@@ -97,16 +84,7 @@
   .h1-detail {
     padding-left: 6.7rem;
     margin-top: 2em;
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
-    /* white-space: nowrap; */
-    /* hyphens: auto; */
   }
-
-  /* .h1-detail:hover {
-    white-space: unset;
-    text-overflow: unset;
-  } */
 
   .h2-detail,
   .bold {
@@ -135,14 +113,14 @@
     color: var(--vtWhite);
   }
 
-  .navmain ul {
+  .navsection ul {
     display: flex;
     align-items: center;
     list-style: none;
     
   }
 
-  .navmain li {
+  .navsection li {
     padding: 0.6rem;
     font-size: 1rem;
 
@@ -151,7 +129,7 @@
     font-weight: bolder;
   }
 
-  .navmain {
+  .navsection {
     display: flex;
     justify-content: space-between;
     background-color: var(--vtGrey-10);
@@ -159,13 +137,13 @@
     margin-bottom: -1rem;
   }
 
-  .navmain li {
+  .navsection li {
     color: var(--vtSec-DarkBlue);
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
   }
 
-  .navmain ul {
+  .navsection ul {
     padding-right: 4rem;
   }
 
@@ -280,7 +258,7 @@
     box-shadow: 1px 1px 10px 5px rgb(244, 244, 244);
   }
 
-  .detail-main {
+  .detail-section {
     margin: 2rem 0;
   }
 

@@ -1,7 +1,5 @@
 <script>
   import BlogButton from "./blogButton.svelte";
-  import BlogButton2 from "./blogButton2.svelte";
-  import BlogButton3 from "./blogButton3.svelte";
   export let data;
 </script>
 
@@ -18,6 +16,7 @@
       <img src={artikelenHomepages.img.url} alt="artikelen" />
       <h2>{artikelenHomepages.title}</h2>
       <p>{artikelenHomepages.description}</p>
+
       <BlogButton page="/artikelen/{artikelenHomepages.pageName}"/>
     </article>
     {/each}

@@ -1,5 +1,8 @@
 <script>
   import Header from "$lib/molecules/header.svelte";
+  import Footer from "$lib/molecules/footer.svelte";
+
+  
   export let data;
   console.log(data.artikel.artikelen[2]);
   let artikel = data.artikel.artikelen;
@@ -33,6 +36,8 @@
     {/each}
   {/each}
 </main>
+
+<Footer />
 
 <style>
   main {

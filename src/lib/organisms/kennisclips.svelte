@@ -19,13 +19,13 @@
   </section>
 </header>
 
-<main>
+<section>
   <section class="clips-container">
-    <button on:click={previousButton}
-      ><img
+    <button on:click={previousButton} aria-label="Vorige Video">
+      <img
         class="left-arrow"
         src="./arrows_black.svg"
-        alt="Knop met pijl naar volgende video"
+        alt="Knop met pijl naar vorige video"
         loading="lazy"
       />
     </button>
@@ -36,8 +36,8 @@
       src={data.categories[index].youTubeLink}
     ></iframe>
 
-    <button on:click={nextButton}
-      ><img
+    <button on:click={nextButton} aria-label="Volgende Video">
+      <img
         class="right-arrow"
         src="./arrows_black.svg"
         alt="Knop met pijl naar volgende video"
@@ -50,54 +50,30 @@
     <h1>{data.categories[index].title}</h1>
     <p>{@html data.categories[index].content.html}</p>
   </section>
-</main>
+</section>
 
 <style>
-  :root {
-    /* Visual Thinking: Primary Colors: Zie kleuren styleguide of eventueel Figma designs voor gebruik! */
-
-    --vtDarkBlue: #090940;
-    --vtLightBlue: #67c5d1;
-    --vtYellow: #feb51e;
-    --vtRed: #f96c4f;
-    --vtWhite: #ffffff;
-
-    /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik!  */
-
-    --vtDarkBlue-80: #3a3a66;
-    --vtDarkBlue-50: #6b6b8c;
-    --vtDarkBlue-30: #9d9db3;
-    --vtDarkBlue-10: #ceced9;
-
-    --vtLightBlue-80: #85d1da;
-    --vtLightBlue-50: #a4dce3;
-    --vtLightBlue-30: #c2e8ed;
-    --vtLightBlue-10: #e1f3f6;
-
-    --vtYellow-80: #fec44b;
-    --vtYellow-50: #fed378;
-    --vtYellow-30: #ffe1a5;
-    --vtYellow-10: #fff0d2;
-
-    --vtRed-80: #fa8972;
-    --vtRed-50: #fba795;
-    --vtRed-30: #fdc4b9;
-    --vtRed-10: #fee2dc;
-
-    --vtGrey-80: #c0beb9;
-    --vtGrey-50: #e0dedc;
-    --vtGrey-10: #f9f8f8;
-
-    --vtPrimaryFont: "rigid-square", sans-serif;
-    --vtSecondaryFont: "yrsa", serif;
+  /* line in header */
+  .line {
+    text-transform: uppercase;
+    background-color: var(--vtSec-LightBlue);
+    color: var(--vtWhite);
+    font-family: var(--vtPrimaryFont);
+    font-size: 0.9rem;
+    padding-left: 9%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0%;
+    width: 100vw;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
   }
 
-  body {
-    padding: 0;
-    overflow-x: hidden;
-    text-align: center;
-  }
+  /* .lineintro{
+    border-top:1px solid var(--vtDarkBlue) ;
+    width: 35rem;
+  } */
 
   /* Header styling */
   h1 {
@@ -144,38 +120,16 @@
   }
 
   /* clips */
-  .clips-container {
+  /* .clips-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 3.3em;
     background-color: var(--vtGrey-10);
-  }
-
-  /* line in header */
-  .line {
-    text-transform: uppercase;
-    background-color: var(--vtSec-LightBlue);
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
-    padding-left: 9%;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    margin-top: 0%;
-    width: 100vw;
-    display: flex;
-    margin-bottom: 0;
-    align-items: center;
-  }
-
-  .lineintro{
-    border-top:1px solid var(--vtDarkBlue) ;
-    width: 35rem;
-  }
+  } */
 
   /* buttons */
-  button {
+  /* button {
     background-color: transparent;
     border: transparent;
     padding: 2em;
@@ -189,7 +143,7 @@
   .left-arrow {
     cursor: pointer;
     transform: rotate(180deg);
-  }
+  } */
 
   /* responsive clips */
   iframe {
@@ -199,8 +153,6 @@
     transition: opacity 0.3s ease-in;
   }
 
-  
-
   /* tablet */
   @media (min-width: 31em) and (max-width: 55em) {
     .line {
@@ -208,7 +160,7 @@
     }
 
     h1 {
-      font-size: 2.1em !important; 
+      font-size: 2.1em !important;
     }
 
     p {
@@ -224,13 +176,12 @@
     }
 
     h1 {
-      font-size: 1.157em !important
+      font-size: 1.157em !important;
     }
 
     p {
       padding-left: 2rem;
       padding-right: 2rem;
-
     }
 
     button {
