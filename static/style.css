@@ -86,6 +86,19 @@
     font-family:var(--vtPrimaryFont);
   }
 
-  p{
+  p {
     font-family:var(--vtSecondaryFont) ;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 3.157rem;
+  }
+
+  h2 {
+    font-size: 2.369rem;
+  }
+
+  h3 {
+    font-size: 1.777rem;
   }
