@@ -38,9 +38,9 @@
   }
 </script>
 
-<section>
+<header>
   <h4 class="line">Tekenmethodes</h4>
-</section>
+</header>
 
 <section class="intro">
   <article class="intro-text">
@@ -188,26 +188,10 @@
 </section>
 
 <style>
-  .intro1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 5rem;
-  }
-
-  h1 {
-        font-size: 3.157rem;
-        font-family: var(--vtPrimaryFont);
-        text-align: center;
-        color: var(--vtDarkBlue);
-    }
-
-    .intro-text1 {
-        width: 80%;
-        
-    }
-
+  /* Header */
   .line {
+    display: flex;
+    height: 30px;
     text-transform: uppercase;
     background-color: var(--vtYellow);
     color: var(--vtWhite);
@@ -215,10 +199,40 @@
     font-size: 0.9rem;
     padding-left: 9%;
     margin-top: 0%;
-    display: flex;
-    height: 30px;
   }
 
+  h1 {
+    font-size: 3.157rem;
+    font-family: var(--vtPrimaryFont);
+    color: var(--vtDarkBlue);
+    text-align: center;
+  }
+
+  h2 {
+    color: var(--vtDarkBlue);
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-family: var(--vtPrimaryFont);
+    line-height: 1.5rem;
+    color: var(--vtDarkBlue);
+  }
+
+  /* Intro Styling */
+  .intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Link Styling */
   a {
     text-decoration: none;
     cursor: pointer;
@@ -229,105 +243,18 @@
     color: var(--vtDarkBlue);
   }
 
+  /* Image Styling */
   .img {
     width: 290px;
     height: 210px;
   }
 
-  h2 {
-    font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
-    line-height: 1.5rem;
-    color: var(--vtDarkBlue);
-  }
-
-  .h1-detail {
-    padding-left: 6.7rem;
-    max-width: 30rem;
-    max-height: 6rem;
-  }
-
-  .h2-detail,
-  .bold {
-    font-size: 1rem;
-    font-weight: 400;
-
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtSec-DarkBlue);
-  }
-
-  .bold {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.5rem;
-  }
-
-  .text,
-  .template-url {
-    margin-top: 3rem;
-  }
-
-  .text {
-    padding-top: 1.5rem;
-    max-width: 35rem;
-    font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
-    color: var(--vtSec-DarkBlue);
-  }
-
-  h4 {
-    font-size: 1rem;
-    font-family: var(--vtPrimaryFont);
-    line-height: 1.5rem;
-    color: var(--vtDarkBlue);
-  }
-
-  p {
-    font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
-    text-transform: uppercase;
-  }
-
-  .lowercase {
-    text-transform: none;
-    line-height: 1.5rem;
-    width: 80%;
-    margin-bottom: 40px;
-  }
-
+  /* Arrow Stling */
   .arrows {
     margin-bottom: -7%;
   }
 
-  .about-text,
-  .about {
-    display: grid;
-    justify-items: center;
-  }
-
-  .about,
-  .about2 {
-    width: 60%;
-  }
-
-  .arrows-line {
-    width: 1%;
-    transform: rotate(180deg);
-  }
-
-  .icon {
-    width: 6.5%;
-    height: 94.5%;
-  }
-
-  .columntag {
-    display: flex;
-    margin-left: -0.8rem;
-  }
-
-  /*---CATEGORIEEN---*/
-
+  /* Category Styling */
   .categorien {
     display: flex;
     flex-direction: column;
@@ -340,54 +267,25 @@
     margin: 2em 2.05em;
   }
 
-  .view-method {
-    display: none;
-  }
-
-  /*---TEKENMETHODES---*/
-
+  /* teken Methods Styling */
   .tekenmethodes-main {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-left: 8em;
+    margin-top: 40px;
   }
 
-  /*---INTRO---*/
+  /* P tag styling  */
 
-  .intro {
-    display: grid;
-    grid: ". intro ." 1fr / 0.75fr 3fr 0.75fr;
-    gap: 10px;
-    padding-top: 20px;
+  .lowercase {
+    line-height: 1.5rem;
     margin-bottom: 20px;
   }
 
-  .intro-text {
-    grid-area: intro;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .intro-text h1 {
-    font-size: 3.157rem;
-    position: relative;
-    justify-content: center;
-  }
-
-  .intro-text {
-    grid-area: intro;
-    /* min-width: 0em; */
-  }
-
-  .intro-text h1 {
-    margin-bottom: 20px;
-  }
-
-  /*---DROPDOWN MENU---*/
-
+  /* Dropdown Menu Styling */
   .categories {
     display: none;
   }
@@ -425,19 +323,14 @@
   .slide li {
     display: flex;
     align-items: center;
-    padding: 20px;
-  }
-
-  .img-categorie {
-    float: left;
-    left: 10%;
+    padding: 10px;
   }
 
   .categories-mobile {
     width: 100%;
     background: var(--vtGrey);
     margin: 10px auto;
-    margin-bottom: 75px;
+    margin-bottom: 20px;
   }
 
   .categories-mobile span {
@@ -461,29 +354,22 @@
     height: auto;
   }
 
-  /*---METHODS---*/
-
+  /* Methods Styles */
   .methods {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .method-container img {
     width: 300px;
-    border: 2px solid;
-    border-color: var(--vtGrey-50);
   }
 
   .methods-titles {
     width: 90%;
     margin-top: -0.7em;
-    margin-bottom: 1.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    hyphens: auto;
   }
 
   .methods-titles:hover {
@@ -495,55 +381,31 @@
     margin: 2rem 0;
   }
 
-  /*---METHOD CATEGORY COLORS---*/
-
-  .Leren-over-jezelf-en-reflecteren {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  .Leren-over-anderen {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  .Creatief-denken {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  .Organiseren-en-plannen {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  .Communcieren-en-presenteren {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  .Onderzoeken-en-begrijpen {
-    border-color: var(--vtSec-DarkBlue) !important;
-  }
-
-  /*---RESPONSIVE DESKTOP---*/
+  /*------------ RESPONSIVE DESKTOP --------------*/
   @media (min-width: 68em) {
+    /* Aanpassen padding voor de .line-klasse */
     .line {
       padding-left: 9% !important;
     }
 
-    /*---CATEGORIEEN---*/
-
+    /* Verbergen van het mobiele categoriemenu */
     .categories-mobile {
       display: none;
     }
 
+    /* Weergeven van het grid voor de categorieënsectie */
     .categories {
       display: grid !important;
       grid: ". category ." 2fr / 1fr 6fr 1fr;
-
       /* margin-bottom: 50px; */
     }
 
+    /* Aanpassen van het gridgebied voor de categorieëncontainer */
     .categories-container {
       grid-area: category;
     }
 
+    /* Stijl voor links binnen lijstitems */
     li a {
       text-decoration: none;
       color: var(--vtDarkBlue);
@@ -553,24 +415,29 @@
       gap: 20px;
     }
 
+    /* Stijl voor lijstitems binnen de categorieën */
     .categorie-names li {
       display: flex;
       align-items: center;
+      /* Eventueel uitlijnen van het centrum van de inhoud */
       /* justify-content:center; */
-      padding-bottom: 0px;
       list-style: none;
       width: 100%;
       flex: 0 0 calc(33.33% - 60px);
-      margin-bottom: 1em;
+      margin-bottom: 2em;
     }
 
+    /* Stijl voor de categorieëncontainer */
     .categorie-names {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       padding: inherit;
+      /* Eventueel margineer de onderkant met 40px */
+      /* margin-bottom: 40px; */
     }
 
+    /* Stijl voor het categorieëngrid */
     .categorien {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -581,25 +448,20 @@
       align-items: center;
     }
 
-    .img-categorie {
-      float: left;
-      left: 10%;
-      margin-top: -1em;
-    }
-
+    /* Stijl voor de lagere sectie */
     .lower {
       margin: 3em 0;
     }
 
-    /*---METHODS---*/
-
+    /* Stijlen voor de tekenmethoden sectie */
     .tekenmethodes-main {
       display: grid;
       grid: ". methods ." 1fr / 0.75fr 3fr 0.75fr;
       grid-auto-flow: dense;
-      margin-bottom: 100px;
+      margin-bottom: 40px;
     }
 
+    /* Stijlen voor het methoden-grid */
     .methods {
       grid-area: methods;
       display: grid;
@@ -607,24 +469,31 @@
       grid-gap: 25px;
     }
 
+    /* Stijlen voor de afbeeldingen in de methoden */
     .methods img {
       width: 100%;
       height: auto;
-      border: 1px solid;
-      border-color: var(--vtGrey-50);
+      border: 1px solid var(--vtDarkBlue);
     }
 
+    /* Stijlen voor de titels in de methoden */
     .methods-titles h2 {
       font-family: var(--vtPrimaryFont);
-      font-size: 24px;
+      font-size: 20px;
       color: var(--vtDarkBlue);
-      width: 80%;
     }
   }
 
-  /*---RESPONSIVE TABLET GROOT---*/
+  /*------------ RESPONSIVE TABLET GROOT --------------*/
   @media (min-width: 45em) {
-    /*---CATEGORIEEN---*/
+    /* Aanpassen van de breedte voor intro tekst 2 */
+    .intro-text {
+      width: 80%;
+    }
+    .line {
+      padding-left: 20%;
+    }
+    /*---CATEGORIEËN---*/
     .categorien {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -634,32 +503,37 @@
       margin: 0 2.05rem;
     }
 
+    /* Aanpassen van marges voor categorie items */
     .categorie {
       margin: 0;
     }
 
+    /* Verbergen van het categorieënmenu */
     .categories {
       display: none;
     }
 
+    /* Aanpassen van stijl voor links binnen lijstitems */
     li a {
       text-decoration: none;
       color: var(--vtDarkBlue);
       font-family: var(--vtPrimaryFont);
       font-size: 18px;
       padding-left: 20px;
-      padding-right: 1em;
+      /* Eventueel aanpassen van rechter padding */
+      /* padding-right: 1em; */
     }
 
-    /*---METHODS---*/
-
+    /*---METHODEN---*/
     .tekenmethodes-main {
       display: grid;
       grid: ". methods ." 1fr / 0.5fr 3fr 0.5fr;
       grid-auto-flow: dense;
-      margin-bottom: 100px;
+      margin-bottom: 40px;
+      margin-left: 0em;
     }
 
+    /* Aanpassen van het grid voor methoden sectie */
     .methods {
       grid-area: methods;
       display: grid;
@@ -667,23 +541,31 @@
       grid-gap: 25px;
     }
 
+    /* Aanpassen van stijl voor afbeeldingen in methoden */
     .methods img {
       width: 100%;
       height: auto;
-      border: 1px solid;
-      border-color: var(--vtGrey-50);
+      border: 1px solid var(--vtDarkBlue);
     }
   }
 
-  /*---RESPONSIVE TABLET MINI---*/
+  /*------------ RESPONSIVE TABLET MINI --------------*/
   @media (min-width: 31em) {
-    .view-method {
-      display: flex;
-      font-weight: bold;
-      flex-direction: column;
-      margin-top: 0.83em;
+    /* Aanpassen van stijl voor kop in intro tekst 2 */
+    .intro-text h1 {
+      /* font-size: 1.7rem; */
+      text-align: center;
     }
 
+    /* Aanpassen van de breedte voor intro tekst 2 */
+    .intro-text {
+      width: 80%;
+    }
+    .line {
+      padding-left: 20%;
+    }
+
+    /* Aanpassen van stijl voor arrow */
     .arrow-down {
       width: 15px;
       float: right;
@@ -691,20 +573,12 @@
       margin-top: -2.2em;
     }
 
-    h1 {
-      font-size: 2.369rem;
-      font-family: var(--vtPrimaryFont);
-      color: var(--vtDarkBlue);
+    /* Aanpassen van stijl voor afbeeldingen in methoden */
+    .methods img {
+      border: 1px solid var(--vtDarkBlue);
     }
 
-    .content {
-      padding: 0 50px;
-    }
-
-    .toggler {
-      display: none;
-    }
-
+    /* Aanpassen van stijl voor navigatie-lijstitems */
     nav ul li {
       display: inline-block;
       padding-right: 30px;
@@ -713,41 +587,35 @@
       font: var(--vtMenuFont);
     }
 
-    .account {
-      padding-left: 30px;
-      padding-bottom: 15px;
-    }
-
-    .tekenmethodes-main {
-      margin-left: 0em;
-    }
-
-    .line {
+    /* Aanpassen van de marge voor de .line-klasse */
+    /* .line {
       padding-left: 20%;
-    }
+    } */
 
-    /*---DROPDOWN---*/
-
+    /* Verbergen van het dropdownmenu */
     .categories {
       display: none;
     }
 
+    /* Aanpassen van stijl voor links binnen lijstitems */
     li a {
       text-decoration: none;
       color: var(--vtDarkBlue);
       font-family: var(--vtPrimaryFont);
       font-size: 18px;
       padding-left: 20px;
-      padding-right: 1em;
     }
   }
 
-  /*---RESPONSIVE MOBILE---*/
+  /*------------ RESPONSIVE  MOBILE --------------*/
   @media (max-width: 31em) {
-    h1 {
-      font-size: 1.157rem;
-      font-family: var(--vtPrimaryFont);
-      color: var(--vtDarkBlue);
+    .intro-text {
+      width: 77%;
+    }
+
+    .intro-text h1 {
+      font-size: 1.7rem;
+      text-align: center;
     }
 
     .arrow-down {
@@ -760,5 +628,15 @@
     .line {
       padding-left: 11%;
     }
+
+    .methods img {
+      border: 1px solid var(--vtDarkBlue);
+    }
+
+    .slide {
+      margin-top: 0px;
+      padding-left: 10px;
+    }
+
   }
 </style>
