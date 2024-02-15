@@ -33,161 +33,106 @@
 
 <Header />
 
-<body class="page">
-  <section>
-    <a href="/tekenmethodes">
-      <p class="line">
-        <img class="arrows-line" src="/arrows.svg" alt="" />
-        Overzicht <strong id="methodes-line">tekenmethodes</strong>
-      </p>
-    </a>
-  </section>
+<section>
+  <a href="/tekenmethodes">
+    <p class="line">
+      <img class="arrows-line" src="/arrows.svg" alt="" />
+      Overzicht <strong id="methodes-line">tekenmethodes</strong>
+    </p>
+  </a>
+</section>
 
-  <main class="detail-main">
-    <section class="navmain">
-      <section>
-        <h1 class="h1-detail">
-          {#each data.methods as method}
-            {method.title}
-          {/each}
-        </h1>
-      </section>
-
-      {#each data.methods as method}
-        <nav>
-          <ul>
-            <a href="/tekenmethodes/{method.slug}">
-              <li>
-                <h2 class="h2-detail">Beschrijving</h2>
-              </li>
-            </a>
-            <li>
-              <h2 class="bold">Stappenplan</h2>
-            </li>
-            <a href="/tekenmethodes/{method.slug}/voorbeelden">
-              <li>
-                <h2 class="h2-detail">Voorbeelden</h2>
-              </li>
-            </a>
-          </ul>
-        </nav>
-      {/each}
+<main class="detail-main">
+  <section class="navmain">
+    <section>
+      <h1 class="h1-detail">
+        {#each data.methods as method}
+          {method.title}
+        {/each}
+      </h1>
     </section>
 
     {#each data.methods as method}
-      <img class="template-url" src={method?.template?.url} alt="" />
+      <nav>
+        <ul>
+          <a href="/tekenmethodes/{method.slug}">
+            <li>
+              <h2 class="h2-detail">Beschrijving</h2>
+            </li>
+          </a>
+          <li>
+            <h2 class="bold">Stappenplan</h2>
+          </li>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">
+            <li>
+              <h2 class="h2-detail">Voorbeelden</h2>
+            </li>
+          </a>
+        </ul>
+      </nav>
     {/each}
+  </section>
 
-    <section class="flex-s">
-      <section class="full-b">
-        <section class="tags-b">
-          <img class="icon" src="/icon1.svg" alt="" />
-          {#each data.methods as method}
-            {#each method.categories as category}
-              <h2 class="tag">
-                {@html category.title}
-              </h2>
-            {/each}
+  {#each data.methods as method}
+    <img class="template-url" src={method?.template?.url} alt="" />
+  {/each}
+
+  <section class="flex-s">
+    <section class="full-b">
+      <section class="tags-b">
+        <img class="icon" src="/icon1.svg" alt="" />
+        {#each data.methods as method}
+          {#each method.categories as category}
+            <h2 class="tag">
+              {@html category.title}
+            </h2>
           {/each}
-        </section>
+        {/each}
+      </section>
 
-        <section class="tags-b">
-          <img class="icon" src="/icon2.svg" alt="" />
-          <h2 class="tag">
-            {#each data.methods as method}
-              {method.material}
-            {/each}
-          </h2>
-        </section>
-
-        <section class="tags-b">
-          <img class="icon" src="/icon3.svg" alt="" />
-          <h2 class="tag">
-            {#each data.methods as method}
-              {method.duration}
-            {/each}
-          </h2>
-        </section>
-
-        <section class="tags-b">
-          <img class="icon" src="/icon4.svg" alt="" />
-          <h2 class="tag">Charley Muhren</h2>
-        </section>
-
-        <section class="steps">
+      <section class="tags-b">
+        <img class="icon" src="/icon2.svg" alt="" />
+        <h2 class="tag">
           {#each data.methods as method}
-            {#each method.steps as step}
-              <p class="step-title">{step.title}</p>
-              {#if typeof step.description === "object"}
-                <p class="step-description">{@html step.description.html}</p>
-              {:else}
-                <p>{step.description}</p>
-              {/if}
-            {/each}
+            {method.material}
           {/each}
-        </section>
+        </h2>
+      </section>
+
+      <section class="tags-b">
+        <img class="icon" src="/icon3.svg" alt="" />
+        <h2 class="tag">
+          {#each data.methods as method}
+            {method.duration}
+          {/each}
+        </h2>
+      </section>
+
+      <section class="tags-b">
+        <img class="icon" src="/icon4.svg" alt="" />
+        <h2 class="tag">Charley Muhren</h2>
+      </section>
+
+      <section class="steps">
+        {#each data.methods as method}
+          {#each method.steps as step}
+            <p class="step-title">{step.title}</p>
+            {#if typeof step.description === "object"}
+              <p class="step-description">{@html step.description.html}</p>
+            {:else}
+              <p>{step.description}</p>
+            {/if}
+          {/each}
+        {/each}
       </section>
     </section>
-  </main>
-</body>
+  </section>
+</main>
+
 
 <Footer />
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .page {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  :root {
-    --vtDarkBlue: #090940;
-    --vtLightBlue: #67c5d1;
-    --vtYellow: #feb51e;
-    --vtRed: #f96c4f;
-    --vtWhite: #ffffff;
-    
-    --vtDarkBlue-80: #3a3a66;
-    --vtDarkBlue-50: #6b6b8c;
-    --vtDarkBlue-30: #9d9db3;
-    --vtDarkBlue-10: #ceced9;
-
-    --vtLightBlue-80: #85d1da;
-    --vtLightBlue-50: #a4dce3;
-    --vtLightBlue-30: #c2e8ed;
-    --vtLightBlue-10: #e1f3f6;
-
-    --vtYellow-80: #fec44b;
-    --vtYellow-50: #fed378;
-    --vtYellow-30: #ffe1a5;
-    --vtYellow-10: #fff0d2;
-
-    --vtRed-80: #fa8972;
-    --vtRed-50: #fba795;
-    --vtRed-30: #fdc4b9;
-    --vtRed-10: #fee2dc;
-
-    --vtGrey-80: #c0beb9;
-    --vtGrey-50: #e0dedc;
-    --vtGrey-10: #f9f8f8;
-
-    --vtSec-Red: #af1301;
-    --vtSec-Red-30: #fbc5b4;
-    --vtSec-Green: #169861;
-    --vtSec-Green-30: #63c09f;
-    --vtSec-LightBlue: #4fbbc2;
-    --vtSec-DarkBlue: #31439c;
-    --vtSec-Brown: #8b3a00;
-    --vtSec-Orange: #fe6f07;
-
-    --vtPrimaryFont: "rigid-square", sans-serif;
-    --vtSecondaryFont: "yrsa", serif;
-  }
 
   h1 {
     font-size: 3.157rem;

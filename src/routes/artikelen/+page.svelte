@@ -8,8 +8,6 @@
 </script>
 
 <Header />
-
-
 <Blog/>
 <BlogBorder data={data}/>
 <Footer />

@@ -4,63 +4,54 @@
     </section>
 </header>
 
-<main>
+<article>
     <section class="grid-container">
-        <section class="hex1" />
-
-        <section class="h3-hex1">
-            <a href="/minicursussen/structuur-en-kleur">
-                <h3>
-                    <em>Structuur en kleur</em>
-                </h3>
-                <img src="/arrows.svg" alt="" />
-            </a>
-        </section>
-
-        <section class="hex2" />
-
-        <section class="h3-hex2">
-            <a href="/minicursussen/basisvormen">
-                <h3>
-                    <em>Basisvormen</em>
-                </h3>
-                <img src="/arrows.svg" alt="" />
-            </a>
-        </section>
-
-        <section class="h1">
-            <h1>Minicursussen</h1>
-        </section>
-
-        <section class="h2">
-            <h2>
-                Maak een keuze uit een <br /> van de vier minicursussen
-            </h2>
-        </section>
-
-        <section class="hex3" />
-
-        <section class="h3-hex3">
-            <a href="/minicursussen/mensen-tekenen">
-                <h3>
-                    <em>Mensen tekenen</em>
-                </h3>
-                <img src="/arrows.svg" alt="" />
-            </a>
-        </section>
-
-        <section class="hex4" />
-
-        <section class="h3-hex4">
-            <a href="/minicursussen/handlettering">
-                <h3>
-                    <em>Handlettering</em>
-                </h3>
-                <img src="/arrows.svg" alt="" />
-            </a>
-        </section>
+      <section class="hex1"></section>
+  
+      <section class="h3-hex1">
+        <a href="/minicursussen/structuur-en-kleur">
+          <h3><em>Structuur en kleur</em></h3>
+          <img src="/arrows.svg" alt="" />
+        </a>
+      </section>
+  
+      <section class="hex2"></section>
+  
+      <section class="h3-hex2">
+        <a href="/minicursussen/basisvormen">
+          <h3><em>Basisvormen</em></h3>
+          <img src="/arrows.svg" alt="" />
+        </a>
+      </section>
+  
+      <section class="h1">
+        <h1>Minicursussen</h1>
+      </section>
+  
+      <section class="h2">
+        <h2>Maak een keuze uit een <br /> van de vier minicursussen</h2>
+      </section>
+  
+      <section class="hex3"></section>
+  
+      <section class="h3-hex3">
+        <a href="/minicursussen/mensen-tekenen">
+          <h3><em>Mensen tekenen</em></h3>
+          <img src="/arrows.svg" alt="" />
+        </a>
+      </section>
+  
+      <section class="hex4"></section>
+  
+      <section class="h3-hex4">
+        <a href="/minicursussen/handlettering">
+          <h3><em>Handlettering</em></h3>
+          <img src="/arrows.svg" alt="" />
+        </a>
+      </section>
     </section>
-</main>
+  </article>
+  
 
 <style>
     .grid-container {
@@ -87,7 +78,6 @@
     .h3-hex3,
     .h3-hex4 {
         color: var(--vtWhite);
-
         z-index: 1;
         display: grid;
         text-align: center;
