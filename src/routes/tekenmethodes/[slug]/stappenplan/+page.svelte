@@ -36,7 +36,7 @@
 <header>
   <a href="/tekenmethodes">
     <h4 class="line">
-      <img class="arrows-line" src="/arrows.svg" alt="" />Overzicht
+      <img class="arrows-line" src="/arrows.svg" alt="terug naar overzicht arrow button" />Overzicht
     </h4>
   </a>
 </header>
@@ -260,11 +260,10 @@
     border: 2px solid var(--vtDarkBlue);
   }
 
-
   /* tags styling */
 
   .tag {
-    background-color: var(--vtYellow);
+    background-color: var(--vtYellow-80);
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
     font-size: 0.9rem;
@@ -279,7 +278,6 @@
     width: 50px;
     height: 55px;
   }
-
 
   /* Accordion styling */
 
@@ -297,7 +295,7 @@
   }
 
   .step-title:hover {
-    background-color: var(--vtYellow);
+    background-color: var(--vtYellow-80);
     color: black;
   }
 
@@ -315,7 +313,6 @@
   /* ----------------------------------------------- DESKTOP */
 
   @media (min-width: 68em) {
-    /* Aanpassen padding voor de .line-klasse */
     .line {
       padding-left: 9% !important;
     }
@@ -345,7 +342,6 @@
       margin-bottom: 10px;
     }
 
-
     /* Accordion  */
 
     .grid {
@@ -362,19 +358,6 @@
     overflow: hidden;
   }
 
-  .step-title {
-    background-color: var(--vtDarkBlue);
-    color: var(--vtWhite);
-    padding: 10px;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .step-title:hover {
-    background-color: var(--vtYellow);
-    color: black;
-  }
-
   .accordion-content {
     padding: 10px;
     background-color: #fff;
@@ -388,8 +371,6 @@
 
   /*------------------------------------------------------- RESPONSIVE TABLET GROOT ----*/
   @media (min-width: 45em) {
-    /* Aanpassen van de breedte voor intro tekst 2 */
-
     h1 {
       padding-top: 25px;
       font-size: 3.157rem;
@@ -402,8 +383,6 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
-
-
   }
 
   /*-------------------------------------------------------- RESPONSIVE TABLET MINI ---*/
@@ -424,8 +403,6 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
-
-
   }
 
   /*-------------------------------------------------------------- RESPONSIVE MOBILE --*/
@@ -448,7 +425,5 @@
       margin-top: -34px;
       margin-bottom: 30px;
     }
-
-
   }
 </style>
