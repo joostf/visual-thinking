@@ -79,7 +79,6 @@
   blockquote {
     color: var(--vtSec-Orange);
     font-family: var(--vtPrimaryFont);
-    margin-top: -1rem;
   }
 
   h1, h2, h3 {

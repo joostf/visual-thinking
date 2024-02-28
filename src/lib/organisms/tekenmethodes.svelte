@@ -210,6 +210,7 @@
 
   h2 {
     color: var(--vtDarkBlue);
+    max-width: 15rem;
     font-size: 20px;
   }
 
@@ -298,13 +299,9 @@
     padding-left: 20px;
   }
 
-  li a:hover {
-    color: var(--vtLightBlue);
-  }
 
-  li a:active {
-    color: var(--vtDarkBlue);
-    font-weight: 600;
+  li a:hover{
+    font-weight: 800;
   }
 
   .active {
@@ -586,11 +583,6 @@
       color: var(--vtDarkBlue);
       font: var(--vtMenuFont);
     }
-
-    /* Aanpassen van de marge voor de .line-klasse */
-    /* .line {
-      padding-left: 20%;
-    } */
 
     /* Verbergen van het dropdownmenu */
     .categories {
