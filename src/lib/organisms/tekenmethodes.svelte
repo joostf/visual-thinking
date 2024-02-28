@@ -210,6 +210,7 @@
 
   h2 {
     color: var(--vtDarkBlue);
+    max-width: 15rem;
     font-size: 20px;
   }
 

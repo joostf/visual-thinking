@@ -13,21 +13,21 @@
   // Voer code uit na het renderen van de component
   onMount(() => {
     // Selecteer het element met de class 'carousel-list'
-    const track = document.querySelector('.carousel-list');
+    const track = document.querySelector(".carousel-list");
 
     // Maak een array van slides uit de children van het 'track'-element
     const slides = Array.from(track.children);
 
     // Selecteer de knoppen voor vorige en volgende slides
-    const nextButton = document.querySelector('.carousel-button-right');
-    const prevButton = document.querySelector('.carousel-button-left');
+    const nextButton = document.querySelector(".carousel-button-right");
+    const prevButton = document.querySelector(".carousel-button-left");
 
     // Bepaal de breedte van een slide
     const slideWidth = slides[0].getBoundingClientRect().width;
 
     // Functie om de positie van een slide in te stellen op basis van de index
     const setSlidePosition = (slide, index) => {
-      slide.style.left = slideWidth * index + 'px';
+      slide.style.left = slideWidth * index + "px";
     };
 
     // Stel de positie in voor elke slide
@@ -35,14 +35,14 @@
 
     // Functie om naar een specifieke slide te verplaatsen
     const moveToSlide = (currentSlide, targetSlide) => {
-      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-      currentSlide.classList.remove('current-slide');
-      targetSlide.classList.add('current-slide');
+      track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+      currentSlide.classList.remove("current-slide");
+      targetSlide.classList.add("current-slide");
     };
 
     // Voeg een eventlistener toe aan de knop voor vorige slide
-    prevButton.addEventListener('click', () => {
-      const currentSlide = track.querySelector('.current-slide');
+    prevButton.addEventListener("click", () => {
+      const currentSlide = track.querySelector(".current-slide");
       const prevSlide = currentSlide.previousElementSibling;
 
       if (prevSlide) {
@@ -51,8 +51,8 @@
     });
 
     // Voeg een eventlistener toe aan de knop voor volgende slide
-    nextButton.addEventListener('click', () => {
-      const currentSlide = track.querySelector('.current-slide');
+    nextButton.addEventListener("click", () => {
+      const currentSlide = track.querySelector(".current-slide");
       const nextSlide = currentSlide.nextElementSibling;
 
       if (nextSlide) {
@@ -62,120 +62,110 @@
   });
 </script>
 
-
 <Header />
 
-<section>
+<header>
   <a href="/tekenmethodes">
-    <p class="line">
-      <img class="arrows-line" src="/arrows.svg" alt="" />
-      Overzicht <strong id="methodes-line">tekenmethodes</strong>
-    </p>
+    <h4 class="line">
+      <img class="arrows-line" src="/arrows.svg" alt="arrow-icon" />Overzicht
+    </h4>
   </a>
-</section>
+</header>
 
-<main class="detail-main">
-  <section class="navmain">
-    <section>
-      <h1 class="h1-detail">
-        {#each data.methods as method}
-          {method.title}
-        {/each}
-      </h1>
-    </section>
-
-    {#each data.methods as method}
-      <nav>
-        <ul>
-          <a href="/tekenmethodes/{method.slug}">
-            <li>
-              <h2 class="h2-detail">Beschrijving</h2>
-            </li>
-          </a>
-          <a href="/tekenmethodes/{method.slug}/stappenplan">
-            <li>
-              <h2 class="h2-detail">Stappenplan</h2>
-            </li>
-          </a>
-          <li>
-            <h2 class="bold">Voorbeelden</h2>
-          </li>
-        </ul>
-      </nav>
-    {/each}
+<section class="nav-items">
+  <section>
+    <h1>
+      {#each data.methods as method}
+        {method.title}
+      {/each}
+    </h1>
   </section>
 
-  <section class="carousel">
+  <nav>
+    <ul>
+      {#each data.methods as method}
+        <li>
+          <a href="/tekenmethodes/{method.slug}">
+            <h2>Beschrijving</h2>
+          </a>
+        </li>
+        <li>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">
+            <h2>Stappenplan</h2>
+          </a>
+        </li>
+        <li>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">
+            <h2 class="bottom">Voorbeelden</h2>
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
+  
+</section>
+
+<section class="carousel">
+  {#if data.methods.some((method) => method.examples.length > 0)}
     <button class="carousel-button-left">
       <img src="/arrow.svg" alt="" />
     </button>
-    <section class="carousel-container">
-      <ul class="carousel-list">
-        {#each data.methods as method}
-        {#each method.examples as example}
-          <li class="carousel-slide current-slide">
-            <!-- <img class="carousel-img-blur" src={example.url} alt="" /> -->
-            <img class="carousel-img" src={example.url} alt="" />
-          </li>
-        {/each}
-        {/each}
-      </ul>
-    </section>
-
-  <button class="carousel-button-right">
+  {/if}
+  <section class="carousel-container">
+    <ul class="carousel-list">
+      {#each data.methods as method}
+        {#if method.examples.length > 0}
+          {#each method.examples as example}
+            <li class="carousel-slide current-slide">
+              <img class="carousel-img" src={example.url} alt="" />
+            </li>
+          {/each}
+        {:else}
+          <li class="Missing-pic">Geen voorbeelden op dit moment</li>
+        {/if}
+      {/each}
+    </ul>
+  </section>
+  {#if data.methods.some((method) => method.examples.length > 0)}
+    <button class="carousel-button-right">
       <img src="/arrows_black.svg" alt="" />
     </button>
-  </section>
-</main>
+  {/if}
+</section>
 
 <Footer />
 
 <style>
-  :root {
-    --vtGrey-80: #c0beb9;
-    --vtGrey-50: #e0dedc;
-    --vtGrey-10: #f9f8f8;
+  .line {
+    display: flex;
+    height: 30px;
+    text-transform: uppercase;
+    background-color: var(--vtYellow);
+    color: var(--vtWhite);
+    font-family: var(--vtPrimaryFont);
+    font-size: 0.9rem;
+    padding-left: 9%;
+    margin-top: 0%;
+    align-items: center;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  h1 {
-    font-size: 3.157rem;
+  .Missing-pic {
+    font-size: 2rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
+    text-align: center;
+    /* margin-top: 0; */
   }
 
-  h2 {
-    font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
-    line-height: 1.5rem;
-    color: var(--vtDarkBlue);
+  nav {
+    margin-bottom: 83px;
   }
 
-  .h1-detail {
-    padding-left: 6.7rem;
-    max-height: 6rem;
-    margin-top: -0.5em;
-  }
 
-  .h2-detail,
-  .bold {
-    font-size: 1rem;
-    font-weight: 400;
-
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtSec-DarkBlue);
-  }
-
-  .bold {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.5rem;
+  .nav-items {
+    margin-top: -34px;
+    margin-bottom: 30px;
+    background-color: var(--vtGrey-10);
   }
 
   a {
@@ -184,71 +174,48 @@
     color: var(--vtWhite);
   }
 
-  .navmain ul {
+  ul {
+    justify-content: center;
+    overflow-y: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  a {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  nav ul {
     display: flex;
     align-items: center;
-
     list-style: none;
   }
 
-  .navmain li {
-    padding: 0.6rem;
-    font-size: 1rem;
-
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-    font-weight: bolder;
-  }
-
-  .navmain {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--vtGrey-10);
-    margin-top: -2em;
-    margin-bottom: -1rem;
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-  }
-
-  .navmain li {
-    color: var(--vtSec-DarkBlue);
+  nav li {
+    padding-right: 10px;
+    padding-left: 10px;
+    /* font-size: 1rem; */
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
   }
 
-  .navmain ul {
-    padding-right: 4rem;
-  }
-
   h1 {
+    /* background-color: var(--vtGrey); */
     font-size: 3.157rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
+    text-align: center;
   }
 
   h2 {
-    font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
-    line-height: 1.5rem;
-    color: var(--vtDarkBlue);
-  }
-
-  .h1-detail {
-    padding-left: 6.7rem;
-    /* max-width: 40rem; */
-    max-height: 6rem;
-  }
-
-  .h2-detail,
-  .bold {
-    font-size: 1rem;
-    font-weight: 400;
-
-    font-family: var(--vtPrimaryFont);
     color: var(--vtSec-DarkBlue);
+    font-family: var(--vtPrimaryFont);
+    font-size: 20px;
+    font-weight: 100;
   }
 
-  .bold {
+  .bottom {
     font-weight: 800;
     text-decoration: underline;
     text-decoration-thickness: 0.2rem;
@@ -271,46 +238,51 @@
     background: var(--vtYellow);
   }
 
-  .line {
-    background-color: var(--vtSec-DarkBlue);
-    color: var(--vtWhite);
-
-    text-transform: uppercase;
-    font-family: var(--vtPrimaryFont);
-    font-size: 0.75rem;
-
-    padding-left: 7rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-  }
-
-  .line img {
-    margin-right: 0.5rem;
-  }
-
   .arrows-line {
-    width: 20px;
+    width: 36px;
+    margin-right: 5px;
     transform: rotate(180deg);
   }
 
-    /*---DESKTOP---*/
-    @media (min-width: 68em) {
+  /*------------------------------------------------ DESKTOP ---*/
+  @media (min-width: 68em) {
+    .line {
+      padding-left: 9% !important ;
+    }
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: -24px !important;
+      margin-bottom: 30px;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      max-height: fit-content;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav ul {
+      margin-top: -1px;
+    }
+
     .carousel-container {
-    height: 100%;
-    margin-top: 5em;
+      height: 100%;
+      margin-top: 5em;
     }
 
-    #methodes-line {
-    margin-left: 0.7em;
+    .Missing-pic {
+      font-size: 2rem;
+      font-family: var(--vtPrimaryFont);
+      color: var(--vtDarkBlue);
+      text-align: center;
+      margin-top: 0rem;
+    }
   }
-    }
 
-
-  /*---CAROUSEL---*/
+  /* CAROUSEL */
   .carousel {
     position: relative;
     height: 27.5rem;
@@ -342,7 +314,6 @@
     top: 0;
     bottom: 0;
     width: 100%;
-
     display: flex;
     justify-content: center;
   }
@@ -356,7 +327,6 @@
     cursor: pointer;
     z-index: 1;
     padding: 0.5rem;
-
   }
 
   .carousel-button-left:active,
@@ -385,73 +355,21 @@
     width: 25px;
   }
 
-  .carousel-img-blur {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(0.2rem);
-    position: absolute;
-}
+  /*-------------------------------------------------------  TABLET GROOT ---*/
 
-  .detail-main {
-    margin: 2rem 0;
-  }
-
-  /*---TABLET---*/
-  @media (min-width: 31em) and (max-width: 68em) {
+  @media (min-width: 45em) {
     .line {
-      padding-left: 2rem;
+      padding-left: 20%;
     }
 
-    #methodes-line {
-    margin-left: 0.7em;
-  }
-
-    .h1-detail {
-      padding-left: 2rem;
-
+    .nav-items {
+      margin-bottom: 30px;
+      /* height: 20rem; */
     }
 
-    h1 {
-      font-size: 2rem;
-    }
-
-    .navmain {
-      background-color: var(--vtGrey-10);
-      margin-top: -2em;
-    }
-
-    nav::-webkit-scrollbar {
-      display: none;
-    }
-
-    nav {
-      display: block !important;
-      position: relative;
-      width: auto;
-      float: right;
-      padding: 5px 0;
-
-      width: auto;
-      float: left;
-      margin-top: 2.5em;
-      margin-left: -11.5em;
-      padding: 5px 0;
-
-      overflow-x: scroll;
-      white-space: nowrap;
-    }
-
-    nav ul {
-      float: left;
-    }
-
-    nav ul li {
-      display: inline-block;
-      padding-right: 30px;
-      padding-top: 5px;
-      color: var(--vtDarkBlue);
-      font: var(--vtMenuFont);
+    .nav-items {
+      margin-top: -63px;
+      margin-bottom: 30px;
     }
 
     .carousel-button-right {
@@ -465,49 +383,65 @@
     }
 
     .carousel-container {
-    margin-top: 6em;
-    height: 50%;
-    position: relative;
-    overflow: hidden;
-  }
-  }
-
-  /*---MOBILE---*/
-  @media (max-width: 31em) {
-    .line {
-      padding-left: 2rem;
+      margin-top: 6em;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
     }
-
-    #methodes-line {
-    margin-left: 0.7em;
   }
 
-    .h1-detail {
-      padding-left: 2rem;
+  /*----------------------------------------- RESPONSIVE TABLET MINI ----*/
+  @media (min-width: 31em) {
+    .line {
+      padding-left: 20%;
     }
 
     h1 {
-      font-size: 2rem;
+      padding-top: 25px;
     }
 
-    nav {
-      width: auto;
-      float: left;
-      margin-top: 4.5em;
-      margin-left: -11em;
-      padding: 5px 0;
-
-      overflow-x: scroll;
-      white-space: nowrap;
+    ul {
+      transform: translateY(0);
     }
 
-    .navmain {
-      background-color: var(--vtGrey-10);
-      margin-top: -2em;
+    .nav-items {
+      margin-top: -63px;
+      margin-bottom: 30px;
     }
 
-    nav::-webkit-scrollbar {
-      display: none;
+    .carousel-button-right {
+      margin-right: 1rem;
+      margin-top: -12.5em;
+    }
+
+    .carousel-button-left {
+      margin-left: 1rem;
+      margin-top: -12.5em;
+    }
+
+    .carousel-container {
+      margin-top: 6em;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  /*------------------------------------ MOBILE---*/
+  @media (max-width: 31em) {
+    .line {
+      padding-left: 11%;
+    }
+
+    ul {
+      transform: translateY(0);
+
+      justify-content: flex-start;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      padding-top: 25px;
     }
 
     .carousel-button-right {
@@ -522,19 +456,13 @@
       z-index: 2;
     }
 
-    .carousel-img-blur {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(0.2rem);
-    position: absolute;
-    }
-
     .carousel-container {
       margin-top: 5em;
-    height: 50%;
-    position: relative;
-    overflow: hidden;
-  }
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+
   }
 </style>
