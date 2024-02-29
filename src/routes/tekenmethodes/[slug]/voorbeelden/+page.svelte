@@ -183,7 +183,7 @@
 
   nav ul {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     list-style: none;
   }
 
@@ -194,6 +194,7 @@
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
   }
+
 
   h1 {
     /* background-color: var(--vtGrey); */
@@ -232,7 +233,7 @@
   }
 
   /*------------------------------------------------ DESKTOP ---*/
-  @media (min-width: 68em) {
+  @media (min-width: 74em) {
     .line {
       padding-left: 9% !important ;
     }
@@ -249,8 +250,8 @@
 
     h1 {
       margin-top: auto;
-      padding-left: 9% !important;
       margin-bottom: 30px;
+      text-align: start;
       max-width: 800px;
     }
 
@@ -258,6 +259,8 @@
       display: flex;
       list-style: none;
     }
+
+   
 
     .carousel-container {
       height: 100%;
