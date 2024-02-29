@@ -132,7 +132,7 @@
             
             {#if step.visual[0]}
             <div class="step-visual">
-              <img src={step.visual[0].url} />
+              <img src={step.visual[0].url} alt="image_voorbeeld" />
             </div>
           {/if}
           
@@ -175,16 +175,6 @@
   }
 
   /* img binnen de steps */
-
-
-.step-visual {
-  display: inline-block;
-  justify-content: center;
-  margin-right: 10px;
-  overflow-y: auto;
-  transform: translateY(0);
-  white-space: nowrap;
-}
 
 .step-visual img {
   width: 100%;
@@ -296,7 +286,7 @@
     background-color: var(--vtYellow-80);
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.5rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
@@ -396,6 +386,10 @@
     .step-description {
       margin: 0;
     }
+
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*------------------------------------------------------- RESPONSIVE TABLET GROOT ----*/
@@ -412,6 +406,10 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
+
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*-------------------------------------------------------- RESPONSIVE TABLET MINI ---*/
@@ -432,6 +430,10 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
+
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*-------------------------------------------------------------- RESPONSIVE MOBILE --*/
@@ -440,6 +442,7 @@
       font-size: 1.7rem;
       padding-top: 25px;
     }
+
 
     .line {
       padding-left: 11%;
