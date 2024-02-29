@@ -46,21 +46,14 @@
   <article class="intro-text">
     <h1>Tekenmethodes</h1>
     <p class="lowercase">
-      Welkom op onze pagina over Visual Thinking! Visual Thinking is een super
-      toffe manier om informatie te begrijpen, te ordenen en te delen met
-      anderen door middel van plaatjes in plaats van alleen maar woorden. Dit
-      maakt het gemakkelijker om complexe ideeën te begrijpen en te delen met
-      anderen. <br />
-      <br />
-      Op deze pagina vind je verschillende Visual Thinking tekenmethodes die je kunt
-      gebruiken om je creativiteit en productiviteit te vergroten. Of je nu een student
-      bent, of gewoon geïnteresseerd bent in Visual Thinking, wij hebben de juiste
-      tools en technieken voor jou. <br />
-      <br />
-      Hier vind je ook een heleboel tips en trucs voor het gebruik van Visual Thinking
-      in je dagelijks leven en je studie. Dus waar wacht je nog op? Ontdek vandaag
-      nog de kracht van Visual Thinking en maak je ideeën visueel!
+      Visual thinking helpt bij het ordenen van informatie. Complexe ideeën
+      worden zo gemakkelijker te begrijpen en te delen met anderen. Docent en
+      onderzoeker Charley Muhren verzamelde meer dan 40 methodes om visual
+      thinking toe te passen. Deze methodes zijn hier ondergebracht zodat jij ze
+      kunt gebruiken om je creativiteit en productiviteit te vergroten. Wil je
+      meer weten over visual thinking? Heb je suggesties of vragen?
     </p>
+    <p>Neem dan contact op met Charley.</p>
   </article>
 </section>
 
@@ -282,7 +275,6 @@
   /* P tag styling  */
 
   .lowercase {
-    line-height: 1.5rem;
     margin-bottom: 20px;
   }
 
@@ -299,8 +291,7 @@
     padding-left: 20px;
   }
 
-
-  li a:hover{
+  li a:hover {
     font-weight: 800;
   }
 
@@ -629,6 +620,5 @@
       margin-top: 0px;
       padding-left: 10px;
     }
-
   }
 </style>

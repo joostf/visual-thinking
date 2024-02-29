@@ -181,9 +181,7 @@
   height: 100%;
 }
 
-  nav {
-    margin-bottom: 83px;
-  }
+
 
   ul {
     justify-content: center;
@@ -277,7 +275,7 @@
   }
 
   .template-url {
-    border: 2px solid var(--vtDarkBlue);
+    border: 1px solid var(--vtDarkBlue);
   }
 
   /* tags styling */
@@ -287,9 +285,9 @@
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
     font-size: 0.7rem;
-    padding: 0.5rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+    padding: 0.1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     margin-left: 0.8rem;
     max-width: fit-content;
   }
@@ -332,34 +330,31 @@
 
   /* ----------------------------------------------- DESKTOP */
 
-  @media (min-width: 68em) {
+  @media (min-width: 74em) {
     .line {
       padding-left: 9% !important;
     }
 
     .nav-items {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       margin-top: -24px !important;
       margin-bottom: 60px;
-      padding-left: 6rem;
-      padding-right: 6rem;
-      max-height: fit-content;
+      padding-left: 9%;
+      padding-right: 9%;
     }
 
-    nav {
-      margin-left: auto;
+    h1 {
+      margin-top: auto;
+      margin-bottom: 30px;
+      text-align: start;
+      max-width: 800px;
     }
 
-    ul {
+    nav ul {
+      display: flex;
       list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
     }
 
     /* Accordion  */

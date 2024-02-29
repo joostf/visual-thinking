@@ -80,18 +80,11 @@
     margin-top: -34px;
     margin-bottom: 30px;
     background-color: var(--vtGrey-10);
-    /* height: 15rem; */
-    /* height: 20rem; */
   }
 
   .section-wrapper {
     max-width: 700px;
     margin: 0 auto;
-  }
-
-  nav {
-    /* height: 15rem; */
-    margin-bottom: 83px;
   }
 
   ul {
@@ -122,7 +115,7 @@
 
   h1 {
     /* background-color: var(--vtGrey); */
-    font-size: 3.157rem;
+    font-size: 1.157rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     text-align: center;
@@ -174,7 +167,7 @@
 
   /*------------ RESPONSIVE DESKTOP --------------*/
 
-  @media (min-width: 68em) {
+  @media (min-width: 74em) {
     /* Aanpassen padding voor de .line-klasse */
     .line {
       padding-left: 9% !important;
@@ -182,29 +175,24 @@
 
     .nav-items {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       margin-top: -24px !important;
       margin-bottom: 60px;
-      padding-left: 6rem;
-      padding-right: 6rem;
-      max-height: fit-content;
+      padding-left: 9%;
+      padding-right: 9%;
     }
 
-
-
-    nav {
-      margin-left: auto;
+    h1 {
+      margin-top: auto;
+      margin-bottom: 30px;
+      text-align: start;
+      max-width: 800px;
     }
 
-    ul {
+    nav ul {
+      display: flex;
       list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
     }
 
     .section-wrapper {
@@ -258,6 +246,7 @@
     .section-wrapper {
       width: 77%;
     }
+
     ul {
       transform: translateY(0);
     }
@@ -284,6 +273,7 @@
     .line {
       padding-left: 11%;
     }
+
     ul {
       transform: translateY(0);
     }

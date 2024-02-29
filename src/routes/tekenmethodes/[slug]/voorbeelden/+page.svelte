@@ -157,11 +157,6 @@
     /* margin-top: 0; */
   }
 
-  nav {
-    margin-bottom: 83px;
-  }
-
-
   .nav-items {
     margin-top: -34px;
     margin-bottom: 30px;
@@ -222,20 +217,12 @@
     text-underline-offset: 0.5rem;
   }
 
-  p {
-    font-size: 0.75rem;
-    font-family: var(--vtPrimaryFont);
-    text-transform: uppercase;
-  }
-
   .carousel-button-left,
   .carousel-button-right {
     width: 72px;
     height: 66px;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     transform: rotate(90deg);
     border: none;
-    background: var(--vtYellow);
   }
 
   .arrows-line {
@@ -249,23 +236,27 @@
     .line {
       padding-left: 9% !important ;
     }
+
     .nav-items {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       margin-top: -24px !important;
-      margin-bottom: 30px;
-      padding-left: 6rem;
-      padding-right: 6rem;
-      max-height: fit-content;
+      margin-bottom: 60px;
+      padding-left: 9%;
+      padding-right: 9%;
     }
 
-    nav {
-      margin-left: auto;
+    h1 {
+      margin-top: auto;
+      padding-left: 9% !important;
+      margin-bottom: 30px;
+      max-width: 800px;
     }
 
     nav ul {
-      margin-top: -1px;
+      display: flex;
+      list-style: none;
     }
 
     .carousel-container {
@@ -322,7 +313,7 @@
   .carousel-button-right {
     position: absolute;
     top: 50%;
-    background: var(--vtYellow);
+    background: center;
     border: 0;
     cursor: pointer;
     z-index: 1;
