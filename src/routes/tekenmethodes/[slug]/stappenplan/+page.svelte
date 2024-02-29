@@ -36,7 +36,11 @@
 <header>
   <a href="/tekenmethodes">
     <h4 class="line">
-      <img class="arrows-line" src="/arrows.svg" alt="terug naar overzicht arrow button" />Overzicht
+      <img
+        class="arrows-line"
+        src="/arrows.svg"
+        alt="terug naar overzicht arrow button"
+      />Overzicht
     </h4>
   </a>
 </header>
@@ -117,13 +121,23 @@
       </section>
     </section>
   </section>
-
   <section class="steps">
+    <!-- {console.log(data)} -->
     {#each data.methods as method}
       {#each method.steps as step}
         <details class="accordion-item">
           <summary class="step-title">{step.title}</summary>
           <div class="accordion-content">
+            <!-- {#each step.visual as visual} -->
+            
+            {#if step.visual[0]}
+            <div class="step-visual">
+              <img src={step.visual[0].url} />
+            </div>
+          {/if}
+          
+            <!-- {/each} -->
+
             {#if typeof step.description === "object"}
               <p class="step-description">{@html step.description.html}</p>
             {:else}
@@ -160,8 +174,24 @@
     /* height: 15rem; */
   }
 
+  /* img binnen de steps */
+
+
+.step-visual {
+  display: inline-block;
+  justify-content: center;
+  margin-right: 10px;
+  overflow-y: auto;
+  transform: translateY(0);
+  white-space: nowrap;
+}
+
+.step-visual img {
+  width: 100%;
+  height: 100%;
+}
+
   nav {
-    /* height: 10px; */
     margin-bottom: 83px;
   }
 
@@ -284,7 +314,8 @@
   .accordion-item {
     margin-bottom: 5px;
     width: 100%;
-    overflow: hidden;  }
+    overflow: hidden;
+  }
 
   .step-title {
     background-color: var(--vtDarkBlue);
@@ -303,7 +334,6 @@
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
-
   }
 
   .step-description {
@@ -345,28 +375,27 @@
     /* Accordion  */
 
     .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-  }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
 
-  .accordion-item {
-    margin-bottom: 5px;
-    width: 100%;
-    overflow: hidden;
-  }
+    .accordion-item {
+      margin-bottom: 5px;
+      width: 100%;
+      overflow: hidden;
+    }
 
-  .accordion-content {
-    padding: 10px;
-    background-color: #fff;
-  }
+    .accordion-content {
+      padding: 10px;
+      background-color: #fff;
+    }
 
-  .step-description {
-    margin: 0;
-  }
-
+    .step-description {
+      margin: 0;
+    }
   }
 
   /*------------------------------------------------------- RESPONSIVE TABLET GROOT ----*/
