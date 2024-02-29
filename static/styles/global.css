@@ -77,6 +77,8 @@
   }
 
   blockquote {
+    margin-left: -6px;
+    margin-bottom: -24px;
     color: var(--vtSec-Orange);
     font-family: var(--vtPrimaryFont);
   }
