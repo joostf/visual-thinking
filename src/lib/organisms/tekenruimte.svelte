@@ -93,15 +93,13 @@
 </header>
 
 <section>
-  <div class="titel">
+  
+  <div class="labeltekst">
     <h1>Teken hier!</h1>
   </div>
-  <p class="disclaimer">
-    <span class="attention">Let op:</span> Deze functie is momenteel in een experimentele
-    fase
-  </p>
-
-  <section class="container">
+  <p class="disclaimer"><span class="attention">Let op:</span> Deze functie is momenteel in een experimentele fase</p>
+  
+    <section class="container">
     <div id="toolbar">
       <h2>Tekentools</h2>
       <label for="stroke">Kleur</label>
@@ -117,7 +115,6 @@
 </section>
 
 <style>
-
   .line {
     text-transform: uppercase;
     background-color: var(--vtGrey-80);
@@ -131,23 +128,25 @@
     height: 30px;
   }
 
-  h1 {
+  h1{
     color: var(--vtDarkBlue);
   }
 
-  h2 {
+  h2{
     font-size: 30px;
   }
 
-  .disclaimer {
-    text-align: center;
+
+
+  .disclaimer{
+    text-align: center; 
   }
 
-  .attention {
+  .attention{
     color: red;
   }
 
-  .titel {
+  .labeltekst {
     font-family: var(--vtPrimaryFont);
     margin: auto 0;
     display: flex;
@@ -159,10 +158,6 @@
     justify-items: center;
     padding-bottom: 40px;
     width: 100vw;
-  }
-
-  label{
-    font-size: small;
   }
 
   .drawing-board {
@@ -297,7 +292,7 @@
       padding-left: 20%;
     }
 
-    .titel {
+    .labeltekst {
       font-family: var(--vtPrimaryFont);
       margin: auto 0;
       display: flex;
@@ -346,7 +341,7 @@
       padding-left: 11%;
     }
 
-    h1 {
+    h1{
       font-size: 1.7rem;
     }
 
@@ -354,13 +349,16 @@
       font-size: 25px;
     }
 
-    .titel {
+
+
+    .labeltekst {
       font-family: var(--vtPrimaryFont);
+
       margin: auto 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      /* margin-top: 2em; */
+      margin-top: 2em;
       margin-left: 0em;
     }
 
