@@ -39,7 +39,7 @@
       <img
         class="arrows-line"
         src="/arrows.svg"
-        alt="terug naar overzicht arrow button"
+        alt="terug_naar_overzicht_arrow"
       />Overzicht
     </h4>
   </a>
@@ -79,12 +79,11 @@
 
 <article class="grid">
   <section class="image-text">
-    {#each data.methods as method}
+    <!-- 
+          {#each data.methods as method}
       <img class="template-url" src={method?.template?.url} alt="icon" />
-    {/each}
-
+    {/each} -->
     <section class="flex-s">
-      <section class="full-b">
         <div class="tags-b">
           <img class="icon" src="/icon1.svg" alt="icon" />
           {#each data.methods as method}
@@ -120,7 +119,8 @@
         </div>
       </section>
     </section>
-  </section>
+
+
   <section class="steps">
     <!-- {console.log(data)} -->
     {#each data.methods as method}
@@ -171,7 +171,6 @@
     margin-top: -34px;
     margin-bottom: 30px;
     background-color: var(--vtGrey-10);
-    /* height: 15rem; */
   }
 
   /* img binnen de steps */
@@ -252,16 +251,7 @@
     width: 100%;
   }
 
-  .template-url {
-    max-width: 100%;
-    height: auto;
-  }
-
   .flex-s {
-    width: 100%;
-  }
-
-  .full-b {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -274,9 +264,6 @@
     margin-bottom: 10px;
   }
 
-  .template-url {
-    border: 1px solid var(--vtDarkBlue);
-  }
 
   /* tags styling */
 
@@ -345,16 +332,17 @@
       padding-right: 9%;
     }
 
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+
     h1 {
       margin-top: auto;
       margin-bottom: 30px;
       text-align: start;
       max-width: 800px;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
     }
 
     /* Accordion  */
@@ -393,6 +381,7 @@
       padding-top: 25px;
       font-size: 3.157rem;
     }
+
     .line {
       padding-left: 20%;
     }
@@ -433,14 +422,13 @@
 
   /*-------------------------------------------------------------- RESPONSIVE MOBILE --*/
   @media (max-width: 31em) {
+    .line {
+      padding-left: 11%;
+    }
+
     h1 {
       font-size: 1.7rem;
       padding-top: 25px;
-    }
-
-
-    .line {
-      padding-left: 11%;
     }
 
     ul {
