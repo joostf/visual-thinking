@@ -260,7 +260,7 @@
   .carrousel-missing {
     font-size: 2.5rem;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 20rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
   }
