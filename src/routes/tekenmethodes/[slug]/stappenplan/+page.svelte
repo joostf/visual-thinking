@@ -36,7 +36,11 @@
 <header>
   <a href="/tekenmethodes">
     <h4 class="line">
-      <img class="arrows-line" src="/arrows.svg" alt="terug naar overzicht arrow button" />Overzicht
+      <img
+        class="arrows-line"
+        src="/arrows.svg"
+        alt="terug_naar_overzicht_arrow"
+      />Overzicht
     </h4>
   </a>
 </header>
@@ -75,12 +79,11 @@
 
 <article class="grid">
   <section class="image-text">
-    {#each data.methods as method}
+    <!-- 
+          {#each data.methods as method}
       <img class="template-url" src={method?.template?.url} alt="icon" />
-    {/each}
-
+    {/each} -->
     <section class="flex-s">
-      <section class="full-b">
         <div class="tags-b">
           <img class="icon" src="/icon1.svg" alt="icon" />
           {#each data.methods as method}
@@ -116,14 +119,25 @@
         </div>
       </section>
     </section>
-  </section>
+
 
   <section class="steps">
+    <!-- {console.log(data)} -->
     {#each data.methods as method}
       {#each method.steps as step}
         <details class="accordion-item">
           <summary class="step-title">{step.title}</summary>
           <div class="accordion-content">
+            <!-- {#each step.visual as visual} -->
+            
+            {#if step.visual[0]}
+            <div class="step-visual">
+              <img src={step.visual[0].url} alt="image_voorbeeld" />
+            </div>
+          {/if}
+          
+            <!-- {/each} -->
+
             {#if typeof step.description === "object"}
               <p class="step-description">{@html step.description.html}</p>
             {:else}
@@ -157,13 +171,16 @@
     margin-top: -34px;
     margin-bottom: 30px;
     background-color: var(--vtGrey-10);
-    /* height: 15rem; */
   }
 
-  nav {
-    /* height: 10px; */
-    margin-bottom: 83px;
-  }
+  /* img binnen de steps */
+
+.step-visual img {
+  width: 100%;
+  height: 100%;
+}
+
+
 
   ul {
     justify-content: center;
@@ -234,16 +251,7 @@
     width: 100%;
   }
 
-  .template-url {
-    max-width: 100%;
-    height: auto;
-  }
-
   .flex-s {
-    width: 100%;
-  }
-
-  .full-b {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -256,9 +264,6 @@
     margin-bottom: 10px;
   }
 
-  .template-url {
-    border: 2px solid var(--vtDarkBlue);
-  }
 
   /* tags styling */
 
@@ -266,10 +271,10 @@
     background-color: var(--vtYellow-80);
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+    font-size: 0.7rem;
+    padding: 0.1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     margin-left: 0.8rem;
     max-width: fit-content;
   }
@@ -284,7 +289,8 @@
   .accordion-item {
     margin-bottom: 5px;
     width: 100%;
-    overflow: hidden;  }
+    overflow: hidden;
+  }
 
   .step-title {
     background-color: var(--vtDarkBlue);
@@ -303,7 +309,6 @@
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
-
   }
 
   .step-description {
@@ -312,61 +317,62 @@
 
   /* ----------------------------------------------- DESKTOP */
 
-  @media (min-width: 68em) {
+  @media (min-width: 74em) {
     .line {
       padding-left: 9% !important;
     }
 
     .nav-items {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       margin-top: -24px !important;
       margin-bottom: 60px;
-      padding-left: 6rem;
-      padding-right: 6rem;
-      max-height: fit-content;
+      padding-left: 9%;
+      padding-right: 9%;
     }
 
-    nav {
-      margin-left: auto;
-    }
-
-    ul {
+    nav ul {
+      display: flex;
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
-    li {
-      margin-bottom: 10px;
+
+    h1 {
+      margin-top: auto;
+      margin-bottom: 30px;
+      text-align: start;
+      max-width: 800px;
     }
 
     /* Accordion  */
 
     .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-  }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
 
-  .accordion-item {
-    margin-bottom: 5px;
-    width: 100%;
-    overflow: hidden;
-  }
+    .accordion-item {
+      margin-bottom: 5px;
+      width: 100%;
+      overflow: hidden;
+    }
 
-  .accordion-content {
-    padding: 10px;
-    background-color: #fff;
-  }
+    .accordion-content {
+      padding: 10px;
+      background-color: #fff;
+    }
 
-  .step-description {
-    margin: 0;
-  }
+    .step-description {
+      margin: 0;
+    }
 
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*------------------------------------------------------- RESPONSIVE TABLET GROOT ----*/
@@ -375,6 +381,7 @@
       padding-top: 25px;
       font-size: 3.157rem;
     }
+
     .line {
       padding-left: 20%;
     }
@@ -383,6 +390,10 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
+
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*-------------------------------------------------------- RESPONSIVE TABLET MINI ---*/
@@ -403,17 +414,21 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
+
+    .tag {
+    font-size: 0.9rem;
+  }
   }
 
   /*-------------------------------------------------------------- RESPONSIVE MOBILE --*/
   @media (max-width: 31em) {
+    .line {
+      padding-left: 11%;
+    }
+
     h1 {
       font-size: 1.7rem;
       padding-top: 25px;
-    }
-
-    .line {
-      padding-left: 11%;
     }
 
     ul {
