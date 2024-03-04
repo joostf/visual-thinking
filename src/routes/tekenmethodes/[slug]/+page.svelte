@@ -152,6 +152,10 @@
     color: var(--vtDarkBlue);
   }
 
+  p {
+    margin-top: -26px; /* Cheat code !/ */
+  }
+
   /* Section's & wrapper styling */
 
   section img {

@@ -10,14 +10,14 @@
 
     prevButton.addEventListener("click", function () {
       var el = document.querySelector("#carrousel-js .carrousel");
-      el.scrollBy({ left:  -1 * 600 - 15  });
+      el.scrollBy({ left: -1 * el.offsetWidth - 15 });
     });
 
     var nextButton = document.getElementById("button-next-1");
 
     nextButton.addEventListener("click", function () {
       var el = document.querySelector("#carrousel-js .carrousel");
-      el.scrollBy({ left: 600 + 15  });
+      el.scrollBy({ left: el.offsetWidth + 15 });
     });
   });
 
@@ -32,7 +32,6 @@
   //     el.scrollBy({ left: 400 + 15 });
   //   }
   // };
-
 </script>
 
 <Header />
@@ -81,7 +80,6 @@
   </nav>
 </section>
 
-
 <section class="images-buttons">
   <div class="nav-btn-right">
     <div id="button-prev-1" class="carousel-btn prev-btn">
@@ -112,9 +110,7 @@
             <img class="carrousel-img" src={example.url} alt="Example Slide" />
           {/each}
         {:else}
-          <p class="carrousel-missing">
-            Op dit moment zijn er geen voorbeelden
-          </p>
+          <p class="carrousel-missing">Geen voorbeelden</p>
         {/if}
       {/each}
     </div>
@@ -195,7 +191,7 @@
   }
 
   /* Carousel */
-  
+
   .carrousel {
     display: flex;
     align-items: center;
@@ -209,7 +205,7 @@
     scroll-snap-align: center;
   }
 
-  .images-buttons{
+  .images-buttons {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -221,7 +217,6 @@
     height: auto;
   }
 
-  
   .nav-btn-right {
     display: -webkit-flex;
     width: 100%;
@@ -229,8 +224,7 @@
     justify-content: center;
   }
 
-
-   .icon-right:hover {
+  .icon-right:hover {
     background-color: var(--vtYellow);
     transition: 0.2s;
   }
@@ -262,12 +256,14 @@
     border: none;
   }
 
+  /* text als er geen voorbeelden zijn */
   .carrousel-missing {
-      font-size: 3rem;
-      padding-bottom: 100%;
-      font-family: var(--vtPrimaryFont);
-      color: var(--vtDarkBlue);
-    }
+    font-size: 2.5rem;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-family: var(--vtPrimaryFont);
+    color: var(--vtDarkBlue);
+  }
 
   /*------------------------------------------------ DESKTOP ---*/
   @media (min-width: 74em) {
@@ -298,10 +294,9 @@
     }
 
     .carrousel {
-    max-width: 600px;
-    gap: 15px;
-  }
-
+      max-width: 600px;
+      gap: 15px;
+    }
   }
 
   /*-------------------------------------------------------  TABLET GROOT ---*/
@@ -320,7 +315,6 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
-
   }
 
   /*----------------------------------------- RESPONSIVE TABLET MINI ----*/
@@ -361,13 +355,18 @@
     }
 
     .carrousel {
-    max-width: 400px;
-    gap: 15px;
-  }
+      max-width: 300px;
+      gap: 15px;
+    }
 
-  .carrousel-img {
-    width: 400px;
-    height: auto;
-  }
+    .carrousel-img {
+      width: 300px;
+      height: auto;
+    }
+
+    .carrousel-missing {
+      font-size: 1.4rem;
+      padding: 20px;
+    }
   }
 </style>
