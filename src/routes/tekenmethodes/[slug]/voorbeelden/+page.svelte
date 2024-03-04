@@ -1,9 +1,37 @@
 <script>
   import Header from "$lib/molecules/header.svelte";
   import Footer from "$lib/molecules/footer.svelte";
+  import { onMount } from "svelte";
 
   export let data;
 
+  onMount(() => {
+    var prevButton = document.getElementById("button-prev-1");
+
+    prevButton.addEventListener("click", function () {
+      var el = document.querySelector("#carrousel-js .carrousel");
+      el.scrollBy({ left:  -1 * 600 - 15  });
+    });
+
+    var nextButton = document.getElementById("button-next-1");
+
+    nextButton.addEventListener("click", function () {
+      var el = document.querySelector("#carrousel-js .carrousel");
+      el.scrollBy({ left: 600 + 15  });
+    });
+  });
+
+  // const updateScrollValue = () => {
+  //   const el = document.querySelector("#carrousel-js .carrousel");
+  //   const viewportWidth = window.innerWidth;
+
+  //   // Gebruik mediaquery om te controleren of de viewport-breedte 31 is
+  //   if (window.matchMedia("(max-width: 31em)").matches) {
+  //     el.scrollBy({ left: -1 * 400 - 15 });
+  //   } else {
+  //     el.scrollBy({ left: 400 + 15 });
+  //   }
+  // };
 
 </script>
 
@@ -12,7 +40,11 @@
 <header>
   <a href="/tekenmethodes">
     <h4 class="line">
-      <img class="arrows-line" src="/arrows.svg" alt="terug_naar_overzicht_arrow" />Overzicht
+      <img
+        class="arrows-line"
+        src="/arrows.svg"
+        alt="terug_naar_overzicht_arrow"
+      />Overzicht
     </h4>
   </a>
 </header>
@@ -47,37 +79,47 @@
       {/each}
     </ul>
   </nav>
-  
 </section>
 
-<section class="carousel">
-  <!-- {#if data.methods.some((method) => method.examples.length > 0)}
-    <button class="carousel-button carousel-button-left">
-      <img src="/arrow.svg" alt="Left Carousel Arrow" />
-    </button>
-  {/if} -->
-  <div class="carousel-container">
-    <ul class="carousel-list">
+
+<section class="images-buttons">
+  <div class="nav-btn-right">
+    <div id="button-prev-1" class="carousel-btn prev-btn">
+      <button class="icon icon-right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          ><path
+            d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+          /></svg
+        >
+      </button>
+    </div>
+    <div id="button-next-1" class="carousel-btn next-btn">
+      <button class="icon icon-right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          ><path
+            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+          /></svg
+        >
+      </button>
+    </div>
+  </div>
+
+  <div id="carrousel-js">
+    <div class="carrousel">
       {#each data.methods as method}
         {#if method.examples.length > 0}
           {#each method.examples as example}
-            <li class="carousel-slide current-slide">
-              <img class="carousel-img" src={example.url} alt="Example Slide" />
-            </li>
+            <img class="carrousel-img" src={example.url} alt="Example Slide" />
           {/each}
         {:else}
-          <li class="carousel-slide Missing-pic">Op dit moment zijn er geen voorbeelden</li>
+          <p class="carrousel-missing">
+            Op dit moment zijn er geen voorbeelden
+          </p>
         {/if}
       {/each}
-    </ul>
+    </div>
   </div>
-  <!-- {#if data.methods.some((method) => method.examples.length > 0)}
-    <button class="carousel-button carousel-button-right">
-      <img src="/arrows_black.svg" alt="Right Carousel Arrow" />
-    </button>
-  {/if} -->
 </section>
-
 
 <Footer />
 
@@ -152,37 +194,80 @@
     transform: rotate(180deg);
   }
 
-   /* Carousel */
-
-   .carousel-img {
-    width: 400px;
-    height: auto;
-    border: 1px solid var(--vtDarkBlue);
-  }
-
-  .carousel-container {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .carousel-list {
+  /* Carousel */
+  
+  .carrousel {
     display: flex;
-    list-style: none;
-    justify-content: flex-start;
+    align-items: center;
+    max-width: 600px;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+  }
+
+  .images-buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 
-  .carousel-slide {
-    margin-right: 40px;
+  .carrousel-img {
+    width: 600px;
+    height: auto;
   }
 
-  .Missing-pic {
-    padding-bottom: 10rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+  
+  .nav-btn-right {
+    display: -webkit-flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
   }
 
+
+   .icon-right:hover {
+    background-color: var(--vtYellow);
+    transition: 0.2s;
+  }
+
+  .carousel-btn {
+    border-radius: 23px;
+    border: 1px solid var(--vtYellow);
+    cursor: pointer;
+  }
+
+  .next-btn {
+    margin-inline-start: 15px;
+  }
+
+  .icon {
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    border: none;
+  }
+
+  .carrousel-missing {
+      font-size: 3rem;
+      padding-bottom: 100%;
+      font-family: var(--vtPrimaryFont);
+      color: var(--vtDarkBlue);
+    }
 
   /*------------------------------------------------ DESKTOP ---*/
   @media (min-width: 74em) {
@@ -212,19 +297,12 @@
       list-style: none;
     }
 
-
-    .Missing-pic {
-    font-size: 2rem;    
-    padding-bottom: 10rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    .carrousel {
+    max-width: 600px;
+    gap: 15px;
   }
 
   }
-
-
-
-
 
   /*-------------------------------------------------------  TABLET GROOT ---*/
 
@@ -243,7 +321,6 @@
       margin-bottom: 30px;
     }
 
-   
   }
 
   /*----------------------------------------- RESPONSIVE TABLET MINI ----*/
@@ -264,8 +341,6 @@
       margin-top: -63px;
       margin-bottom: 30px;
     }
-
-
   }
 
   /*------------------------------------ MOBILE---*/
@@ -285,9 +360,14 @@
       padding-top: 25px;
     }
 
-    .Missing-pic {
-    font-size: 1rem;    
+    .carrousel {
+    max-width: 400px;
+    gap: 15px;
   }
 
+  .carrousel-img {
+    width: 400px;
+    height: auto;
+  }
   }
 </style>
