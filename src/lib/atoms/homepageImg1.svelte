@@ -1,5 +1,5 @@
 <section class="img-man">
-    <img src="/man.svg" alt="" />
+    <img src="/man.svg" alt="standing_man_image" />
 </section>
 
 <style>
@@ -35,7 +35,7 @@
     /* desktop */
     @media (min-width: 55em) {
         .img-man {
-            background: var(--vtGrey-50);
+            background: #f9f8f8;
         }
     }
 

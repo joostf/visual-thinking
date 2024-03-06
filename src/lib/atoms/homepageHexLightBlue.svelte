@@ -10,9 +10,13 @@
 </section>
 
 <style>
-	.h3-light-blue:hover h3 {
+	/* .h3-light-blue:hover h3 {
 		text-transform: uppercase;
-	}
+	} */
+	h3:hover {
+    transform: scale(1.1);
+  }
+
 
 	.light-blue {
 		background: var(--vtLightBlue);

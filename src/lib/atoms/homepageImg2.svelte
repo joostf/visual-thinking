@@ -1,5 +1,5 @@
 <section class="img-pencil">
-    <img src="/pencil.svg" alt="" />
+    <img src="/pencil.svg" alt="pencil_image" />
 </section>
 
 <style>
@@ -35,7 +35,7 @@
     /* desktop */
     @media (min-width: 55em) {
         .img-pencil {
-            background: var(--vtGrey-50);
+            background: #f9f8f8;
         }
     }
 

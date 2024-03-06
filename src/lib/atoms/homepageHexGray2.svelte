@@ -10,12 +10,16 @@
 </section>
 
 <style>
-    .h3-gray2:hover h3 {
+    /* .h3-gray2:hover h3 {
         text-transform: uppercase;
-    }
+    } */
+    h3:hover {
+    transform: scale(1.1);
+  }
+
 
     .gray2 {
-        background: var(--vtGrey-50);
+        background: #f9f8f8;
 
         width: 300px;
         height: 275px;

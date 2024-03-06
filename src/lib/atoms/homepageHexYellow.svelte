@@ -10,8 +10,15 @@
 </section>
 
 <style>
-  .h3-yellow:hover h3 {
+  /* .h3-yellow:hover h3 {
     text-transform: uppercase;
+  } */
+  h3:hover {
+    transform: scale(1.1);
+  }
+
+  h3 {
+    line-height: 0.9;
   }
 
   .yellow {
