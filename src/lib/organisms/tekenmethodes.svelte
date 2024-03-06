@@ -355,14 +355,16 @@
     width: 300px;
   }
 
+
+
   .method-title {
     width: 90%;
     margin-top: -0.7em;
   }
 
-  .method-title:hover {
-    white-space: unset;
-    text-overflow: unset;
+  h2 :hover img {
+    border: 1px solid var(--vtYellow);
+
   }
 
   .detail-main {
@@ -462,6 +464,11 @@
       width: 100%;
       height: auto;
       border: 1px solid var(--vtDarkBlue);
+      /* transition: 0.1s ease; */
+    }
+
+    .methods img:hover {
+      border: 1px solid var(--vtYellow);
     }
 
     /* Stijlen voor de titels in de methoden */
