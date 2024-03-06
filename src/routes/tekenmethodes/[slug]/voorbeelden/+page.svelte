@@ -20,18 +20,6 @@
       el.scrollBy({ left: el.offsetWidth + 15 });
     });
   });
-
-  // const updateScrollValue = () => {
-  //   const el = document.querySelector("#carrousel-js .carrousel");
-  //   const viewportWidth = window.innerWidth;
-
-  //   // Gebruik mediaquery om te controleren of de viewport-breedte 31 is
-  //   if (window.matchMedia("(max-width: 31em)").matches) {
-  //     el.scrollBy({ left: -1 * 400 - 15 });
-  //   } else {
-  //     el.scrollBy({ left: 400 + 15 });
-  //   }
-  // };
 </script>
 
 <Header />
@@ -103,7 +91,7 @@
   </div>
 
   <div id="carrousel-js">
-    <div class="carrousel">
+    <div class="carrousel" id="scrollbar">
       {#each data.methods as method}
         {#if method.examples.length > 0}
           {#each method.examples as example}
@@ -263,6 +251,30 @@
     margin-bottom: 20rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
+  }
+
+  /* Scrollbar */
+
+
+
+  #scrollbar::-webkit-scrollbar {
+    width: 10px;
+    /* height: 7px; */
+    background-color: none;
+  }
+
+  #scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--vtYellow);
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
   }
 
   /*------------------------------------------------ DESKTOP ---*/
