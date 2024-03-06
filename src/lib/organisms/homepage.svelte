@@ -3,7 +3,6 @@
 
     import HomepageImg1 from "$lib/atoms/homepageImg1.svelte";
     import HomepageImg2 from "$lib/atoms/homepageImg2.svelte";
-
     import HomepageHexBlue from "$lib/atoms/homepageHexBlue.svelte";
     import HomepageHexYellow from "$lib/atoms/homepageHexYellow.svelte";
     import HomepageHexLightBlue from "$lib/atoms/homepageHexLightBlue.svelte";
@@ -65,9 +64,8 @@
     /* mobile */
     @media (max-width: 31em) {
         .grid-container {
-            margin-top: -75%;
-            /* justify-content: normal; */
-            scale: 0.75;
+            margin-top: -45%;
+            scale: 0.85;
             margin-bottom: -40%;
         }
 
