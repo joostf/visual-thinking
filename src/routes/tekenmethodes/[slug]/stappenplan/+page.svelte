@@ -294,7 +294,7 @@
   }
 
   .step-title {
-    font-family:var(--vtSecondaryFont) ;
+    font-family:var(--vtPrimaryFont) ;
     background-color: var(--vtDarkBlue);
     color: var(--vtWhite);
     padding: 10px;
