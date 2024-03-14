@@ -1,5 +1,4 @@
 <script>
-  export let loading = false;
   let active = false;
 
   function myFunction() {
@@ -14,19 +13,17 @@
   }
 </script>
 
-<section>
-  <nav class={loading ? "animate" : ""}>
-    <ul>
-      <li><a href="/tekenmethodes">Tekenmethodes</a></li>
-      <li><a href="/over">Over</a></li>
-      <li><a href="/minicursussen">Minicursussen</a></li>
-      <li><a href="/"><img src="/vtHBO-v1.0-Logo_1.svg" class="visual-thinking-logo" alt="visual-thinking-logo" /></a></li>
-      <li><a href="/kennisclips">Kennisclips</a></li>
-      <li><a href="/artikelen">Artikelen</a></li>
-      <li><a href="/tekenruimte">Tekenruimte</a></li>
-    </ul>
-  </nav>
-</section>
+<nav>
+  <ul>
+    <li><a href="/tekenmethodes">Tekenmethodes</a></li>
+    <li><a href="/over">Over</a></li>
+    <li><a href="/minicursussen">Minicursussen</a></li>
+    <li><a href="/"><img src="/vtHBO-v1.0-Logo_1.svg" class="visual-thinking-logo" alt="visual-thinking-logo" /></a></li>
+    <li><a href="/kennisclips">Kennisclips</a></li>
+    <li><a href="/artikelen">Artikelen</a></li>
+    <li><a href="/tekenruimte">Tekenruimte</a></li>
+  </ul>
+</nav>
 
 <div class="mobile-container">
   <div class="topnav">
@@ -47,20 +44,6 @@
 </div>
 
 <style>
-
-  .animate {
-    animation: appear 3s forwards;
-  }
-
-  @keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   a {
     color: var(--vtDarkBlue);
     text-decoration: none;
@@ -108,21 +91,11 @@
   }
 
   /* tablet */
-  @media (min-width: 31em) and (max-width: 55em) {
+  @media (min-width: 31em) and (max-width: 70em) {
 
-    body {
-      font-size: 1em;
-      line-height: 1.6;
-      overflow-x: hidden;
-      background-color: rgb(255, 255, 255);
-    }
 
     li {
       width: 6.7rem;
-    }
-
-    .animate {
-      animation: none;
     }
 
     .mobile-container {
@@ -298,9 +271,7 @@
 
   /* mobile */
   @media (max-width: 31em) {
-    .animate {
-      animation: none;
-    }
+
 
     a:link {
       text-decoration: none;
