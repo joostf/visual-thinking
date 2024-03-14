@@ -1,5 +1,5 @@
-<section>
-  <nav class="footer">
+<footer>
+  <nav>
     <a href="/">
       <img
         src="/visual-thinking-logo-footer.svg"
@@ -43,11 +43,11 @@
       <h4 class="copy">© Charley Muhren, 2022</h4>
     </div>
   </nav>
-</section>
+</footer>
 
 <style>
   
-  .footer {
+  footer nav {
     background-color: rgb(240, 240, 240);
     font-family: var(--vtPrimaryFont);
     grid-template-columns: 1fr;
@@ -109,7 +109,7 @@
   }
 
   @media (min-width: 768px) {
-    .footer {
+    footer nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
