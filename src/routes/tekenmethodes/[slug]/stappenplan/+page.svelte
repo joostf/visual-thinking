@@ -135,8 +135,7 @@
               <img src={step.visual[0].url} alt="image_voorbeeld" />
             </div>
           {/if}
-          
-            <!-- {/each} -->
+           <!-- {/each} -->
 
             {#if typeof step.description === "object"}
               <p class="step-description">{@html step.description.html}</p>
@@ -259,11 +258,13 @@
 
   .tags-b {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
   }
-
+  
+  .tag {
+    flex-wrap: wrap;
+  }
 
   /* tags styling */
 
@@ -293,6 +294,7 @@
   }
 
   .step-title {
+    font-family:var(--vtPrimaryFont) ;
     background-color: var(--vtDarkBlue);
     color: var(--vtWhite);
     padding: 10px;

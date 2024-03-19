@@ -1,3 +1,0 @@
-Molecules
-
-Elementen die herhaald worden op andere pagina's (bijv header, footer)

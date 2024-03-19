@@ -148,8 +148,8 @@
   <section class="methods">
     {#if data && data.methods && data.methods.length > 0}
       {#each data.methods as method, index}
-        <section class="method-container" data-index={index}>
-          <a href="/tekenmethodes/{method.slug}" class="link-detail-page">
+        <div class="method-container" data-index={index}>
+          <a href="/tekenmethodes/{method.slug}">
             {#if method.template && method.template.url}
               <picture>
                 <source
@@ -170,11 +170,11 @@
                 alt="Placeholder"
               />
             {/if}
-            <section class="methods-titles">
+            <div class="method-title">
               <h2>{method.title}</h2>
-            </section>
+            </div>
           </a>
-        </section>
+        </div>
       {/each}
     {/if}
   </section>
@@ -355,14 +355,16 @@
     width: 300px;
   }
 
-  .methods-titles {
+
+
+  .method-title {
     width: 90%;
     margin-top: -0.7em;
   }
 
-  .methods-titles:hover {
-    white-space: unset;
-    text-overflow: unset;
+  h2 :hover img {
+    border: 1px solid var(--vtYellow);
+
   }
 
   .detail-main {
@@ -462,10 +464,15 @@
       width: 100%;
       height: auto;
       border: 1px solid var(--vtDarkBlue);
+      /* transition: 0.1s ease; */
+    }
+
+    .methods img:hover {
+      border: 1px solid var(--vtYellow);
     }
 
     /* Stijlen voor de titels in de methoden */
-    .methods-titles h2 {
+    .method-title h2 {
       font-family: var(--vtPrimaryFont);
       font-size: 20px;
       color: var(--vtDarkBlue);

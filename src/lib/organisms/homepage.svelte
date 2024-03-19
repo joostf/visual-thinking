@@ -1,78 +1,378 @@
-<script>
-    import HomepageText from "$lib/atoms/homepageText.svelte";
+<article>
+  <header>
+    <h1>Visual Thinking in het HBO</h1>
+    <p>
+      Visual thinking leert studenten en docenten hun gedachten en doelen te
+      verbeelden. Het helpt ze bij het creëren van overzicht en het overbrengen
+      van hun boodschap.
+    </p>
+  </header>
 
-    import HomepageImg1 from "$lib/atoms/homepageImg1.svelte";
-    import HomepageImg2 from "$lib/atoms/homepageImg2.svelte";
-
-    import HomepageHexBlue from "$lib/atoms/homepageHexBlue.svelte";
-    import HomepageHexYellow from "$lib/atoms/homepageHexYellow.svelte";
-    import HomepageHexLightBlue from "$lib/atoms/homepageHexLightBlue.svelte";
-    import HomepageHexRed from "$lib/atoms/homepageHexRed.svelte";
-    import HomepageHexGray1 from "$lib/atoms/homepageHexGray1.svelte";
-    import HomepageHexGray2 from "$lib/atoms/homepageHexGray2.svelte";
-
-    export let loading = false;
-</script>
-
-<div class="grid-container {loading ? 'animate' : ''}">
-    <HomepageText />
-
-    <HomepageImg1 />
-    <HomepageImg2 />
-
-    <HomepageHexBlue />
-    <HomepageHexYellow />
-    <HomepageHexGray1 />
-    <HomepageHexLightBlue />
-    <HomepageHexRed />
-    <HomepageHexGray2 />
-</div>
+  <ul>
+    <li>
+      <a href="/"><span><img src="man.svg" alt="man_image" /></span></a>
+    </li>
+    <li>
+      <a href="/"><span><img src="pencil.svg" alt="pencil_image" /></span></a>
+    </li>
+    <li>
+      <a href="/over" style="--bg:#3F439D" class="highlight"
+        ><span>Over Visual Thinking</span></a
+      >
+    </li>
+    <li>
+      <a href="/tekenmethodes" style="--bg:#feb51e" class="highlight"
+        ><span>Ontdek de Visual Thinking methodes</span></a
+      >
+    </li>
+    <li>
+      <a href="/artikelen" style="--bg:#e0dedc"><span>Artikelen</span></a>
+    </li>
+    <li>
+      <a href="/kennisclips" style="--bg:#67c5d1" class="highlight"
+        ><span>Kennisclips</span></a
+      >
+    </li>
+    <li>
+      <a href="/minicursussen" style="--bg:#f96c4f" class="highlight"
+        ><span>Minicursussen</span></a
+      >
+    </li>
+    <li>
+      <a href="/tekenruimte" style="--bg:#e0dedc"><span>Tekenruimte</span></a>
+    </li>
+  </ul>
+</article>
 
 <style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        justify-content: center;
-        /* animation: appear 4s forwards; */
+  article {
+    max-width: 80em;
+    position: relative;
+    color: #090940;
+    padding: 1rem 0;
+    margin: 0 auto;
+    margin-bottom: 20%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.77rem;
+    margin: 0;
+    text-align: center;
+    max-width: 24rem;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.7;
+    padding: 20px;
+    font-family: var(--vtPrimaryFont);
+  }
+
+  p {
+    text-align: center;
+    max-width: 30rem;
+  }
+
+  ul li a {
+    /* --bg: #e0dedc; */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: var(--bg);
+    /*   aspect-ratio: 1 / 1; */
+    display: grid;
+    text-decoration: none;
+    color: inherit;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.25em;
+    height: 100%;
+  }
+  ul li a.highlight {
+    color: #fff;
+  }
+  ul li a span {
+    place-self: center;
+  }
+
+  /* ul li a:hover{
+    transform: scale(1.1);
+
+  } */
+
+  ul {
+    --gap: 1rem;
+    --size: 10em;
+
+    --tx: 0.265;
+    --ch: 0.74;
+
+    --cc: 2;
+    --rc: 6;
+
+    display: grid;
+    grid-template-columns: repeat(var(--cc), var(--size));
+    grid-template-rows: repeat(
+      var(--rc),
+      calc(var(--size) * var(--ch) + var(--gap) * 1)
+    );
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    align-items: stretch;
+    gap: var(--gap);
+  }
+
+  ul li {
+    width: var(--size);
+    height: calc(var(--size) * 1.1);
+  }
+
+  /* mobile */
+
+  ul li:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    transform: translateX(calc(var(--size) * var(--tx) * -0.1));
+  }
+
+  ul li:nth-of-type(1) img {
+    width: 150px;
+    height: auto;
+  }
+
+  ul li:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    transform: translateX(calc(var(--size) * var(--tx) * 0.1));
+  }
+
+  ul li:nth-of-type(2) img {
+    width: 50px;
+    height: auto;
+  }
+
+  ul li:nth-of-type(3) {
+    transform: translateX(calc(var(--size) * var(--tx)));
+  }
+
+  ul li a:nth-of-type(3) {
+    background-color: #3f439d;
+  }
+
+  ul li:nth-of-type(4) {
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    transform: translateX(calc(var(--size) * var(--tx) * -1));
+  }
+
+  ul li:nth-of-type(5) {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    transform: translateX(calc(var(--size) * var(--tx)));
+  }
+
+  ul li:nth-of-type(6) {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    transform: translateX(calc(var(--size) * var(--tx) * -1));
+  }
+
+  ul li:nth-of-type(7) {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    transform: translateX(calc(var(--size) * var(--tx)));
+  }
+
+  ul li:nth-of-type(8) {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    transform: translateX(calc(var(--size) * var(--tx) * -1));
+  }
+
+  /* tablet mini */
+  @media (width > 40em) {
+
+    h1 {
+      font-size: 3.157rem;
     }
 
-    .animate {
-        animation: appear 5.5s forwards;
+
+    p {
+      max-width: 24rem;
     }
 
-    @keyframes appear {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+    ul {
+      --gap: 1.2rem;
+      --tx: 0.275;
+      --ch: 0.725;
+    }
+  }
+
+  /* tablet groot */
+
+  @media (width > 44em) {
+    ul {
+      --gap: 1.4rem;
+      --size: 12em;
+
+      --tx: 0.55;
+      --ch: 0.71;
+
+      --cc: 3;
+      --rc: 4;
     }
 
-    /* tablet */
-    @media (min-width: 31em) and (max-width: 55em) {
-        .grid-container {
-            margin-top: 0%;
-        }
+    ul li:nth-of-type(1) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      --bg: #e0dedc;
 
-        .animate {
-            animation: none;
-        }
+      transform: translateX(0);
     }
 
-    /* mobile */
-    @media (max-width: 31em) {
-        .grid-container {
-            margin-top: -75%;
-            /* justify-content: normal; */
-            scale: 0.75;
-            margin-bottom: -40%;
-        }
-
-        .animate {
-            animation: none;
-        }
+    ul li:nth-of-type(2) {
+      grid-column-start: 3;
+      grid-row-start: 3;
+      transform: translateX(0);
+      --bg: #e0dedc;
     }
+
+    ul li:nth-of-type(3) {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(4) {
+      grid-column-start: 2;
+      grid-row-start: 3;
+
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(5) {
+      grid-column-start: 1;
+      grid-row-start: 4;
+      transform: translateX(calc(var(--size) * var(--tx)));
+    }
+
+    ul li:nth-of-type(6) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      transform: translateX(calc(var(--size) * var(--tx)));
+    }
+
+    ul li:nth-of-type(7) {
+      grid-column-start: 3;
+      grid-row-start: 2;
+      transform: translateX(calc(var(--size) * var(--tx) * -1));
+    }
+
+    ul li:nth-of-type(8) {
+      grid-column-start: 3;
+      grid-row-start: 4;
+      transform: translateX(calc(var(--size) * var(--tx) * -1));
+    }
+  }
+
+  /* desktop */
+  @media (width > 70em) {
+    article {
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 15rem;
+      font-size: 22px;
+    }
+
+    ul {
+      --gap: 1rem;
+      --size: 14em;
+
+      /* --tx:.55; */
+      /* --ch:.71; */
+
+      --cc: 4;
+      --rc: 2;
+      margin-top: -50vh;
+    }
+
+    ul li:nth-of-type(1) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      --bg: #e0dedc;
+
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(2) {
+      grid-column-start: 4;
+      grid-row-start: 1;
+      transform: translateX(0);
+      --bg: #e0dedc;
+    }
+
+    ul li:nth-of-type(3) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      transform: translateX(calc(var(--size) * var(--tx)));
+    }
+
+    ul li:nth-of-type(4) {
+      grid-column-start: 4;
+      grid-row-start: 2;
+
+      transform: translateX(calc(var(--size) * var(--tx) * -1));
+    }
+
+    ul li:nth-of-type(5) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(6) {
+      grid-column-start: 3;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(7) {
+      grid-column-start: 2;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(8) {
+      grid-column-start: 4;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+  }
+
+  @media (width > 68em) {
+    ul {
+      --gap: 1.3rem;
+      --size: 13em;
+      --tx: 0.55;
+      --ch: 0.71;
+      /* --rc:2; */
+    }
+    ul li a:hover{
+    transform: scale(1.1);
+
+  }
+  }
 </style>

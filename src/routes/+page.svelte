@@ -1,8 +1,12 @@
 <script>
   import { onMount, onDestroy } from "svelte";
+
   import Header from "$lib/molecules/header.svelte";
+
   import Footer from "$lib/molecules/footer.svelte";
+
   import Homepage from "$lib/organisms/homepage.svelte";
+
   import LoadingScreen from "$lib/organisms/loadingScreen.svelte";
 
   let loading = true;
@@ -10,9 +14,10 @@
   function handleKeyDown(event) {
     if (event.key === "L" || event.key === "l") {
       loading = true;
+
       setTimeout(() => {
         loading = false;
-      }, 5900);
+      }, 5700);
     }
   }
 
@@ -24,9 +29,10 @@
         loading = false;
       } else {
         sessionStorage.setItem("alreadyLoaded", "true");
+
         setTimeout(() => {
           loading = false;
-        }, 5900);
+        }, 5700);
       }
     }
   });
@@ -40,11 +46,16 @@
 
 {#if loading}
   <LoadingScreen />
+
   <Header {loading} />
+
   <Homepage {loading} />
+
   <Footer />
 {:else}
   <Header {loading} />
+
   <Homepage {loading} />
+
   <Footer />
 {/if}
