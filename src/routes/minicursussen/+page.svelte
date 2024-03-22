@@ -1,11 +1,8 @@
 <script>
-  import Header from "$lib/molecules/header.svelte";
-  import Minicursussen from "$lib/organisms/minicursussen.svelte";
-  import Footer from "$lib/molecules/footer.svelte";
+  import MiniCourses from "$lib/organisms/miniCourses.svelte";
+
+  export let data;
 </script>
 
-<Header />
+<MiniCourses {data} />
 
-<Minicursussen />
-
-<Footer />
