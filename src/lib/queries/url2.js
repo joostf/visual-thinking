@@ -1,5 +1,5 @@
 export default function getQueryUrl(gql, slug) {
-    return gql`
+  return gql`
     query Artikelen {
   detailpagina(where: { slug: "${slug}" }) {
     title

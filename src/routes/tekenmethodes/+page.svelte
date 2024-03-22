@@ -1,11 +1,8 @@
 <script>
-  import Header from "$lib/molecules/header.svelte";
-  import Tekenmethodes from "$lib/organisms/tekenmethodes.svelte";
-  import Footer from "$lib/molecules/footer.svelte";
+  import Methods from "$lib/organisms/methods.svelte";
   export let data;
 </script>
 
-<Header />
-<Tekenmethodes data={data}/>
-<Footer />
+
+<Methods data={data}/>
 

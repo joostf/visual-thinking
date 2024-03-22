@@ -1,9 +1,5 @@
 <script>
-  import Footer from "$lib/molecules/footer.svelte";
-  import Header from "$lib/molecules/header.svelte";
-  import Tekenruimte from "$lib/organisms/tekenruimte.svelte";
+  import DrawingSpace from "$lib/organisms/drawingSpace.svelte";
 </script>
 
-<Header />
-<Tekenruimte />
-<Footer />
+<DrawingSpace />

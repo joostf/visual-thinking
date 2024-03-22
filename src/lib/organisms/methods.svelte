@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import Breadcrumb from "../atoms/breadcrumb.svelte";
 
   export let data;
 
@@ -38,9 +39,9 @@
   }
 </script>
 
-<header>
-  <h4 class="line">Tekenmethodes</h4>
-</header>
+<div class="breadcrumb">
+<Breadcrumb titel="Tekenmethodes" />
+</div>
 
 <section class="intro">
   <article class="intro-text">
@@ -181,6 +182,11 @@
 </section>
 
 <style>
+
+  .breadcrumb {
+    background-color: var(--vtYellow); /* Nieuwe achtergrondkleur alleen voor deze pagina */
+  }
+
   /* Header */
   .line {
     display: flex;
@@ -355,8 +361,6 @@
     width: 300px;
   }
 
-
-
   .method-title {
     width: 90%;
     margin-top: -0.7em;
@@ -364,7 +368,6 @@
 
   h2 :hover img {
     border: 1px solid var(--vtYellow);
-
   }
 
   .detail-main {

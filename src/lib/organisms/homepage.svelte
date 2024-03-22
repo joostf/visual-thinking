@@ -95,16 +95,17 @@
     font-size: 1.25em;
     height: 100%;
   }
+
   ul li a.highlight {
     color: #fff;
   }
+
   ul li a span {
     place-self: center;
   }
 
   /* ul li a:hover{
     transform: scale(1.1);
-
   } */
 
   ul {
@@ -202,11 +203,9 @@
 
   /* tablet mini */
   @media (width > 40em) {
-
     h1 {
       font-size: 3.157rem;
     }
-
 
     p {
       max-width: 24rem;
@@ -370,9 +369,18 @@
       --ch: 0.71;
       /* --rc:2; */
     }
-    ul li a:hover{
-    transform: scale(1.1);
 
-  }
+    /* Hover effect voor de li -items  */
+
+    ul li a:hover {
+      transform: scale(1.1);
+    }
+
+    /* zodat de img <li> geen hover effect krijgen */
+
+    ul li:nth-of-type(1):not(:hover),
+    ul li:nth-of-type(2):not(:hover) {
+      pointer-events: none;
+    }
   }
 </style>
