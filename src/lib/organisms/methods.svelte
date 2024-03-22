@@ -367,7 +367,7 @@
   }
 
   h2 :hover img {
-    border: 1px solid var(--vtYellow);
+    border: 3px solid var(--vtYellow);
   }
 
   .detail-main {
@@ -466,12 +466,12 @@
     .methods img {
       width: 100%;
       height: auto;
-      border: 1px solid var(--vtDarkBlue);
+      border: 2px solid var(--vtDarkBlue);
       /* transition: 0.1s ease; */
     }
 
     .methods img:hover {
-      border: 1px solid var(--vtYellow);
+      border: 3px solid var(--vtDarkBlue);
     }
 
     /* Stijlen voor de titels in de methoden */
@@ -573,7 +573,7 @@
 
     /* Aanpassen van stijl voor afbeeldingen in methoden */
     .methods img {
-      border: 1px solid var(--vtDarkBlue);
+      border: 2px solid var(--vtDarkBlue);
     }
 
     /* Aanpassen van stijl voor navigatie-lijstitems */

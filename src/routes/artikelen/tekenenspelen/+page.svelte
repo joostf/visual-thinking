@@ -1,22 +1,17 @@
-<script>
-  import Header from "$lib/molecules/header.svelte";
-  import Footer from "$lib/molecules/footer.svelte";
+<script>  
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
 
-  
   export let data;
   console.log(data.artikel.artikelen[2]);
   let artikel = data.artikel.artikelen;
 </script>
 
-<Header />
-<header>
-  <section>
-    <h4 class="line">Case</h4>
-  </section>
-</header>
+
+<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--vtDarkBlue)" />
+
 
 <main>
-  <section class="greybackground">
+  <section>
     <h1>Tekenen en spelen met kinderen (en hun ouders)</h1>
     <section class="lineintro"></section>
     <p class="description">Door: Charley Muhren</p>
@@ -37,7 +32,7 @@
   {/each}
 </main>
 
-<Footer />
+
 
 <style>
   main {
