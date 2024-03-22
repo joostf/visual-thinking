@@ -1,6 +1,5 @@
 <script>
-  import Inputtekenruimte from "$lib/atoms/inputtekenruimte.svelte";
-
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
   import { onMount } from "svelte";
 
   // Voer code uit na het renderen van de component
@@ -88,9 +87,9 @@
   });
 </script>
 
-<header>
-  <h4 class="line">Tekenruimte</h4>
-</header>
+<div class="breadcrumb">
+<Breadcrumb titel= "Tekenruimte" />
+</div>
 
 <section>
   
@@ -115,17 +114,9 @@
 </section>
 
 <style>
-  .line {
-    text-transform: uppercase;
+
+  .breadcrumb{
     background-color: var(--vtGrey-80);
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
-    padding-left: 9%;
-    margin-top: 0%;
-    display: flex;
-    align-items: center;
-    height: 30px;
   }
 
   h1{

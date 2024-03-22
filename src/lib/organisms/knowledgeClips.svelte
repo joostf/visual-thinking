@@ -1,4 +1,6 @@
 <script>
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+
   let index = 0;
 
   export let data;
@@ -13,14 +15,19 @@
   };
 </script>
 
-<header>
+<div class="breadcrumb">
+<Breadcrumb titel="Kennisclips" />
+</div>
+
+<!-- <header>
   <section>
     <h4 class="line">Kennisclips</h4>
   </section>
-</header>
+</header> -->
 
 <section>
-  <section class="clips-container">
+  <h1 class="sr-only">Alle kennisclips</h1>
+  <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
       <img
         class="left-arrow"
@@ -44,15 +51,18 @@
         loading="lazy"
       />
     </button>
-  </section>
+  </div>
 
-  <section class="text-container">
-    <h1>{data.categories[index].title}</h1>
+  <div class="text-container">
+    <h2>{data.categories[index].title}</h2>
     <p>{@html data.categories[index].content.html}</p>
-  </section>
+  </div>
 </section>
 
 <style>
+  .breadcrumb {
+    background-color: var(--vtSec-LightBlue) ;
+  }
   /* line in header */
   .line {
     text-transform: uppercase;
@@ -71,7 +81,7 @@
   }
 
   /* Header styling */
-  h1 {
+  h2 {
     font-size: 3.157rem;
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);

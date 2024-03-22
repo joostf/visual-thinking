@@ -1,47 +1,49 @@
 <script>
-  import BlogButton from "./blogButton.svelte";
+  import BlogButton from "../atoms/blogButton.svelte";
+  import Breadcrumb from "../atoms/breadcrumb.svelte";
   export let data;
 </script>
 
+<Breadcrumb titel="Artikelen" bgc="var(--vtDarkBlue)" />
+
 <!-- INTRO DATA - CONTENT -->
-<section class="intro">
+<header class="intro">
   {#each data.introTeksts as intro}
     <h1 class="introtitel2">{intro.title}</h1>
     <p class="introtext2">{intro.description.text}</p>
   {/each}
-</section>
+</header>
 
 <!-- BORDERS - BUTTON - ARTIKELEN DATA - CONTENT -->
-<section class="grid">
-  {#each data.artikelenHomepages as artikelenHomepages}
+<div class="grid">
+  {#each data.artikelenHomepages as article}
     <article>
-      <img src={artikelenHomepages.img.url} alt="artikelen" />
-      <h2>{artikelenHomepages.title}</h2>
-      <p class="text">{artikelenHomepages.description}</p>
-
-      <BlogButton page="/artikelen/{artikelenHomepages.pageName}" />
+      <a href="/artikelen/{article.pageName}">
+      <img src={article.img.url} alt="artikelen" />
+      <h2>{article.title}</h2>
+      <!-- <p class="text">{article.description}</p> -->
+    </a>
+      <!-- <BlogButton page="/artikelen/{article.pageName}" /> -->
     </article>
   {/each}
-</section>
+</div>
 
 <style>
-  /* MOBILE - STYLING */
-  /* INTRO - STYLING */
-
-  /* Center the intro section with a max width of 700px */
-  .intro {
+  header {
     max-width: 700px;
     width: 77%;
     margin: 0 auto;
   }
 
-  /* Style for intro text */
-  .introtitel2 {
+  h1 {
     font-size: 1.7rem;
     text-align: center;
   }
 
-  /* BORDER - CONTENT - STYLING */
+  img {
+    border: 2px solid var(--vtDarkBlue);
+  } 
+
   .grid {
     display: grid;
     grid-template-columns: auto;
@@ -49,22 +51,22 @@
     justify-items: center;
     padding: 40px;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     gap: 2em;
   }
 
-  article {
+  /* article {
     height: 30em;
     width: 16em;
     border: 4px solid var(--vtYellow);
     border-radius: 0.5em;
-  }
+  } */
 
   img {
     width: 100%;
-    height: 40%;
-    border-top-right-radius: 1em;
-    border-top-left-radius: 1em;
+
+    /* border-top-right-radius: 1em;
+    border-top-left-radius: 1em; */
   }
 
   h2 {
