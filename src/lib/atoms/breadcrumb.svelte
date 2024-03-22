@@ -1,15 +1,20 @@
 <script>
   export let titel;
   export let url;
+  export let bgc;
 </script>
 
-{#if url}
-  <a href="{url}">{titel}</a>
-{:else}
-  <span>{titel}</span>
-{/if}
-
+<div class="breadcrumb" style="--bgc:{bgc}">
+  {#if url}
+    <a href="{url}">{titel}</a>
+  {:else}
+    <span>{titel}</span>
+  {/if}
+</div>
 <style>
+  div {
+    background-color: var(--bgc);
+  }
   /* MOBILE - STYLING */
   a,span {
     font-weight: bold;
