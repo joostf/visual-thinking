@@ -1,6 +1,7 @@
 <script>
-  import Header from "$lib/molecules/header.svelte";
-  import Footer from "$lib/molecules/footer.svelte";
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import MethodsHeader from "$lib/organisms/methodsHeader.svelte";
+
 
   export let data;
 
@@ -31,95 +32,51 @@
   }
 </script>
 
-<Header />
+<Breadcrumb
+  titel="Terug naar overzicht"
+  url="/tekenmethodes"
+  bgc="var(--vtYellow)"
+/>
 
-<header>
-  <a href="/tekenmethodes">
-    <h4 class="line">
-      <img
-        class="arrows-line"
-        src="/arrows.svg"
-        alt="terug_naar_overzicht_arrow"
-      />Overzicht
-    </h4>
-  </a>
-</header>
+<MethodsHeader {data} />
 
-<section class="nav-items">
-  <section>
-    <h1>
-      {#each data.methods as method}
-        {method.title}
-      {/each}
-    </h1>
-  </section>
-
-  <nav>
-    <ul>
-      {#each data.methods as method}
-        <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <h2>Beschrijving</h2>
-          </a>
-        </li>
-        <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <h2 class="bottom">Stappenplan</h2>
-          </a>
-        </li>
-        <li>
-          <a href="/tekenmethodes/{method.slug}/voorbeelden">
-            <h2>Voorbeelden</h2>
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
-</section>
 
 <article class="grid">
-  <section class="image-text">
-    <!-- 
-          {#each data.methods as method}
-      <img class="template-url" src={method?.template?.url} alt="icon" />
-    {/each} -->
-    <section class="flex-s">
-        <div class="tags-b">
-          <img class="icon" src="/icon1.svg" alt="icon" />
-          {#each data.methods as method}
-            {#each method.categories as category}
-              <h3 class="tag">
-                {@html category.title}
-              </h3>
-            {/each}
-          {/each}
-        </div>
-
-        <div class="tags-b">
-          <img class="icon" src="/icon2.svg" alt="icon" />
+  <div class="flex-s">
+    <div class="tags-b">
+      <img class="icon" src="/icon1.svg" alt="icon" />
+      {#each data.methods as method}
+        {#each method.categories as category}
           <h3 class="tag">
-            {#each data.methods as method}
-              {method.material}
-            {/each}
+            {@html category.title}
           </h3>
-        </div>
+        {/each}
+      {/each}
+    </div>
 
-        <div class="tags-b">
-          <img class="icon" src="/icon3.svg" alt="icon" />
-          <h3 class="tag">
-            {#each data.methods as method}
-              {method.duration}
-            {/each}
-          </h3>
-        </div>
+    <div class="tags-b">
+      <img class="icon" src="/icon2.svg" alt="icon" />
+      <h3 class="tag">
+        {#each data.methods as method}
+          {method.material}
+        {/each}
+      </h3>
+    </div>
 
-        <div class="tags-b">
-          <img class="icon" src="/icon4.svg" alt="icon" />
-          <h3 class="tag">Charley Muhren</h3>
-        </div>
-      </section>
-    </section>
+    <div class="tags-b">
+      <img class="icon" src="/icon3.svg" alt="icon" />
+      <h3 class="tag">
+        {#each data.methods as method}
+          {method.duration}
+        {/each}
+      </h3>
+    </div>
 
+    <div class="tags-b">
+      <img class="icon" src="/icon4.svg" alt="icon" />
+      <h3 class="tag">Charley Muhren</h3>
+    </div>
+  </div>
 
   <section class="steps">
     <!-- {console.log(data)} -->
@@ -129,13 +86,13 @@
           <summary class="step-title">{step.title}</summary>
           <div class="accordion-content">
             <!-- {#each step.visual as visual} -->
-            
+
             {#if step.visual[0]}
-            <div class="step-visual">
-              <img src={step.visual[0].url} alt="image_voorbeeld" />
-            </div>
-          {/if}
-           <!-- {/each} -->
+              <div class="step-visual">
+                <img src={step.visual[0].url} alt="image_voorbeeld" />
+              </div>
+            {/if}
+            <!-- {/each} -->
 
             {#if typeof step.description === "object"}
               <p class="step-description">{@html step.description.html}</p>
@@ -149,89 +106,13 @@
   </section>
 </article>
 
-<Footer />
-
 <style>
-  /* Header */
-  .line {
-    display: flex;
-    align-items: center;
-    height: 30px;
-    text-transform: uppercase;
-    background-color: var(--vtYellow);
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
-    padding-left: 9%;
-    margin-top: 0%;
-  }
-
-  .nav-items {
-    margin-top: -34px;
-    margin-bottom: 30px;
-    background-color: var(--vtGrey-10);
-  }
 
   /* img binnen de steps */
 
-.step-visual img {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-  ul {
-    justify-content: center;
-    overflow-y: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  a {
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-  }
-
-  nav ul {
-    display: flex;
-    /* align-items: center; */
-    list-style: none;
-  }
-
-  nav li {
-    padding-right: 10px;
-    padding-left: 10px;
-    /* font-size: 1rem; */
-    text-transform: uppercase;
-    font-family: var(--vtPrimaryFont);
-  }
-
-  h1 {
-    /* background-color: var(--vtGrey); */
-    font-size: 3.157rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-    text-align: center;
-  }
-
-  h2 {
-    color: var(--vtSec-DarkBlue);
-    font-size: 20px;
-    font-weight: 100;
-  }
-
-  .arrows-line {
-    width: 36px;
-    margin-right: 5px;
-    transform: rotate(180deg);
-  }
-
-  .bottom {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.5rem;
+  .step-visual img {
+    width: 100%;
+    height: 100%;
   }
 
   /* Grid -Article */
@@ -245,7 +126,7 @@
     margin: 0 auto;
   }
 
-  .image-text,
+  .grid,
   .steps {
     width: 100%;
   }
@@ -261,7 +142,7 @@
     flex-wrap: wrap;
     margin-bottom: 10px;
   }
-  
+
   .tag {
     flex-wrap: wrap;
   }
@@ -294,7 +175,7 @@
   }
 
   .step-title {
-    font-family:var(--vtPrimaryFont) ;
+    font-family: var(--vtPrimaryFont);
     background-color: var(--vtDarkBlue);
     color: var(--vtWhite);
     padding: 10px;
@@ -320,35 +201,8 @@
   /* ----------------------------------------------- DESKTOP */
 
   @media (min-width: 74em) {
-    .line {
-      padding-left: 9% !important;
-    }
-
-    .nav-items {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: -24px !important;
-      margin-bottom: 60px;
-      padding-left: 9%;
-      padding-right: 9%;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-
-    h1 {
-      margin-top: auto;
-      margin-bottom: 30px;
-      text-align: start;
-      max-width: 800px;
-    }
 
     /* Accordion  */
-
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -373,74 +227,12 @@
     }
 
     .tag {
-    font-size: 0.9rem;
-  }
-  }
-
-  /*------------------------------------------------------- RESPONSIVE TABLET GROOT ----*/
-  @media (min-width: 45em) {
-    h1 {
-      padding-top: 25px;
-      font-size: 3.157rem;
-    }
-
-    .line {
-      padding-left: 20%;
-    }
-
-    .nav-items {
-      margin-top: -63px;
-      margin-bottom: 30px;
-    }
-
-    .tag {
-    font-size: 0.9rem;
-  }
-  }
-
-  /*-------------------------------------------------------- RESPONSIVE TABLET MINI ---*/
-  @media (min-width: 31em) {
-    .line {
-      padding-left: 20%;
-    }
-
-    h1 {
-      padding-top: 25px;
-    }
-
-    ul {
-      transform: translateY(0);
-    }
-
-    .nav-items {
-      margin-top: -63px;
-      margin-bottom: 30px;
-    }
-
-    .tag {
-    font-size: 0.9rem;
-  }
-  }
-
-  /*-------------------------------------------------------------- RESPONSIVE MOBILE --*/
-  @media (max-width: 31em) {
-    .line {
-      padding-left: 11%;
-    }
-
-    h1 {
-      font-size: 1.7rem;
-      padding-top: 25px;
-    }
-
-    ul {
-      transform: translateY(0);
-      justify-content: flex-start;
-    }
-
-    .nav-items {
-      margin-top: -34px;
-      margin-bottom: 30px;
+      font-size: 0.9rem;
     }
   }
+
+
+
+
+
 </style>
