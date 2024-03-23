@@ -1,19 +1,14 @@
 <script>
-  import Header from "$lib/molecules/header.svelte";
-  import Footer from "$lib/molecules/footer.svelte";
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
+
 
 </script>
 
-<Header />
+<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--vtDarkBlue)" />
 
-<header>
-  <section>
-    <h4 class="line">Case</h4>
-  </section>
-</header>
 
 <main>
-  <section class="greybackground">
+  <section>
     <h1>Het ontstaan van de tekenmethode Tekenen, spelen delen</h1>
     <section class="lineintro"></section>
     <p class="description">Door: Charley Muhren</p>
@@ -515,7 +510,7 @@
   </section>
 </main>
 
-<Footer />
+
 
 <style>
   main {
