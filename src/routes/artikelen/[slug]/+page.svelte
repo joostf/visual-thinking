@@ -69,9 +69,9 @@
     color: var(--vtDarkBlue);
     margin:0;
   }
-  img {
-    width: 22em;
-    height: auto;
+
+  time {
+    font-weight: bold;
   }
 
   /* tablet */

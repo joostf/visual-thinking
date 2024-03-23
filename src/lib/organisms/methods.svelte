@@ -39,9 +39,7 @@
   }
 </script>
 
-<div class="breadcrumb">
-<Breadcrumb titel="Tekenmethodes" />
-</div>
+<Breadcrumb titel="Tekenmethodes" url="/tekenmethodes" bgc="var(--vtYellow)" />
 
 <section class="intro">
   <article class="intro-text">
