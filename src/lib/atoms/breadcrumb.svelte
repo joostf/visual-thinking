@@ -14,6 +14,7 @@
 <style>
   div {
     background-color: var(--bgc);
+    margin:0 -1rem;
   }
   /* MOBILE - STYLING */
   a,span {

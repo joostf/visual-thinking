@@ -1,105 +1,95 @@
 <script>
-  import Breadcrumb from "../atoms/breadcrumb.svelte";
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   export let data;
 </script>
 
 <Breadcrumb titel="Artikelen" bgc="var(--vtDarkBlue)" />
 
 <header>
-  {#each data.introTeksts as intro}
-    <h1>{intro.title}</h1>
-    <p>{intro.description.text}</p>
-  {/each}
+    <h1>{data.articlePage.title}</h1>
+    <p>{data.articlePage.content.text}</p>
 </header>
 
 <div class="grid">
-  {#each data.artikelenHomepages as article}
+  {#each data.articles as article}
+  <a href="/artikelen/{article.slug}">
     <article>
-      <a href="/artikelen/{article.pageName}">
-      <img src={article.img.url} alt="artikelen" />
+      <img src={article.visual.url} alt="{article.title}" width="300px" height="200" />
       <h2>{article.title}</h2>
-      <!-- <p class="text">{article.description}</p> -->
-    </a>
-  </article>
+    </article>
+  </a>
   {/each}
 </div>
 
 <style>
   header {
-    max-width: 700px;
+    max-width: 43.75em;
     width: 77%;
     margin: 0 auto;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    justify-items: center;
   }
 
   h1 {
     font-size: 1.7rem;
     text-align: center;
   }
-  a > img {
-    width: 100%;
-    height: 335px;
-    border: 2px solid var(--vtDarkBlue);
-  }  
 
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: start;
+    padding:2rem;
+  }
 
-    a {
-    text-decoration: none; 
-    width: 30px;
-    cursor: pointer; 
+  a {
+    text-decoration: none;
+    border: 2px solid transparent; 
+    transition:.25s
+  }
+
+  a:hover,
+  a:focus-visible {
+      border-color:var(--vtDarkBlue);
+      scale:1.01;
+      outline:none;
+      background:var(--vtYellow);
     }
 
-  article{
-    padding: 10px;
-    max-width: 400px;
+  article {
+    padding: 1rem;
+    display:flex;
+    flex-direction:column;
   }
+  img {
+    border: 2px solid var(--vtDarkBlue);
+    object-fit: cover;
+    width:100%;
+  }  
 
   h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
-    margin-top: -3px;
-    font-size: 20px;
+    font-size: 1.25em;
+    margin-bottom: 0;
   }
 
 
   /* TABLET - STYLING */
-  @media screen and (min-width: 768px) {   
-     header {
-      max-width: 700px;
-      width: 80%;
-    }
-
-    h1{
+  @media screen and (min-width: 36em) {   
+    h1 {
       font-size: 3.157rem;
     }
 
     .grid {
       grid-template-columns: repeat(2, 1fr); 
+      margin:2rem auto;
     }
-  
   }
 
-
   /* DESKTOP - STYLING */
-  @media screen and (min-width: 1024px) {
-    header {
-      max-width: 700px;
-      width: 80%;
-    }
+  @media screen and (min-width: 60em) {
     .grid {
       grid-template-columns: repeat(3, 1fr); 
     }
-
-    img:hover{
-      border: 3px solid var(--vtDarkBlue);
-    }
-
- 
   }
 </style>
