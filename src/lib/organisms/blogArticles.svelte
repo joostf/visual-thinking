@@ -37,22 +37,22 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    justify-items: start;
+    justify-items: stretch;
     padding:2rem;
   }
 
   a {
     text-decoration: none;
-    border: 2px solid transparent; 
+    border: 1px solid transparent; 
     transition:.25s
   }
 
   a:hover,
   a:focus-visible {
       border-color:var(--vtDarkBlue);
-      scale:1.01;
+      /* scale:1.01; */
       outline:none;
-      background:var(--vtYellow);
+      background:var(--vtDarkBlue-10);
     }
 
   article {
@@ -61,7 +61,7 @@
     flex-direction:column;
   }
   img {
-    border: 2px solid var(--vtDarkBlue);
+    border: 1px solid var(--vtDarkBlue);
     object-fit: cover;
     width:100%;
   }  
@@ -69,8 +69,10 @@
   h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
-    font-size: 1.25em;
+    font-size: 1em;
     margin-bottom: 0;
+    font-weight: normal;
+    text-wrap:balance
   }
 
 
