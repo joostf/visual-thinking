@@ -32,6 +32,7 @@
     top:1rem;
     left:1rem;
     width:40px;
+    z-index:1
   }
   a.logo img {
     width:60px
@@ -39,7 +40,28 @@
 
   nav {
     --horizontal-spacing:1rem;
-    padding:2rem 1rem 1rem 3.5rem;
+    padding:1rem 1rem 1rem 3.5rem;
+    margin-left:1rem;
+    position: relative;
+  }
+
+  nav::before,
+  nav::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:3.5rem;
+    width: 3rem;
+    height: 100%;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 80%);
+  }
+
+  nav::after {
+    left:auto;
+    right:0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
   }
 
   ul {
@@ -48,13 +70,15 @@
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
     font-weight: 700;
-    padding: 0 1rem 1em;
+    padding:1em;
     margin: 0;
     align-items: center;
     gap:4vw;
     overflow-x:auto;
     width:100%;
   }
+
+  
 
   /* tablet */
   @media (min-width: 72.5em) {
@@ -69,6 +93,11 @@
     nav {
       --horizontal-spacing:10vw;
       padding-left:1rem;
+    }
+
+    nav::before,
+    nav::after {
+      display:none;
     }
 
     ul {
