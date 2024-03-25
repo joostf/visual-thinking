@@ -76,7 +76,10 @@
     }
 
     li:nth-of-type(3) {
-      margin-right: auto;
+      margin-right: 60px;
+    }
+    li:nth-of-type(4) {
+      margin-left: 60px;
     }
 
     
