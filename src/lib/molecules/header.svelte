@@ -45,7 +45,6 @@
     --horizontal-spacing:1rem;
     padding:1rem 1rem 1rem 3.5rem;
     position: relative;
-    box-shadow: 0 7px 6px -2px var(--vtGrey);
   }
 
   nav::before,
