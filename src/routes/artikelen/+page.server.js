@@ -3,23 +3,25 @@ import { hygraph } from "$lib/utils/hygraph.js";
 
 export async function load() {
   let query = gql`
-      query Assets {
-        introTeksts {
-          title
-          description {
-            text
-          }
-        }
-        artikelenHomepages(first: 6) {
-          img {
-            url
-          }
-          title
-          description
-          pageName
+    query ArticlePage {
+      articlePage(where: {id: "clrj2exi47lp30cuwz58mp5f8"}) {
+        title
+        content {
+          text
         }
       }
+      
+      articles(first:6) {
+        visual {
+          url
+        }
+        title
+        intro
+        slug
+      }
+    }
   `;
-
-  return await hygraph.request(query);
+  const data = await hygraph.request(query);
+  
+  return data
 }
