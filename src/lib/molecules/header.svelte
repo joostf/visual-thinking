@@ -45,6 +45,7 @@
     --horizontal-spacing:1rem;
     padding:1rem 1rem 1rem 3.5rem;
     position: relative;
+    overflow: hidden;
   }
 
   nav::before,
