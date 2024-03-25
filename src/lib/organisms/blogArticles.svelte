@@ -36,9 +36,9 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     justify-items: stretch;
     padding:2rem;
+    gap:.5rem;
   }
 
   a {
@@ -49,17 +49,17 @@
 
   a:hover,
   a:focus-visible {
-      border-color:var(--vtDarkBlue);
-      /* scale:1.01; */
-      outline:none;
-      background:var(--vtDarkBlue-10);
-    }
+    border-color:var(--vtDarkBlue);
+    outline:none;
+    background:var(--vtDarkBlue-10);
+  }
 
   article {
     padding: 1rem;
     display:flex;
     flex-direction:column;
   }
+
   img {
     border: 1px solid var(--vtDarkBlue);
     object-fit: cover;
@@ -74,7 +74,6 @@
     font-weight: normal;
     text-wrap:balance
   }
-
 
   /* TABLET - STYLING */
   @media screen and (min-width: 36em) {   

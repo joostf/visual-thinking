@@ -12,8 +12,8 @@
 
 <header>
   <div>
-    <p>Gepost op: <time>26 maart 2019<time></p>
-    <p>Door: <strong>Charley Muhren</strong></p>
+    <p>Gepost op <time>26 maart 2019<time></p>
+    <p>Door <strong>Charley Muhren</strong></p>
   </div>
 
   <h1>{title}</h1>
@@ -25,7 +25,10 @@
 </header>
 
 <div class="content">
-  <img src="/portret.webp" alt="portret" />
+  {#if visual.url} 
+    <img src="{visual.url}" alt="{title}" />
+  {/if}
+  
 
   <p class="intro">
     {intro}
