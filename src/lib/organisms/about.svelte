@@ -3,7 +3,7 @@
 
 </script>
 
-<Breadcrumb titel="Over" bgc="var(--vtDarkBlue)" />
+<Breadcrumb titel="Over" bgc="var(--vtSec-DarkBlue)" />
 
 <div class="content">
   <h1>Over het platform</h1>
