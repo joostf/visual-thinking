@@ -1,67 +1,70 @@
 <script>
   let active = false;
-
-  function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-      active = false;
-    } else {
-      x.style.display = "block";
-      active = true;
-    }
-  }
 </script>
+
+<a href="/" class="logo"><img src="/vtHBO-v1.0-Logo_1.svg"  alt="Visual Thinking Logo" /></a>
 
 <nav>
   <ul>
     <li><a href="/tekenmethodes">Tekenmethodes</a></li>
     <li><a href="/over">Over</a></li>
     <li><a href="/minicursussen">Minicursussen</a></li>
-    <li><a href="/"><img src="/vtHBO-v1.0-Logo_1.svg" class="visual-thinking-logo" alt="visual-thinking-logo" /></a></li>
     <li><a href="/kennisclips">Kennisclips</a></li>
     <li><a href="/artikelen">Artikelen</a></li>
     <li><a href="/tekenruimte">Tekenruimte</a></li>
   </ul>
 </nav>
 
-<div class="mobile-container">
-  <div class="topnav">
-    <a
-      href="/"
-      class={active ? "active rotate" : "active"}
-      on:click|preventDefault={myFunction}>Navigatie</a
-    >
-    <div id="myLinks">
-      <a href="/over">Over</a>
-      <a href="/tekenmethodes">Tekenmethodes</a>
-      <a href="/minicursussen">Minicursussen</a>
-      <a href="/kennisclips">Kennisclips</a>
-      <a href="/artikelen">Artikelen</a>
-      <a href="/tekenruimte">Tekenruimte</a>
-    </div>
-  </div>
-</div>
-
 <style>
   a {
     color: var(--vtDarkBlue);
     text-decoration: none;
     cursor: pointer;
+    font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
+    padding:.25rem;
   }
 
-  a:link {
-    text-decoration: none;
+  a:hover,
+  a:focus-visible {
+    background: var(--vtYellow);
+    outline:none;
+  }
+
+  a.logo {
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    z-index:1
+  }
+
+  a.logo img {
+    width:60px
   }
 
   nav {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    box-shadow: 0px 7px 6px -2px rgba(0, 0, 0, 0.1);
+    --horizontal-spacing:1rem;
+    padding:1rem 1rem 1rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
 
+  nav::before,
+  nav::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:3.5rem;
+    width: 3rem;
+    height: 100%;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
+  }
+
+  nav::after {
+    left:auto;
+    right:-1rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
   }
 
   ul {
@@ -70,399 +73,49 @@
     color: var(--vtDarkBlue);
     font-family: var(--vtPrimaryFont);
     font-weight: 700;
-    padding: 0;
-    margin: 0;
+    padding:1em;
+    margin: 0 1rem 0 1rem;
     align-items: center;
+    gap:4vw;
+    overflow-x:auto;
+    width:100%;
   }
 
-  li {
-    width: 7.7rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .visual-thinking-logo {
-    max-width: 100px;
-    height: auto;
-  }
-
-  .mobile-container {
-    display: none;
-  }
-
-  /* tablet */
-  @media (min-width: 31em) and (max-width: 70em) {
-
-
-    li {
-      width: 6.7rem;
+  @media (min-width: 72.5em) {
+    a.logo {
+      position: absolute;
+      z-index:1;
+      left:calc(50% - 40px);
+      top:.5rem;
     }
 
-    .mobile-container {
-      display: inherit;
-      position: relative;
-      z-index: 9999;
-    }
-
-    .mobile-container {
-      background-color: #555;
-      color: white;
-      border-radius: 10px;
-    }
-
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
-    }
-
-    .topnav #myLinks {
-      display: none;
-    }
-
-    .topnav a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    .topnav a:nth-child(1),
-    .topnav a:nth-child(2),
-    .topnav a:nth-child(3),
-    .topnav a:nth-child(4),
-    .topnav a:nth-child(5),
-    .topnav a:nth-child(6){
-      text-transform: uppercase;
-      color: var(--vtWhite);
-      font-family: var(--vtPrimaryFont);
-      font-size: 0.9rem;
-      padding-top: 0.2rem;
-      padding-bottom: 0.2rem;
-      margin-top: 0%;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-    }
-
-    .topnav > a:nth-child(1) {
-      background-color: var(--vtGrey-50);
-      color: var(--vtDarkBlue);
-      padding-left: 20%;
-    }
-
-    #myLinks a:nth-child(1) {
-      background-color: var(--vtSec-DarkBlue);
-      animation: slide1 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(2) {
-      background-color: var(--vtYellow);
-      animation: slide2 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(3) {
-      background-color: var(--vtRed);
-      animation: slide3 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(4) {
-      background-color: var(--vtLightBlue);
-      animation: slide4 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(5) {
-      background-color: var(--vtDarkBlue);
-      color: var(--vtWhite);
-      animation: slide5 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(6) {
-      background-color: var(--vtGrey-80);
-      color: var(--vtWhite);
-      animation: slide6 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    nav ul a:nth-child(1) {
-      display: none;
-    }
-    nav ul li:nth-of-type(4) a{
-      display: block;
-    }
-    
-    nav {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
-
-    .active::before {
-      content: ">";
-      transition: 600ms;
-      padding-right: 5px;
-    }
-
-    .active.rotate::before {
-      content: ">";
-      transform: rotate(90deg);
-    }
-
-    @keyframes slide1 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 26%;
-      }
-    }
-
-    @keyframes slide2 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 32%;
-      }
-    }
-
-    @keyframes slide3 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 38%;
-      }
-    }
-
-    @keyframes slide4 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 44%;
-      }
-    }
-
-    @keyframes slide5 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 50%;
-      }
-    }
-
-    @keyframes slide6 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 56%;
-      }
-    }
-  }
-
-  /* mobile */
-  @media (max-width: 31em) {
-
-
-    a:link {
-      text-decoration: none;
-      font-family: var(--vtPrimaryFont), sans-serif;
-      font-weight: 700;
+    a.logo img {
+      width:80px
     }
 
     nav {
-      background-color: rgb(255, 252, 249);
-      padding-top: 2em;
-      padding-bottom: 2em;
-      width: 100%;
+      --horizontal-spacing:10vw;
+      padding-left:1rem;
     }
 
-    li {
-      width: 3rem;
+    nav::before,
+    nav::after {
+      display:none;
     }
 
     ul {
-      flex-direction: column;
+      --spacing-logo:6rem;
+      justify-content: center;
     }
 
-    .mobile-container {
-      display: inherit;
-      position: relative;
-      z-index: 9999;
+    li:nth-of-type(3) {
+      margin-right: var(--spacing-logo);
     }
 
-    .mobile-container {
-      max-width: 480px;
-      margin: auto;
-      background-color: #555;
-      color: white;
-      border-radius: 10px;
+    li:nth-of-type(4) {
+      margin-left: var(--spacing-logo);
     }
 
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
-    }
-
-    .topnav #myLinks {
-      display: none;
-    }
-
-    .topnav a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    .topnav a:nth-child(1),
-    .topnav a:nth-child(2),
-    .topnav a:nth-child(3),
-    .topnav a:nth-child(4),
-    .topnav a:nth-child(5),
-    .topnav a:nth-child(6) {
-      text-transform: uppercase;
-      color: var(--vtWhite);
-      font-family: var(--vtPrimaryFont);
-      font-size: 0.9rem;
-      padding-top: 0.2rem;
-      padding-bottom: 0.2rem;
-      margin-top: 0%;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-    }
-
-    .topnav > a:nth-child(1) {
-      background-color: var(--vtGrey-50);
-      color: var(--vtDarkBlue);
-      padding-left: 11%;
-    }
-
-    #myLinks a:nth-child(1) {
-      background-color: var(--vtSec-DarkBlue);
-      animation: slide1 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(2) {
-      background-color: var(--vtYellow);
-      animation: slide2 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(3) {
-      background-color: var(--vtRed);
-      animation: slide3 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(4) {
-      background-color: var(--vtLightBlue);
-      animation: slide4 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(5) {
-      background-color: var(--vtDarkBlue);
-      color: var(--vtWhite);
-      animation: slide5 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .topnav a:nth-child(6) {
-      background-color: var(--vtGrey-80);
-      color: var(--vtWhite);
-      animation: slide6 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    nav ul a:nth-child(1) {
-      display: none;
-    }
-    nav ul li:nth-of-type(4) a{
-      display: block;
-    }
-
-    nav {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
-
-    .active::before {
-      content: ">";
-      transition: 600ms;
-      padding-right: 5px;
-    }
-
-    .active.rotate::before {
-      content: ">";
-      transform: rotate(90deg);
-    }
-
-    @keyframes slide1 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 17%;
-      }
-    }
-
-    @keyframes slide2 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 23%;
-      }
-    }
-
-    @keyframes slide3 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 29%;
-      }
-    }
-
-    @keyframes slide4 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 35%;
-      }
-    }
-
-    @keyframes slide5 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 41%;
-      }
-    }
-
-    @keyframes slide6 {
-      0% {
-        padding-left: 0%;
-      }
-
-      100% {
-        padding-left: 47%;
-      }
-    }
+    
   }
 </style>
