@@ -14,8 +14,7 @@ export async function load() {
 
   const request = await hygraph.request(query)
 
-
   return{
     request
-    };
+  };
 }

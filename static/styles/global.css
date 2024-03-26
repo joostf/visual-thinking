@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-
 :root {
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
@@ -77,6 +66,17 @@ body {
   --SecFont: 1.7rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--vtSecondaryFont);
+}
+
 blockquote {
   color: var(--vtYellow);
   font-family: var(--vtPrimaryFont);
@@ -108,12 +108,21 @@ h3 {
   font-size: 1.0777rem;
 }
 
-main {
-  padding: 0 1rem;
+a {
+  color: var(--vtYellow);
+  
 }
 
 img {
   max-width: 100%;
+}
+
+ul {
+  align-self:flex-start
+}
+
+main {
+  padding: 0 1rem;
 }
 
 .sr-only {
