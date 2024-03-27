@@ -6,22 +6,22 @@
   export let data;
 
   onMount(() => {
-    var prevButton = document.getElementById("button-prev");
+    const carrousel = document.querySelector("#js-carrousel .carrousel");
+    const prevButton = document.getElementById("button-prev");
+    const nextButton = document.getElementById("button-next");
 
-    prevButton.addEventListener("click", function () {
-      var el = document.querySelector("#js-carrousel .carrousel");
-      el.scrollBy({ left: -1 * el.offsetWidth - 15 });
-    });
+    const handleButtonClick = (scrollAmount) => {
+      carrousel.scrollBy({ left: scrollAmount });
+    };
 
-    var nextButton = document.getElementById("button-next-1");
+    prevButton.addEventListener("click", () =>
+      handleButtonClick(-1 * carrousel.offsetWidth - 15)
+    );
+    nextButton.addEventListener("click", () =>
+      handleButtonClick(carrousel.offsetWidth + 15)
+    );
 
-    nextButton.addEventListener("click", function () {
-      var el = document.querySelector("#js-carrousel .carrousel");
-      el.scrollBy({ left: el.offsetWidth + 15 });
-    });
-
-    const icon = document.querySelector(".js-disable");
-    icon?.classList.toggle("js-disable");
+    document.querySelector(".js-disable")?.classList.remove("js-disable");
   });
 </script>
 
@@ -32,13 +32,12 @@
 />
 <MethodsHeader {data} />
 
-
 <section class="images-buttons">
   <div class="js-disable">
     <div class="scroll-btn">
       {#if data.methods[0].examples.length > 0}
         <div id="button-prev" class="carousel-btn prev-btn">
-          <button class="icon icon-right">
+          <button class="icon-button">
             <svg
               id="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +49,8 @@
             >
           </button>
         </div>
-        <div id="button-next-1" class="carousel-btn next-btn">
-          <button class="icon icon-right">
+        <div id="button-next" class="carousel-btn next-btn">
+          <button class="icon-button">
             <svg
               id="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +71,12 @@
       {#each data.methods as method}
         {#if method.examples.length > 0}
           {#each method.examples as example}
-            <img class="carrousel-img" src={example.url} alt="Example Slide" />
+            <img
+              class="carrousel-img"
+              src={example.url}
+              alt="Example Slide"
+              loading="lazy"
+            />
           {/each}
         {:else}
           <p class="carrousel-missing">Geen voorbeelden</p>
@@ -92,7 +96,7 @@
   .carrousel {
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 31em;
     gap: 15px;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -110,7 +114,7 @@
   }
 
   .carrousel-img {
-    width: 600px;
+    width: 100%;
     height: auto;
   }
 
@@ -121,7 +125,7 @@
     justify-content: center;
   }
 
-  .icon-right:hover {
+  .icon-button:hover {
     background-color: var(--vtYellow);
     transition: 0.2s;
   }
@@ -136,9 +140,9 @@
     margin-inline-start: 15px;
   }
 
-  .icon {
-    height: 45px;
-    width: 45px;
+  .icon-button {
+    height: 40px;
+    width: 60px;
     border-radius: 30px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -186,7 +190,7 @@
   /*------------------------------------------------ DESKTOP ---*/
   @media (min-width: 74em) {
     .carrousel {
-      max-width: 600px;
+      max-width: 38em;
       gap: 15px;
     }
   }
@@ -194,14 +198,14 @@
   /*----------------------------------------- MOBILE---*/
   @media (max-width: 31em) {
     .carrousel {
-      max-width: 300px;
+      max-width: 17em;
       gap: 15px;
     }
 
-    .carrousel-img {
+    /* .carrousel-img {
       width: 300px;
       height: auto;
-    }
+    } */
 
     .carrousel-missing {
       font-size: 1.4rem;
