@@ -9,14 +9,15 @@
 
 <div>
   <header>
-      <h1>{data.slug}</h1>
+      <h1>{data.miniCourse.title}</h1>
   </header>
+
   {#if data.miniCourse && data.miniCourse.slides}
     {#each data.miniCourse.slides as slide, index}
       <article>
           <h2>{slide.title}</h2>
-  
-          {@html slide.content.html}
+          
+          {@html slide.content.html }
 
           {#if slide.image && slide.image.url.length > 0}
             <img src="slide.image.url" alt="">
