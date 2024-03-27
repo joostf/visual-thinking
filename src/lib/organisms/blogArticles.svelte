@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: stretch;
-    padding:2rem;
+    padding:2rem 0;
     gap:.5rem;
   }
 

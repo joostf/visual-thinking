@@ -4,19 +4,13 @@ import { hygraph } from "$lib/utils/hygraph.js";
 export async function load({ params }) {
   const { slug } = params;
   let query = gql`
-    query MyQuery($slug: String) {
-      minicursussen(where: { slug: $slug }) {
+    query MiniCourse {
+      miniCourse(where: {slug: "${slug}"}) {
         slides {
-          content {
-            text
-            raw
-            html
-            markdown
-          }
-          quote
           title
-          type
-          paragraph
+          content {
+            html
+          }
           image {
             url
           }
@@ -27,8 +21,10 @@ export async function load({ params }) {
 
   const variables = { slug };
   const request = await hygraph.request(query, variables);
-  console.log(variables)
+
+  console.log('server', request)
   return {
-    minicursussen: request.minicursussen,
+    miniCourse: request.miniCourse,
+    slug
   };
 }
