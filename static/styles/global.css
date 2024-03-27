@@ -114,7 +114,6 @@ a {
 
 img {
   max-width: 100%;
-  height:auto;
 }
 
 ul {
@@ -133,4 +132,9 @@ main {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+/* rich text data styling*/
+.rich-text img {
+  height:auto;
 }
