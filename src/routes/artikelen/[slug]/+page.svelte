@@ -34,7 +34,10 @@
     {intro}
   </p>
 
-  {@html content.html}
+  <div class="richt-text">
+    {@html content.html}
+  </div> 
+  
 </div>
 
 <style>
