@@ -6,6 +6,7 @@ export async function load({ params }) {
   let query = gql`
     query MiniCourse {
       miniCourse(where: {slug: "${slug}"}) {
+        title
         slides {
           title
           content {
@@ -22,9 +23,7 @@ export async function load({ params }) {
   const variables = { slug };
   const request = await hygraph.request(query, variables);
 
-  console.log('server', request)
   return {
     miniCourse: request.miniCourse,
-    slug
   };
 }
