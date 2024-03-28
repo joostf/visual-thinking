@@ -34,7 +34,7 @@
     {intro}
   </p>
 
-  <div class="richt-text">
+  <div class="rich-text">
     {@html content.html}
   </div> 
   
