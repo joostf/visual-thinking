@@ -2,13 +2,13 @@ import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
 
 export async function load({ url }) {
-    let selectedCategoryId = url.searchParams.get('selectedCategoryId') || null;
-    let where = ''
-    if (selectedCategoryId !== null) {
-        where = `, where: {categories_some: {id: "${selectedCategoryId}"}}`
-    }
+  let selectedCategoryId = url.searchParams.get("selectedCategoryId") || null;
+  let where = "";
+  if (selectedCategoryId !== null) {
+    where = `, where: {categories_some: {id: "${selectedCategoryId}"}}`;
+  }
 
-    let query = gql`
+  let query = gql`
         query VisualThinking {
             methods(first: 100 ${where}) {
                 id
@@ -24,8 +24,10 @@ export async function load({ url }) {
                     width
                 }
             }
-        }`;
+            
+        }`
+        
+        ;
 
-    return await hygraph.request(query);
-
+  return await hygraph.request(query);
 }
