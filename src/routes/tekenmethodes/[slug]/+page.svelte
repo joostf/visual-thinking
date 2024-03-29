@@ -6,7 +6,7 @@
 </script>
 
 <Breadcrumb
-  titel="Terug naar overzicht"
+  titel="Overzicht"
   url="/tekenmethodes"
   bgc="var(--vtYellow)"
 />

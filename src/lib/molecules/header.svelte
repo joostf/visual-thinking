@@ -23,13 +23,6 @@
     cursor: pointer;
     font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
     padding:.25rem;
-    transition:.25s
-  }
-
-  a:hover,
-  a:focus-visible {
-    background: var(--background);
-    outline:none;
   }
 
   a.logo {
@@ -82,7 +75,7 @@
   ul {
     list-style-type: none;
     display: flex;
-    color: var(--vtDarkBlue);
+    color: transparent;
     font-family: var(--vtPrimaryFont);
     font-weight: 700;
     padding:1em;
@@ -92,6 +85,36 @@
     overflow-x:auto;
     scrollbar-width:0;
     width:100%;
+  }
+
+  ul li:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: 0.25s;
+  }
+
+  li:nth-child(1):hover {
+    text-decoration: underline var(--vtYellow);
+  }
+
+  li:nth-child(2):hover {
+    text-decoration: underline var(--vtSec-DarkBlue);
+  }
+
+  li:nth-child(3):hover {
+    text-decoration: underline var(--vtRed);
+  }
+
+  li:nth-child(4):hover {
+    text-decoration: underline var(--vtSec-LightBlue);
+  }
+
+  li:nth-child(5):hover {
+    text-decoration: underline var(--vtDarkBlue);
+  }
+
+  li:nth-child(6):hover {
+    text-decoration: underline var(--vtGrey);
   }
 
   @media (min-width: 72.5em) {
