@@ -17,24 +17,36 @@
 
 <style>
   a {
+    --background:var(--vtYellow);
     color: var(--vtDarkBlue);
     text-decoration: none;
     cursor: pointer;
     font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
     padding:.25rem;
+    transition:.25s
   }
 
   a:hover,
   a:focus-visible {
-    background: var(--vtYellow);
+    background: var(--background);
     outline:none;
   }
 
   a.logo {
+    --background:var(--vtDarkBlue);
+    padding:1rem .25rem 0;
+    margin-top:-.75rem;
     position:absolute;
     top:1rem;
     left:1rem;
-    z-index:1
+    z-index:1;
+  }
+
+  a.logo:hover,
+  a.logo:focus-visible {
+    background: none;
+    outline:none;
+    scale:1.1
   }
 
   a.logo img {
@@ -78,6 +90,7 @@
     align-items: center;
     gap:4vw;
     overflow-x:auto;
+    scrollbar-width:0;
     width:100%;
   }
 
