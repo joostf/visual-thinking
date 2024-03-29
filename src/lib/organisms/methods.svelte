@@ -20,44 +20,32 @@
   <p>Neem dan contact op met Charley.</p>
 </header>
 
-<h2>Categories</h2>
+<h2>Categorieën</h2>
 
 <ul>
   <li>
     <!-- <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"
-      >Onderzoeken en begrijpen</a
-    >
+    <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
   </li>
   <li>
     <!-- <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"
-      >Organiseren en plannen</a
-    >
+    <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
   </li>
   <li>
     <!-- <img src="/leren-over-anderen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"
-      >Leren over anderen</a
-    >
+    <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
   </li>
   <li>
     <!-- <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"
-      >Leren over jezelf</a
-    >
+    <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
   </li>
   <li>
     <!-- <img src="/communiceren.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"
-      >Communiceren en presenteren</a
-    >
+    <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
   </li>
   <li>
     <!-- <img src="/creatief.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"
-      >Creatief denken</a
-    >
+    <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
   </li>
 </ul>
 
