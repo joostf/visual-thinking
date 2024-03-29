@@ -17,6 +17,7 @@
 
 <style>
   a {
+    --background:var(--vtYellow);
     color: var(--vtDarkBlue);
     text-decoration: none;
     cursor: pointer;
@@ -25,10 +26,21 @@
   }
 
   a.logo {
+    --background:var(--vtDarkBlue);
+    padding:1rem .25rem 0;
+    margin-top:-.75rem;
     position:absolute;
     top:1rem;
     left:1rem;
-    z-index:1
+    z-index:1;
+    transition:.25s
+  }
+
+  a.logo:hover,
+  a.logo:focus-visible {
+    background: none;
+    outline:none;
+    scale:1.1
   }
 
   a.logo img {
@@ -72,37 +84,47 @@
     align-items: center;
     gap:4vw;
     overflow-x:auto;
+    scrollbar-width:0;
     width:100%;
   }
 
-  ul li:hover {
+  ul li a:hover,
+  ul li a:focus-visible {
+    --state-color: var(--vtSec-DarkBlue);
     text-decoration: underline;
+    text-decoration-color:var(--state-color);
     text-underline-offset: 5px;
-    transition: 0.25s;
+    outline:none;
   }
 
-  li:nth-child(1):hover {
-    text-decoration: underline var(--vtYellow);
+  li:nth-child(1) a:hover,
+  ul li:nth-child(1) a:focus-visible {
+    --state-color:var(--vtYellow);
   }
 
-  li:nth-child(2):hover {
-    text-decoration: underline var(--vtSec-DarkBlue);
+  li:nth-child(2) a:hover,
+  ul li:nth-child(2) a:focus-visible {
+    --state-color: var(--vtSec-DarkBlue);
   }
 
-  li:nth-child(3):hover {
-    text-decoration: underline var(--vtRed);
+  li:nth-child(3) a:hover,
+  ul li:nth-child(3) a:focus-visible {
+    --state-color: var(--vtRed);
   }
 
-  li:nth-child(4):hover {
-    text-decoration: underline var(--vtSec-LightBlue);
+  li:nth-child(4) a:hover,
+  ul li:nth-child(4) a:focus-visible {
+    --state-color: var(--vtSec-LightBlue);
   }
 
-  li:nth-child(5):hover {
-    text-decoration: underline var(--vtDarkBlue);
+  li:nth-child(5) a:hover,
+  ul li:nth-child(5) a:focus-visible {
+    --state-color: var(--vtDarkBlue);
   }
 
-  li:nth-child(6):hover {
-    text-decoration: underline var(--vtGrey);
+  li:nth-child(6) a:hover,
+  ul li:nth-child(6) a:focus-visible {
+    --state-color: var(--vtGrey);
   }
 
   @media (min-width: 72.5em) {
