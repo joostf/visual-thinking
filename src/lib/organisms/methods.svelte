@@ -1,6 +1,11 @@
 <script>
-  import { onMount } from "svelte";
-  import Breadcrumb from "../atoms/breadcrumb.svelte";
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import IconResearch from "$lib/atoms/icons/iconResearch.svelte";
+  import IconOrganise from "$lib/atoms/icons/iconOrganise.svelte";
+  import IconLearnAboutYourself from "$lib/atoms/icons/iconLearnAboutYourself.svelte";
+  import IconLearnAboutOthers from "$lib/atoms/icons/IconLearnAboutOthers.svelte";
+  import IconCommunicate from "$lib/atoms/icons/IconCommunicate.svelte";
+  import IconCreativeThinking from "$lib/atoms/icons/IconCreativeThinking.svelte";
 
   export let data;
 </script>
@@ -24,28 +29,22 @@
 
 <ul>
   <li>
-    <!-- <img src="/onderzoeken-en-begrijpen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch">Onderzoeken en begrijpen</a>
+    <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"><IconResearch /> Onderzoeken en begrijpen</a>
   </li>
   <li>
-    <!-- <img src="/organiseren-en-plannen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch">Organiseren en plannen</a>
+    <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"><IconOrganise /> Organiseren en plannen</a>
   </li>
   <li>
-    <!-- <img src="/leren-over-anderen.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch">Leren over anderen</a>
+    <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"><IconLearnAboutOthers /> Leren over anderen</a>
   </li>
   <li>
-    <!-- <img src="/leren-over-jezelf.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch">Leren over jezelf</a>
+    <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"><IconLearnAboutYourself /> Leren over jezelf</a>
   </li>
   <li>
-    <!-- <img src="/communiceren.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch">Communiceren en presenteren</a>
+    <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"><IconCommunicate /> Communiceren en presenteren</a>
   </li>
   <li>
-    <!-- <img src="/creatief.svg" alt="" class="img-categorie" /> -->
-    <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch">Creatief denken</a>
+    <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"><IconCreativeThinking />Creatief denken</a>
   </li>
 </ul>
 
@@ -56,7 +55,6 @@
         <a href="/tekenmethodes/{method.slug}">
           {#if method.template && method.template.url}
             <picture>
-
               <img
                 src={method.template.url.replace(":webp", ":png")}
                 alt={"Voorbeeld van " + method.title}
@@ -98,26 +96,28 @@
 
   ul {
     list-style: none;
-    /* overflow-x: auto;  */
     margin-top: -1.7rem;
+    margin-bottom: 0;
+    display:flex;
+    gap:.5rem;
+    overflow-x:auto;
+    
   }
 
-  li {
-    border: 1px solid #ccc;
+  li a {
+    display:flex;
+    white-space: nowrap;
     padding: 10px;
-    margin: 5px;
-    display: inline-block;
+    border:1px solid transparent;
+    align-items:center;
+    transition:.25s
   }
 
-  li:hover {
-    border-color: var(--vtYellow);
-    background: var(--vtYellow-10);
+  li a:hover,
+  li a:focus-visible {
+    border-color: var(--vtGrey);
+    background: var(--vtGrey-10);    
   }
-
-  /* li > img {
-    width: 45px;
-    height: 45px;
-  } */
 
   a {
     text-decoration: none;
@@ -138,7 +138,6 @@
   article:focus-visible {
     border-color: var(--vtYellow);
     outline: none;
-    background: var(--vtYellow-10);
   }
 
   .grid h2 {
@@ -147,7 +146,6 @@
     font-size: 19px;
     font-weight: 400;
     margin: 0;
-    /* text-wrap: balance; */
   }
 
   .grid {
@@ -169,9 +167,14 @@
 
     h2 {
       font-size: 2rem;
-  }
+    }
+    
     .grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    ul {
+      flex-wrap:wrap;
     }
   }
 
