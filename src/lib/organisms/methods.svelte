@@ -7,6 +7,11 @@
   import IconCommunicate from "$lib/atoms/icons/iconCommunicate.svelte";
   import IconCreativeThinking from "$lib/atoms/icons/iconCreativeThinking.svelte";
 
+  import { page } from "$app/stores";
+
+  let filter;
+  $: filter = $page.url.searchParams.get("categorie");
+
   export let data;
 </script>
 
@@ -25,26 +30,26 @@
   <p>Neem dan contact op met Charley.</p>
 </header>
 
-<h2>Categorieën</h2>
+<h2 id="methodes">Categorieën</h2>
 
 <ul>
   <li>
-    <a href="?selectedCategoryId=clbm28czo0kny0bw3tl71hnq4#touch"><IconResearch /> Onderzoeken en begrijpen</a>
+    <a href="?categorie=onderzoeken-en-begrijpen#methodes" class:active={filter == "onderzoeken-en-begrijpen"}><IconResearch /> Onderzoeken en begrijpen</a>
   </li>
   <li>
-    <a href="?selectedCategoryId=clbm2bwei0ku90bw26jca93on#touch"><IconOrganise /> Organiseren en plannen</a>
+    <a href="?categorie=organiseren-en-plannen#methodes" class:active={filter == "organiseren-en-plannen"}><IconOrganise /> Organiseren en plannen</a>
   </li>
   <li>
-    <a href="?selectedCategoryId=clbm2cfuj0kt40bw30fo6ow2j#touch"><IconLearnAboutOthers /> Leren over anderen</a>
+    <a href="?categorie=leren-over-anderen#methodes" class:active={filter == "leren-over-anderen"}><IconLearnAboutOthers /> Leren over anderen</a>
   </li>
   <li>
-    <a href="?selectedCategoryId=clbm298dc0kpu0bw3weflzwvw#touch"><IconLearnAboutYourself /> Leren over jezelf</a>
+    <a href="?categorie=leren-over-jezelf#methodes" class:active={filter == "leren-over-jezelf"}><IconLearnAboutYourself /> Leren over jezelf</a>
   </li>
   <li>
-    <a href="?selectedCategoryId=clbm2c6zs0kst0aw18ja2oafj#touch"><IconCommunicate /> Communiceren en presenteren</a>
+    <a href="?categorie=communiceren-en-presenteren#methodes" class:active={filter == "communiceren-en-presenteren"}><IconCommunicate /> Communiceren en presenteren</a>
   </li>
   <li>
-    <a href="?selectedCategoryId=clbm2bnf20kqw0aw159269x9i#touch"><IconCreativeThinking />Creatief denken</a>
+    <a href="?categorie=creatief-denken#methodes" class:active={filter == "creatief-denken"}><IconCreativeThinking />Creatief denken</a>
   </li>
 </ul>
 
@@ -114,7 +119,8 @@
   }
 
   li a:hover,
-  li a:focus-visible {
+  li a:focus-visible,
+  li a.active {
     border-color: var(--vtGrey);
     background: var(--vtGrey-10);    
   }
