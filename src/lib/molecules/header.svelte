@@ -1,17 +1,20 @@
 <script>
-  let active = false;
+  import { page } from "$app/stores"
+
+  let activeRoute;
+  $: activeRoute = $page.route.id;
 </script>
 
 <a href="/" class="logo"><img src="/vtHBO-v1.0-Logo_1.svg"  alt="Visual Thinking Logo" /></a>
 
 <nav>
   <ul>
-    <li><a href="/tekenmethodes">Tekenmethodes</a></li>
-    <li><a href="/over">Over</a></li>
-    <li><a href="/minicursussen">Minicursussen</a></li>
-    <li><a href="/kennisclips">Kennisclips</a></li>
-    <li><a href="/artikelen">Artikelen</a></li>
-    <li><a href="/tekenruimte">Tekenruimte</a></li>
+    <li><a href="/tekenmethodes" class:active={activeRoute == "/tekenmethodes"}>Tekenmethodes</a></li>
+    <li><a href="/over" class:active={activeRoute == "/over"}>Over</a></li>
+    <li><a href="/minicursussen" class:active={activeRoute == "/minicursussen"}>Minicursussen</a></li>
+    <li><a href="/kennisclips" class:active={activeRoute == "/kennisclips"}>Kennisclips</a></li>
+    <li><a href="/artikelen" class:active={activeRoute == "/artikelen"}>Artikelen</a></li>
+    <li><a href="/tekenruimte" class:active={activeRoute == "/tekenruimte"}>Tekenruimte</a></li>
   </ul>
 </nav>
 
@@ -84,12 +87,12 @@
     align-items: center;
     gap:4vw;
     overflow-x:auto;
-    scrollbar-width:0;
     width:100%;
   }
 
   ul li a:hover,
-  ul li a:focus-visible {
+  ul li a:focus-visible,
+  ul li a.active {
     --state-color: var(--vtSec-DarkBlue);
     text-decoration: underline;
     text-decoration-color:var(--state-color);
@@ -98,32 +101,38 @@
   }
 
   li:nth-child(1) a:hover,
-  ul li:nth-child(1) a:focus-visible {
+  ul li:nth-child(1) a:focus-visible,
+  ul li:nth-child(1) a.active {
     --state-color:var(--vtYellow);
   }
 
   li:nth-child(2) a:hover,
-  ul li:nth-child(2) a:focus-visible {
+  ul li:nth-child(2) a:focus-visible,
+  ul li:nth-child(2) a.active {
     --state-color: var(--vtSec-DarkBlue);
   }
 
   li:nth-child(3) a:hover,
-  ul li:nth-child(3) a:focus-visible {
+  ul li:nth-child(3) a:focus-visible,
+  ul li:nth-child(3) a.active {
     --state-color: var(--vtRed);
   }
 
   li:nth-child(4) a:hover,
-  ul li:nth-child(4) a:focus-visible {
+  ul li:nth-child(4) a:focus-visible,
+  ul li:nth-child(4) a.active {
     --state-color: var(--vtSec-LightBlue);
   }
 
   li:nth-child(5) a:hover,
-  ul li:nth-child(5) a:focus-visible {
+  ul li:nth-child(5) a:focus-visible,
+  ul li:nth-child(5) a.active {
     --state-color: var(--vtDarkBlue);
   }
 
   li:nth-child(6) a:hover,
-  ul li:nth-child(6) a:focus-visible {
+  ul li:nth-child(6) a:focus-visible,
+  ul li:nth-child(6) a.active {
     --state-color: var(--vtGrey);
   }
 

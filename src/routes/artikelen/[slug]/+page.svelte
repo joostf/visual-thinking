@@ -3,8 +3,6 @@
 
   export let data;
 
-  console.log(data);
-
   const {title, visual, intro, content} = data.article
 </script>
 

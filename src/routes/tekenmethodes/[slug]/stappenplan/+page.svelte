@@ -79,7 +79,6 @@
   </div>
 
   <section class="steps">
-    <!-- {console.log(data)} -->
     {#each data.methods as method}
       {#each method.steps as step}
         <details class="accordion-item">

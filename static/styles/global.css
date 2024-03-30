@@ -117,7 +117,12 @@ img {
 }
 
 ul {
-  align-self:flex-start
+  align-self:flex-start;
+  scrollbar-width:none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
 }
 
 main {
@@ -137,4 +142,15 @@ main {
 /* rich text data styling*/
 .rich-text img {
   height:auto;
+}
+
+/* svg icons */
+svg.icon {
+  margin-right: .25rem;
+}
+svg.icon path {
+  fill:var(--vtDarkBlue)
+}
+svg.icon path.background {
+  fill:var(--vtGrey-50)
 }

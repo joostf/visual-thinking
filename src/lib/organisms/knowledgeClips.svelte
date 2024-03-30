@@ -4,7 +4,6 @@
   let index = 0;
 
   export let data;
-  console.log(data);
 
   const nextButton = () => {
     index = index + 1;
