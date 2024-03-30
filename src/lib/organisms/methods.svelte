@@ -3,9 +3,9 @@
   import IconResearch from "$lib/atoms/icons/iconResearch.svelte";
   import IconOrganise from "$lib/atoms/icons/iconOrganise.svelte";
   import IconLearnAboutYourself from "$lib/atoms/icons/iconLearnAboutYourself.svelte";
-  import IconLearnAboutOthers from "$lib/atoms/icons/IconLearnAboutOthers.svelte";
-  import IconCommunicate from "$lib/atoms/icons/IconCommunicate.svelte";
-  import IconCreativeThinking from "$lib/atoms/icons/IconCreativeThinking.svelte";
+  import IconLearnAboutOthers from "$lib/atoms/icons/iconLearnAboutOthers.svelte";
+  import IconCommunicate from "$lib/atoms/icons/iconCommunicate.svelte";
+  import IconCreativeThinking from "$lib/atoms/icons/iconCreativeThinking.svelte";
 
   export let data;
 </script>
