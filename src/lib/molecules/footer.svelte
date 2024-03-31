@@ -48,7 +48,7 @@
 <style>
   
   footer nav {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
     grid-template-columns: 1fr;
     padding: 20px;

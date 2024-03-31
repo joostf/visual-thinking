@@ -23,6 +23,10 @@
     let startX;
     let startY;
 
+    toolbar.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+
     // Voeg een click eventlistener toe aan de toolbar voor wissen
     toolbar.addEventListener("click", (e) => {
       if (e.target.id === "clear") {
@@ -87,304 +91,119 @@
   });
 </script>
 
-<div class="breadcrumb">
-<Breadcrumb titel= "Tekenruimte" />
-</div>
+<Breadcrumb titel= "Tekenruimte" bgc="var(--vtGrey)" />
 
+<header class="sr-only">
+  <h1>Teken hier!</h1>
+  <p class="disclaimer"><span class="attention">Let op:</span> deze functie is momenteel in een experimentele fase</p>
+</header>
+    
 <section>
-  
-  <div class="labeltekst">
-    <h1>Teken hier!</h1>
-  </div>
-  <p class="disclaimer"><span class="attention">Let op:</span> Deze functie is momenteel in een experimentele fase</p>
-  
-    <section class="container">
-    <div id="toolbar">
-      <h2>Tekentools</h2>
+  <header id="toolbar">
+    <h2 class="sr-only">Tekentools</h2>
+
+    <form>
       <label for="stroke">Kleur</label>
       <input id="stroke" name="stroke" type="color" />
-      <label for="lineWidth">Pen dikte:</label>
+      
+      <label for="lineWidth">Pen dikte</label>
       <input id="lineWidth" name="lineWidth" type="number" value="5" />
+      
       <button id="clear">Wissen</button>
-    </div>
-    <div class="drawing-board">
-      <canvas id="drawing-board" />
-    </div>
-  </section>
+    </form>
+  </header>
+
+  <div class="drawing-board">
+    <canvas id="drawing-board" />
+  </div>
 </section>
 
 <style>
-
-  .breadcrumb{
-    background-color: var(--vtGrey-80);
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
   }
 
-  h1{
-    color: var(--vtDarkBlue);
+  h2 {
+    font-size: 1.5rem;
+    margin:.25rem;
   }
 
-  h2{
-    font-size: 30px;
-  }
-
-
-
-  .disclaimer{
+  p.disclaimer {
     text-align: center; 
   }
 
-  .attention{
-    color: red;
+  p span.attention {
+    color: var(--vtYellow);
   }
 
-  .labeltekst {
-    font-family: var(--vtPrimaryFont);
-    margin: auto 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container {
+  section {
     font-family: var(--vtPrimaryFont);
     justify-items: center;
-    padding-bottom: 40px;
     width: 100vw;
+    margin:0 -1rem;
+  }
+
+  section header {
+    font-weight: 800;
+    padding: .25em 1rem;
+    background-color: var(--vtGrey-50);
+    height:3rem;
+  }
+
+  section form {
+    display: flex;
+    align-items: center;
+    margin:.25rem;
+    gap: 0.5em; 
   }
 
   .drawing-board {
-    border-radius: 25px;
     border: none;
     background-color: var(--vtGrey-10);
-    box-shadow: var(--vtGrey-80) 1px 1px 20px 1px;
-    margin: 2em;
     cursor: pointer;
+    box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.1);
+    height: calc(100vh - 3rem);
+    cursor: url('/pencil.svg'), auto;
   }
 
-  #toolbar {
-    font-weight: 800;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5em;
-    width: 15%;
-    height: 30%;
-    border: none;
-    background-color: var(--vtGrey-50);
-    box-shadow: var(--vtGrey-50) 1px 1px 20px 1px;
-    border-radius: 25px;
-    gap: 0.3em;
-    margin: 3em;
+  label {
+    white-space: nowrap;
   }
 
   input {
     width: 25%;
     border-radius: 4px;
-    margin: 0em;
+    padding:5px;
+    font-weight: bold;
+  }
+  input[type=color] {
+    padding:0;
   }
 
-  input:active {
-    transform: translateY(1px);
-  }
-
-  #stroke {
-    border: none;
-    background: none;
-    border-radius: 4px;
-  }
-
-  #lineWidth {
+  input#lineWidth {
     border: none;
     border-radius: 4px;
   }
 
-  #clear {
-    background-color: #090940;
+  button {
     border: none;
     border-radius: 4px;
-    color: white;
-    padding: 2px;
+    padding: 4px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    width: 25%;
+    color: var(--vtWhite);
+    background:var(--vtDarkBlue);
+    font-family: inherit;
+    font-weight: bold;
   }
 
-  #clear:hover {
-    color: var(--vtYellow);
+  button:hover {
+    color: var(--vtDarkBlue);
+    background:var(--vtGrey-10)
   }
 
-  #clear:active {
-    transform: translateY(1px);
-  }
-
-  h3 {
-    margin: 0.5em;
-  }
-
-  /*---DESKTOP---*/
-  @media (min-width: 55em) {
-    .container {
-      display: flex;
-      width: 100vw;
-      margin-top: 3em;
-    }
-
-    #toolbar {
-      /* display: none; */
-      position: absolute;
-      max-width: 8em;
-      max-height: 20em;
-      margin-left: 4em;
-      margin-top: 2em;
-    }
-
-    .drawing-board {
-      border-radius: 25px;
-      border: none;
-      background-color: var(--vtGrey-10);
-      box-shadow: var(--vtGrey-50) 1px 1px 20px 1px;
-      margin: 2em;
-      margin-left: 4em;
-      height: 25em;
-      width: 90%;
-      cursor: url("cursor-img.jpg");
-    }
-
-    #toolbar input {
-      width: 50%;
-      height: 3em;
-      border-radius: 4px;
-      margin: 0em;
-    }
-
-    #clear {
-      background-color: #090940;
-      border: none;
-      border-radius: 4px;
-      color: white;
-      padding: 2px;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      width: 35%;
-    }
-
-    #clear:hover {
-      color: var(--vtYellow);
-    }
-
-    #clear:active {
-      transform: translateY(1px);
-    }
-  }
-
-  /*---TABLET---*/
-  @media (min-width: 31em) and (max-width: 55em) {
-    .line {
-      padding-left: 20%;
-    }
-
-    .labeltekst {
-      font-family: var(--vtPrimaryFont);
-      margin: auto 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      margin-top: 2em;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 100vw;
-      margin-top: 2em;
-    }
-
-    #toolbar {
-      width: 50%;
-      max-width: 15em;
-      height: 60%;
-    }
-
-    .drawing-board {
-      border-radius: 25px;
-      border: none;
-      background-color: var(--vtGrey-10);
-      box-shadow: var(--vtGrey-50) 1px 1px 20px 1px;
-      margin: 2em;
-      max-width: 22em;
-      height: 35em;
-      width: 90%;
-      cursor: url("cursor-img.jpg");
-    }
-
-    #toolbar input {
-      width: 50%;
-      height: 3em;
-      border-radius: 4px;
-      margin: 0em;
-    }
-  }
-
-  /*---MOBILE---*/
-  @media (max-width: 31em) {
-    .line {
-      padding-left: 11%;
-    }
-
-    h1{
-      font-size: 1.7rem;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
 
 
-
-    .labeltekst {
-      font-family: var(--vtPrimaryFont);
-
-      margin: auto 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2em;
-      margin-left: 0em;
-    }
-
-    .container {
-      width: 100vw;
-      margin-top: 3em;
-    }
-
-    #toolbar {
-      margin-left: 2.5em;
-      margin-right: 1em;
-      width: 60%;
-      height: 12em;
-    }
-
-    .drawing-board {
-      border-radius: 25px;
-      border: none;
-      background-color: var(--vtGrey-10);
-      box-shadow: var(--vtGrey-50) 1px 1px 20px 1px;
-      margin: 1em;
-      height: 30em;
-      width: 90%;
-    }
-
-    #toolbar input {
-      width: 50%;
-      height: 3em;
-      border-radius: 4px;
-      margin: 0em;
-    }
-
-    .drawing-board #drawing-board {
-      /* width: 100%;
-      height: 100%; */
-    }
-  }
+  
 </style>

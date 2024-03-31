@@ -20,13 +20,12 @@
   a,span {
     font-weight: bold;
     text-transform: uppercase;
-    /* background-color: var(--vtDarkBlue); */
     color: var(--vtWhite);
     font-family: var(--vtPrimaryFont);
     font-size: 0.9rem;
-    padding-left: 9%;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+    padding-left: 1rem;
     margin-top: 0%;
     width: 100vw;
     display: flex;
@@ -41,14 +40,14 @@
   /* tablet */
   @media (min-width: 31em) and (max-width: 70em) {
     a, span {
-      padding-left: 20%;
+      padding-left: 116px;
     }
   }
 
   /* mobile */
   @media (max-width: 31em) {
     a, span {
-      padding-left: 11%;
+      padding-left: 116px;
     }
   }
 </style>
