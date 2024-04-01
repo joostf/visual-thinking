@@ -17,12 +17,11 @@
     margin:0 -1rem;
   }
   /* MOBILE - STYLING */
-  a,span {
-    font-weight: bold;
+  a, span {
     text-transform: uppercase;
     color: var(--vtWhite);
     font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     padding-left: 1rem;
@@ -37,17 +36,4 @@
     text-decoration: underline;
   }
 
-  /* tablet */
-  @media (min-width: 31em) and (max-width: 70em) {
-    a, span {
-      padding-left: 116px;
-    }
-  }
-
-  /* mobile */
-  @media (max-width: 31em) {
-    a, span {
-      padding-left: 116px;
-    }
-  }
 </style>

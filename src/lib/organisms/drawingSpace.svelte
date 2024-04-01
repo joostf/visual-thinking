@@ -201,9 +201,5 @@
   button:hover {
     color: var(--vtDarkBlue);
     background:var(--vtGrey-10)
-  }
-
-
-
-  
+  }  
 </style>

@@ -82,31 +82,29 @@
 
 <style>
   header {
-    max-width: 43.75em;
-    width: 77%;
+    max-width: 40rem;
     margin: 0 auto;
   }
 
   h1 {
     font-size: 1.7rem;
-    text-align: center;
   }
 
   h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
-    font-size: 1.7rem;
-    margin: 2.1rem;
+    margin: 2rem 0;
+    font-size: 1rem;
   }
 
   ul {
     list-style: none;
     margin-top: -1.7rem;
     margin-bottom: 0;
+    padding-left: 0;
     display:flex;
     gap:.5rem;
     overflow-x:auto;
-    
   }
 
   li a {
@@ -133,7 +131,6 @@
 
   article {
     display: flex;
-    padding: 1rem;
     flex-direction: column;
     transition: 0.25s;
     border: 1px solid #ccc;
@@ -158,7 +155,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px;
   }
 
   article img {
@@ -167,12 +163,12 @@
   }
 
   @media screen and (min-width: 36em) {
+    header {
+      width:75%;
+    }
     h1 {
       font-size: 3.157rem;
-    }
-
-    h2 {
-      font-size: 2rem;
+      text-align:center;
     }
     
     .grid {
