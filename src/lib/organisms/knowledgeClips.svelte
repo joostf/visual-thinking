@@ -16,13 +16,6 @@
 
 <Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
 
-
-<!-- <header>
-  <section>
-    <h4 class="line">Kennisclips</h4>
-  </section>
-</header> -->
-
 <section>
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
@@ -58,25 +51,6 @@
 </section>
 
 <style>
-  .breadcrumb {
-    background-color: var(--vtSec-LightBlue) ;
-  }
-  /* line in header */
-  .line {
-    text-transform: uppercase;
-    background-color: var(--vtSec-LightBlue);
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
-    font-size: 0.9rem;
-    padding-left: 9%;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    margin-top: 0%;
-    width: 100vw;
-    display: flex;
-    margin-bottom: 0;
-    align-items: center;
-  }
 
   /* Header styling */
   h2 {
@@ -101,7 +75,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3.3em;
+    padding: 3.3em 0;
+    margin:0 -1rem;
     background-color: var(--vtGrey-10);
   }
 
@@ -128,40 +103,6 @@
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease-in;
-  }
-
-  /* tablet */
-  @media (min-width: 31em) and (max-width: 55em) {
-    .line {
-      padding-left: 19.5% !important;
-    }
-
-    h1 {
-      font-size: 2.1em !important;
-    }
-
-    p {
-      width: 80%;
-    }
-  }
-
-  /* mobile */
-  @media (max-width: 31em) {
-    .line {
-      padding-left: 11% !important;
-    }
-
-    h1 {
-      font-size: 1.157em !important;
-    }
-
-    p {
-      width: 77%;
-    }
-
-    button {
-      padding: 0.6em;
-    }
   }
 
   /* desktop */
