@@ -14,9 +14,8 @@
   };
 </script>
 
-<div class="breadcrumb">
-<Breadcrumb titel="Kennisclips" />
-</div>
+<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+
 
 <!-- <header>
   <section>
