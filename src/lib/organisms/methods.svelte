@@ -154,7 +154,8 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1.5rem;
+    margin: 1rem 0;
   }
 
   article img {
