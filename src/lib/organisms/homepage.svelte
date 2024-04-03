@@ -10,10 +10,10 @@
 
   <ul>
     <li>
-      <a href="/"><span><img src="man.svg" alt="man_image" /></span></a>
+      <a href="/"><span><img src="/images/man.svg" alt="man_image" /></span></a>
     </li>
     <li>
-      <a href="/"><span><img src="pencil.svg" alt="pencil_image" /></span></a>
+      <a href="/"><span><img src="/images/pencil.svg" alt="pencil_image" /></span></a>
     </li>
     <li>
       <a href="/over" style="--bg:#3F439D" class="highlight"
