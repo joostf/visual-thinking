@@ -2,7 +2,6 @@
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import MethodsHeader from "$lib/organisms/methodsHeader.svelte";
 
-
   export let data;
 
   // Variabele om de zichtbaarheid van stappenplan te regelen
