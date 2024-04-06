@@ -101,6 +101,7 @@
     footer nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-items: center;
     }
 
     .logo-footer {
