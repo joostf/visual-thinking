@@ -25,11 +25,7 @@
   });
 </script>
 
-<Breadcrumb
-  titel="Overzicht"
-  url="/tekenmethodes"
-  bgc="var(--vtYellow)"
-/>
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
 <MethodsHeader {data} />
 
 <section class="images-buttons">
@@ -102,9 +98,8 @@
     margin-bottom: 20px;
     overflow: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scroll-snap-align: center;
   }
+
 
   .images-buttons {
     display: flex;
@@ -117,6 +112,8 @@
     width: 100%;
     height: auto;
     max-height:20rem; 
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
   }
 
   .scroll-btn {

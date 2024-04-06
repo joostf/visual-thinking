@@ -4,19 +4,11 @@
       <img
         src="/visual-thinking-logo-footer.svg"
         class="logo-footer"
-        alt="footer-logo"
+        alt="Visual thinking logo"
       />
     </a>
 
-    <ul class="footer-menu">
-      <li><a href="/over">Over</a></li>
-      <li><a href="/artikelen">Artikelen</a></li>
-      <li><a href="/tekenmethodes">Tekenmethodes</a></li>
-      <li><a href="/kennisclips">Kennisclips</a></li>
-    </ul>
-
     <div>
-      <h4>Socials</h4>
       <ul class="social-media">
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
@@ -40,22 +32,19 @@
         </li>
       </ul>
 
-      <h4 class="copy">© Charley Muhren, 2022</h4>
+      <p class="copy">© Charley Muhren, 2024</p>
     </div>
   </nav>
 </footer>
 
 <style>
-  
   footer nav {
     background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
-    grid-template-columns: 1fr;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 10px;
     text-align: center;
   }
- 
+
   .social-media {
     list-style: none;
     padding: 0;
@@ -66,25 +55,16 @@
 
   .social-media li {
     text-align: center;
+    list-style-type: none;
+    transition: 0.25s;
     margin: 0 10px;
   }
 
-  .social-media a{
+  .social-media a {
     display: flex;
-  }
-
-  a {
     text-decoration: none;
     color: var(--vtDarkBlue);
     align-items: center;
-  }
-
-  ul {
-    margin-left: -20px;
-    }
-
-  li {
-    list-style-type: none;
   }
 
   span {
@@ -93,8 +73,7 @@
     color: #555;
   }
 
-  .copy{
-    margin: 26.6px;
+  .copy {
     font-size: 14px;
   }
 
@@ -104,8 +83,18 @@
     margin: 0 2px 0 0;
   }
 
-  img {
-    margin: 0;
+  li:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 425px) {
+    div span {
+      display: none;
+    }
+
+    .logo-footer {
+      width: 60%;
+    }
   }
 
   @media (min-width: 768px) {
@@ -114,25 +103,14 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .social-media {
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .footer-menu {
-      display: none;
-    }
-
     .logo-footer {
       height: auto;
       width: 70%;
-      padding-top: 20px;
     }
 
     .icon {
       width: 30px;
       height: 30px;
     }
-
   }
 </style>
