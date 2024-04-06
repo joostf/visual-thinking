@@ -9,7 +9,7 @@
     </a>
 
     <div>
-      <ul class="social-media">
+      <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
             <img src="/instagram.svg" alt="instagram" class="icon" />
@@ -31,8 +31,7 @@
           </a>
         </li>
       </ul>
-
-      <p class="copy">© Charley Muhren, 2024</p>
+      <p>© Charley Muhren, 2024</p>
     </div>
   </nav>
 </footer>
@@ -45,7 +44,7 @@
     text-align: center;
   }
 
-  .social-media {
+  div ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -53,14 +52,14 @@
     align-items: center;
   }
 
-  .social-media li {
+  div li {
     text-align: center;
     list-style-type: none;
     transition: 0.25s;
     margin: 0 10px;
   }
 
-  .social-media a {
+  div a {
     display: flex;
     text-decoration: none;
     color: var(--vtDarkBlue);
@@ -73,7 +72,7 @@
     color: #555;
   }
 
-  .copy {
+  div p {
     font-size: 14px;
   }
 
