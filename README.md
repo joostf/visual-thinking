@@ -1,6 +1,7 @@
 
 # Visual Thinking | RC2
 
+Ik heb 10 weken lang aan deze website gewerkt, waar ik mijn best heb gedaan om een goed eindresultaat te kunnen opleveren. En dat is een website zonder HTML-fouten en goed presterend, toegankelijk voor iedereen.
 
 <img width="1551" alt="Scherm­afbeelding 2024-02-09 om 13 30 40" src="https://github.com/iBadr49/visual-thinking/assets/112857932/f087a63f-a404-428c-a1ab-e3ffde47955a">
 
