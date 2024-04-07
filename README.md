@@ -1,5 +1,5 @@
 
-# Visual Thinking
+# Visual Thinking | RC2
 
 
 <img width="1551" alt="Scherm­afbeelding 2024-02-09 om 13 30 40" src="https://github.com/iBadr49/visual-thinking/assets/112857932/f087a63f-a404-428c-a1ab-e3ffde47955a">
