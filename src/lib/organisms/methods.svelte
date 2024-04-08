@@ -27,29 +27,57 @@
     je creativiteit en productiviteit te vergroten. Wil je meer weten over
     visual thinking? Heb je suggesties of vragen?
   </p>
-  <p>Neem dan contact op met Charley.</p>
+  <p>
+    Neem dan contact op met <span
+      ><a href="mailto:c.j.muhren@hva.nl">charley.</a></span
+    >
+  </p>
 </header>
 
 <h2 id="methodes">Categorieën</h2>
 
 <ul>
   <li>
-    <a href="?categorie=onderzoeken-en-begrijpen#methodes" class:active={filter == "onderzoeken-en-begrijpen"}><IconResearch /> Onderzoeken en begrijpen</a>
+    <a
+      href="?categorie=onderzoeken-en-begrijpen#methodes"
+      class:active={filter == "onderzoeken-en-begrijpen"}
+      ><IconResearch /> Onderzoeken en begrijpen</a
+    >
   </li>
   <li>
-    <a href="?categorie=organiseren-en-plannen#methodes" class:active={filter == "organiseren-en-plannen"}><IconOrganise /> Organiseren en plannen</a>
+    <a
+      href="?categorie=organiseren-en-plannen#methodes"
+      class:active={filter == "organiseren-en-plannen"}
+      ><IconOrganise /> Organiseren en plannen</a
+    >
   </li>
   <li>
-    <a href="?categorie=leren-over-anderen#methodes" class:active={filter == "leren-over-anderen"}><IconLearnAboutOthers /> Leren over anderen</a>
+    <a
+      href="?categorie=leren-over-anderen#methodes"
+      class:active={filter == "leren-over-anderen"}
+      ><IconLearnAboutOthers /> Leren over anderen</a
+    >
   </li>
   <li>
-    <a href="?categorie=leren-over-jezelf#methodes" class:active={filter == "leren-over-jezelf"}><IconLearnAboutYourself /> Leren over jezelf</a>
+    <a
+      href="?categorie=leren-over-jezelf#methodes"
+      class:active={filter == "leren-over-jezelf"}
+      ><IconLearnAboutYourself /> Leren over jezelf</a
+    >
   </li>
   <li>
-    <a href="?categorie=communiceren-en-presenteren#methodes" class:active={filter == "communiceren-en-presenteren"}><IconCommunicate /> Communiceren en presenteren</a>
+    <a
+      href="?categorie=communiceren-en-presenteren#methodes"
+      class:active={filter == "communiceren-en-presenteren"}
+      ><IconCommunicate /> Communiceren en presenteren</a
+    >
   </li>
   <li>
-    <a href="?categorie=creatief-denken#methodes" class:active={filter == "creatief-denken"}><IconCreativeThinking />Creatief denken</a>
+    <a
+      href="?categorie=creatief-denken#methodes"
+      class:active={filter == "creatief-denken"}
+      ><IconCreativeThinking />Creatief denken</a
+    >
   </li>
 </ul>
 
@@ -86,6 +114,15 @@
     margin: 0 auto;
   }
 
+  header a {
+    font-weight: bold;
+  }
+
+  header span:hover {
+    text-decoration: underline;
+    color: var(--vtYellow);
+  }
+
   h1 {
     font-size: 1.7rem;
   }
@@ -102,25 +139,25 @@
     margin-top: -1.7rem;
     margin-bottom: 0;
     padding-left: 0;
-    display:flex;
-    gap:.5rem;
-    overflow-x:auto;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
   }
 
   li a {
-    display:flex;
+    display: flex;
     white-space: nowrap;
     padding: 10px;
-    border:1px solid transparent;
-    align-items:center;
-    transition:.25s
+    border: 1px solid transparent;
+    align-items: center;
+    transition: 0.25s;
   }
 
   li a:hover,
   li a:focus-visible,
   li a.active {
     border-color: var(--vtGrey);
-    background: var(--vtGrey-10);    
+    background: var(--vtGrey-10);
   }
 
   a {
@@ -135,7 +172,6 @@
     transition: 0.25s;
     border: 1px solid #ccc;
   }
-
 
   article:hover,
   article:focus-visible {
@@ -165,19 +201,19 @@
 
   @media screen and (min-width: 36em) {
     header {
-      width:75%;
+      width: 75%;
     }
     h1 {
       font-size: 3.157rem;
-      text-align:center;
+      text-align: center;
     }
-    
+
     .grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
     ul {
-      flex-wrap:wrap;
+      flex-wrap: wrap;
     }
   }
 
