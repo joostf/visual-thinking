@@ -98,6 +98,7 @@
     margin-bottom: 20px;
     overflow: auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
   }
 
 
