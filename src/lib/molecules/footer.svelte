@@ -31,7 +31,7 @@
           </a>
         </li>
       </ul>
-      <p class="copy">© Charley Muhren, 2024</p>
+      <p>© Charley Muhren, 2024</p>
     </div>
   </nav>
 </footer>
