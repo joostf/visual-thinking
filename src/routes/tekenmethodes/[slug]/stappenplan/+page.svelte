@@ -43,7 +43,12 @@
 <article class="grid">
   <div class="flex-s">
     <div class="tags-b">
+
+      <img class="icon" src="/icon1.svg" alt="icon" />
+      <div class="wrapper-methods">
+
       <img class="icon" src="/images/category.svg" alt="icon" />
+
       {#each data.methods as method}
         {#each method.categories as category}
           <h3 class="tag">
@@ -51,6 +56,7 @@
           </h3>
         {/each}
       {/each}
+    </div>
     </div>
 
     <div class="tags-b">
@@ -105,6 +111,10 @@
 </article>
 
 <style>
+
+  .wrapper-methods {
+    margin-left: 0em;
+  }
 
   /* img binnen de steps */
 
