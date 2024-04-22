@@ -1,6 +1,4 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-
   let index = 0;
 
   export let data;
@@ -14,10 +12,11 @@
   };
 </script>
 
-<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+
 
 <section>
   <h1 class="sr-only">Alle kennisclips</h1>
+  
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
       <img

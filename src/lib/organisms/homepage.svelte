@@ -38,6 +38,10 @@
 
 
 <style>
+  section {
+    margin-top: -4rem;
+  }
+
   ul li a {
     /* --bg: #e0dedc; */
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -263,7 +267,7 @@
 
       --cc: 4;
       --rc: 2;
-      margin-top: -60vh;
+      margin-top: -28rem;
     }
 
     ul li:nth-of-type(1) {

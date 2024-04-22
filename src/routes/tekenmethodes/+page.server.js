@@ -18,6 +18,12 @@ export async function load({ url }) {
       }
     }
 
+    categories {
+      title
+      slug
+      icon
+    }
+
     methods(first: 100, ${filter}) {
       id
       slug

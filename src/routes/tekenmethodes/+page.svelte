@@ -6,10 +6,10 @@
 
   export let data;
 
-  const {page, methods} = data
+  const {page, categories, methods} = data
 </script>
 
 <Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
 <Introduction data={page}/>
-<Filter />
+<Filter data={categories} />
 <Methods data={methods}/>

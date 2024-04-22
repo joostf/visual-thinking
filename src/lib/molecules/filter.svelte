@@ -8,56 +8,24 @@
 
     import { page } from "$app/stores";
 
+    export let data;
+
     let filter;
     $: filter = $page.url.searchParams.get("categorie");
 </script>
 
 <section>
     <h2 id="methodes">Filter op categorie</h2>
-  
+
     <ul>
+    {#each data as category}
       <li>
-        <a
-          href="?categorie=onderzoeken-en-begrijpen#methodes"
-          class:active={filter == "onderzoeken-en-begrijpen"}
-          ><IconResearch /> Onderzoeken en begrijpen</a
-        >
+        <a href="?categorie={category.slug}#methodes" class:active={filter == category.slug}>
+            {@html category.icon}
+            {category.title}
+        </a>
       </li>
-      <li>
-        <a
-          href="?categorie=organiseren-en-plannen#methodes"
-          class:active={filter == "organiseren-en-plannen"}
-          ><IconOrganise /> Organiseren en plannen</a
-        >
-      </li>
-      <li>
-        <a
-          href="?categorie=leren-over-anderen#methodes"
-          class:active={filter == "leren-over-anderen"}
-          ><IconLearnAboutOthers /> Leren over anderen</a
-        >
-      </li>
-      <li>
-        <a
-          href="?categorie=leren-over-jezelf#methodes"
-          class:active={filter == "leren-over-jezelf"}
-          ><IconLearnAboutYourself /> Leren over jezelf</a
-        >
-      </li>
-      <li>
-        <a
-          href="?categorie=communiceren-en-presenteren#methodes"
-          class:active={filter == "communiceren-en-presenteren"}
-          ><IconCommunicate /> Communiceren en presenteren</a
-        >
-      </li>
-      <li>
-        <a
-          href="?categorie=creatief-denken#methodes"
-          class:active={filter == "creatief-denken"}
-          ><IconCreativeThinking />Creatief denken</a
-        >
-      </li>
+    {/each}
     </ul>
 </section>
   
@@ -93,8 +61,6 @@
   }
 
   @media screen and (min-width: 36em) {
-      ul {
-          /flex-wrap: wrap;
-      }
+
   }
 </style>
